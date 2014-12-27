@@ -79,6 +79,11 @@
             }
         }
         //-->
+
+        function openGoogleMap() {
+            open('https://www.google.com/maps/d/viewer?ll=5.332071,103.147845&source=embed&iwloc=00045067c9e420974965c&ie=UTF8&msa=0&spn=0,0&hl=en&mid=z-UdJ9CaRHZ8.kWNEoVqUrvDs');
+            return false;
+        }
     </script>
 
     <!-- css -->
@@ -141,11 +146,11 @@
                 </div>
                 <div id="navbar-collapse-main" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="home.html" onclick="loadpage('home');">Home</a></li>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="rooms.html">Rooms</a></li>
-                        <li><a href="places.html">Places</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="home">Home</a></li>
+                        <li><a href="aboutus">About Us</a></li>
+                        <li><a href="rooms">Rooms</a></li>
+                        <li><a href="places">Places</a></li>
+                        <li><a href="contact">Contact Us</a></li>
                     </ul>
                     <!-- ul class="nav navbar-nav navbar-right">
                         <li><a id="1" href="home.html" onclick="loadpage('home');">Home</a></li>
@@ -193,14 +198,18 @@
                         <h3>AJAX #Content</h3>
                     </div>
                     <div id="content" class="col-sm-12"></div>
+                    <!-- 
                     <script type="text/javascript">
-                        $('#content').load('home.html', function(responseTxt, statusTxt, xhr) {
+                        var $content = $('#content');
+
+                        $content.load('home.html #main>*', function(responseTxt, statusTxt, xhr) {
                             if (statusTxt=='success')
                                 console.log('load complete');
                             if (statusTxt=='error')
                                 console.lop('Error: Fail to load home.html.');
                         });
                     </script>
+                     -->
                 </div>
             </div>
         </div>
