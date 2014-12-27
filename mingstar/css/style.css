@@ -6,6 +6,24 @@ body {
     height:             100%;
     width:              100%;
 }
+.pageContact {
+    font-size:          10px;
+}
+
+/* flex section */
+
+.row-left-flex-container {
+    display:            flex;
+    align-items:        center;
+    flex-flow:          row nowrap; /* <‘flex-direction’> || <‘flex-wrap’> */
+    justify-content:    flex-start;
+}
+.row-left-flex-container > * {
+    flex:               0 0 auto;
+}
+.flex-spacer {
+    flex:               1 0 auto; /* none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+}
 
 /* padded section */
 
