@@ -94,7 +94,7 @@ footer .glyphicon:hover {
     top:                0;
     #height:             70px;
     height:             52px;
-    z-index:            1;
+    z-index:            11;
 }
 .marginFromTop {
     #margin-top:         72px;
@@ -126,4 +126,140 @@ nav li {
 .navbar {
     border-radius:      0;
     margin:             0;
+}
+
+/* image gallery */
+/* To do: Add animation support for firefox */
+/* To do: Add animation support for IE */
+
+/** {
+    margin: 0;
+    padding: 0;
+}*/
+
+/*img {border: none;}*/
+
+#imgGalleryBody {
+    text-align:         center;
+}
+
+#imgGalleryBox {
+    background:         #000;
+    border:             10px solid #000;
+    margin:             0 auto;
+    overflow:           hidden;
+    text-align:         left;
+    width:              700px;
+    
+    -moz-box-shadow:    #131313 0px 3px 10px;
+    -webkit-box-shadow: #131313 0px 2px 10px;
+    box-shadow:         #131313 0px 3px 10px;   
+    
+    -webkit-animation-name:             fadeIn; 
+    -webkit-animation-duration:         1s; 
+    -webkit-animation-iteration-count:  1;
+    -webkit-animation-delay:            0s;
+}
+
+ul#slider{
+    height:             438px;
+    list-style:         none;
+    margin:             0;
+    overflow:           hidden;
+    padding:            0;
+    position:           relative;
+    /*width:              700px;*/
+
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius:      10px;
+}
+
+ul#thumb {
+    background:         #000;
+    list-style:         none;
+    margin:             0;
+    overflow:           auto;
+    overflow:           none;
+    padding:            0;
+    position:           relative;
+    /*width: 700px;*/
+}
+
+ul#thumb a {
+    border:             1px solid #979797;
+    display:            block;
+    float:              right;
+    height:             35px;
+    margin:             10px 0px 0px 10px;
+    opacity:            0.75;
+    overflow:           hidden;
+    width:              50px;
+
+    -moz-transition:    opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+    transition:         opacity .2s ease-in-out;
+}
+
+ul#thumb a:hover {
+    opacity:            1;
+} 
+
+ul#slider li {  
+    height:             438px;
+    position:           absolute;
+    width:              700px;
+}
+    
+ul#slider li p {
+    background:         rgba(0, 0, 0, .5);
+    bottom:             0;
+    color:              #fff;
+    left:               0;
+    position:           absolute;
+    width:              100%;
+    z-index:            inherit;
+}
+
+ul#slider li p span {
+    display:            block;
+    line-height:        1.2em;
+    padding:            10px;
+}
+
+ul#slider li:target {
+    left:               0;
+    top:                0;
+    z-index:            10;
+
+    -webkit-animation-name: moveTarget; 
+    -webkit-animation-duration: .5s; 
+    -webkit-animation-iteration-count: 1;
+}
+
+ul#slider li:not(:target) {
+    left:               0;
+    top:                0;
+
+    -webkit-animation-name: moveIt; 
+    -webkit-animation-duration: 1.5s; 
+    -webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes fadeIn {
+    0%   { opacity: 0; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes moveTarget {
+    0%   { left:-700px; }
+    100% { left:0px; }
+}
+
+@-webkit-keyframes moveIt {
+    0%   { left:0px; }
+    50%  { left:700px; }
+    100% { left:-700px;
+           z-index: 5; }
 }
