@@ -119,6 +119,8 @@ nav li {
 }
 
 /* image gallery */
+/* To do: Add animation support for firefox */
+/* To do: Add animation support for IE */
 * {
 	margin: 0;
 	padding: 0;
@@ -171,7 +173,7 @@ ul#thumb {
 ul#thumb a {
 	-webkit-transition: opacity .2s ease-in-out;
 	border: 1px solid #979797;
-	width: 35px;
+	width: 50px;
 	height: 35px;
 	display: block;
 	overflow: hidden;
