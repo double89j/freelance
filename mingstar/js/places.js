@@ -1,3 +1,7 @@
+/*
+    Adding a Google Map to your website
+        - https://developers.google.com/maps/tutorials/fundamentals/adding-a-google-map
+*/
 var hotelLatLng = new google.maps.LatLng(5.332071, 103.147845);
 
 function initialize() {
@@ -5,7 +9,7 @@ function initialize() {
     var mapOptions = {
         // center: new google.maps.LatLng(44.5403, -78.5463),
         center: hotelLatLng,
-        zoom: 17,
+        zoom: 16,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(mapCanvas, mapOptions);

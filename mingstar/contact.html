@@ -61,7 +61,19 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="home">Home</a></li>
                     <li><a href="aboutus">About Us</a></li>
-                    <li><a href="rooms" class="underdev">Rooms</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Rooms&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Deluxe</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Superior Plus</a></li>
+                            <li><a href="#">Superior</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Standard</a></li>
+                        </ul>
+                    </li>
                     <li><a href="gallery">Gallery</a></li>
                     <li><a href="places">Places</a></li>
                     <li><a href="contact">Contact Us</a></li>
@@ -72,9 +84,9 @@
 
     <div id="box3" class="pad-section">
         <div class="container">
-            <div class="row">
-                <div id="content" class="col-sm-12">
-                    <h3>Contact Us</h3>
+            <div id="content" class="row">
+                <div class="col-sm-12">
+                    <p class="pageTitle">Contact Us</p>
                     <p>Ming Star thanks you once again for visiting our website.</p>
                     <p>Should you have any inquiries, please feel free to contact us via phone, fax or email as shown below.</p>
                     <p>
@@ -88,6 +100,86 @@
                     </p>
                     <p>Alternatively, you may fill up our contact form to reach us.</p>
                     <p>Let us hear from you! Your generous input will definitely help us to server you better.</p>
+                    <hr style="border:1px solid #838383;" />
+                    <form>
+                        <div class="form-group">
+                            <label for="inputName">Name</label>
+                            <input id="inputName" type="text" class="form-control" placeholder="Enter name">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPhone">Phone</label>
+                            <input id="inputPhone" type="number" class="form-control" placeholder="Enter phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">E-mail</label>
+                            <input id="inputEmail" type="email" class="form-control" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputRoomType">Room Type (Testing)</label>
+                            <div class="row-left-flex-container" style="flex-wrap:wrap;">
+                                <div style="margin-right:40px;">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" value="option1" checked>Standard Room
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" value="option2">Superior Room
+                                        </label>
+                                    </div>
+                                    <div class="radio disabled">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" value="option3" disabled>Superior Plus Room
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="radio disabled">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" value="option4" disabled>Deluxe Room
+                                        </label>
+                                    </div>
+                                    <div class="radio disabled">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" value="option5" disabled>Executive Room
+                                        </label>
+                                    </div>
+                                    <div class="radio disabled">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" value="option6" disabled>Family Room
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputRoomType2">Room Type 2 (Testing)</label>
+                            <select id="inputRoomType2" class="form-control">
+                                <option value="option1">Standard Room</option>
+                                <option value="option2">Superior Room</option>
+                                <option value="option3">Superior Plus Room</option>
+                                <option value="option4">Deluxe Room</option>
+                                <option value="option5">Executive Room</option>
+                                <option value="option6">Family Room</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputNote">Note</label>
+                            <textarea id="inputNote" class="form-control" rows="3"></textarea>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="exampleInputFile">File input</label>
+                            <input type="file" id="exampleInputFile">
+                            <p class="help-block">Example block-level help text here.</p>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Check me out
+                            </label>
+                        </div> -->
+                        <button type="submit" class="btn btn-default pull-right">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -96,20 +188,23 @@
     <footer>
         <hr class="footerDivider" />
         <div class="container">
-            <div class="row-left-flex-container">
-                <table class="pageContact"><tbody>
-                    <tr>
-                        <td rowspan="2"><img src="images/z.gif" alt="Contact Info" class="contactIcon" /></td>
-                        <td class="contactSpace1">Phone:</td>
-                        <td>+60-9-6228666</td>
-                    </tr>
-                    <tr>
-                        <td>FAX:</td>
-                        <td>+60-9-6221888</td>
-                    </tr>
-                </tbody></table>
-                <span class="flex-spacer"></span>
-                <p>All material herein &copy; 2014 – 2015 Ming Group, All Rights Reserved.</p>
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-5">
+                    <table class="pageContact"><tbody>
+                        <tr>
+                            <td rowspan="2"><img src="images/z.gif" alt="Contact Info" class="contactIcon" /></td>
+                            <td class="contactSpace1">Phone:</td>
+                            <td>+60-9-6228666</td>
+                        </tr>
+                        <tr>
+                            <td>FAX:</td>
+                            <td>+60-9-6221888</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-7 text-right">
+                    <p>All material herein &copy; 2014 – 2015 Ming Group<br />All Rights Reserved.</p>
+                </div>
             </div>
         </div>
     </footer>

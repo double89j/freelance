@@ -61,7 +61,19 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="home">Home</a></li>
                     <li><a href="aboutus">About Us</a></li>
-                    <li><a href="rooms" class="underdev">Rooms</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Rooms&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Deluxe</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Superior Plus</a></li>
+                            <li><a href="#">Superior</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Standard</a></li>
+                        </ul>
+                    </li>
                     <li><a href="gallery">Gallery</a></li>
                     <li><a href="places">Places</a></li>
                     <li><a href="contact">Contact Us</a></li>
@@ -72,9 +84,9 @@
 
     <div id="box3" class="pad-section">
         <div class="container">
-            <div class="row">
-                <div id="content" class="col-sm-12">
-                    <p>About Us</p>
+            <div id="content" class="row">
+                <div class="col-sm-12">
+                    <p class="pageTitle">About Us</p>
                     <p>
                         Strategically located, highly accessible and conveniently surrounded by various well-known landmarks, restaurants, 
                         and places of interest, Ming Star Hotel is perfect either for a business or family trip to Kuala Terengganu. 
@@ -91,20 +103,23 @@
     <footer>
         <hr class="footerDivider" />
         <div class="container">
-            <div class="row-left-flex-container">
-                <table class="pageContact"><tbody>
-                    <tr>
-                        <td rowspan="2"><img src="images/z.gif" alt="Contact Info" class="contactIcon" /></td>
-                        <td class="contactSpace1">Phone:</td>
-                        <td>+60-9-6228666</td>
-                    </tr>
-                    <tr>
-                        <td>FAX:</td>
-                        <td>+60-9-6221888</td>
-                    </tr>
-                </tbody></table>
-                <span class="flex-spacer"></span>
-                <p>All material herein &copy; 2014 – 2015 Ming Group, All Rights Reserved.</p>
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-5">
+                    <table class="pageContact"><tbody>
+                        <tr>
+                            <td rowspan="2"><img src="images/z.gif" alt="Contact Info" class="contactIcon" /></td>
+                            <td class="contactSpace1">Phone:</td>
+                            <td>+60-9-6228666</td>
+                        </tr>
+                        <tr>
+                            <td>FAX:</td>
+                            <td>+60-9-6221888</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-7 text-right">
+                    <p>All material herein &copy; 2014 – 2015 Ming Group<br />All Rights Reserved.</p>
+                </div>
             </div>
         </div>
     </footer>

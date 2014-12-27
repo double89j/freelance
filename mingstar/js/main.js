@@ -53,6 +53,9 @@ $(document).ready(function() {
         },
 
         loadPage = function(href) {
+            if (href=='#')
+                return;
+
             console.log('load page function');
             if (href=='index.html' || href=='index')
                 href = 'home'
@@ -65,13 +68,6 @@ $(document).ready(function() {
                 if (statusTxt=='error')
                     console.log('Error: '+xhr.status+": "+xhr.statusTxt);
             });
-
-            // $.load('title.html #'+href, function(responseTxt, statusTxt, xhr) {
-            //     if (statusTxt=='success')
-            //         ajaxLoad(responseTxt);
-            //     if (statusTxt=='error')
-            //         console.log('Error: '+xhr.status+": "+xhr.statusTxt);
-            // });
 
             $.cachedScript('js/'+href+'.js')
                 .done(function(script, textStatus) {
@@ -126,6 +122,11 @@ $(document).ready(function() {
     $('#navbar-collapse-main').on('click', 'a', function(evt) {
         // console.log('item ID: '+$(this).attr('id'));
         var href = $(this).attr('href');
+        if (href=='#') {
+            evt.preventDefault();
+            return;
+        }
+
         console.log('link click');
 
         if (href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) {
