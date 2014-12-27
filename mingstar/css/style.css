@@ -8,8 +8,20 @@ body {
     /*background:         url("../images/background.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
     /*margin: 0;*/
 }
+.footerDivider {
+    border-color:       #000;
+}
 .pageContact {
     font-size:          10px;
+}
+.contactIcon {
+    margin-right:       10px;
+}
+.contactSpace1 {
+    width:              40px;
+}
+.underdev {
+    pointer-events:     none;
 }
 
 /* flex section */
