@@ -18,9 +18,10 @@
     <script src="https://maps.googleapis.com/maps/api/js"></script>
 
     <!-- JavaScrip -->
+    <script src="js/main.js"></script>
     <script type="text/javascript">
         // From Ming Star original coding
-        function MM_openBrWindow(theURL, winName, features) {
+        function MM_openBrWindow(theURL, winName, features) { //v2.0
             window.open(theURL, winName, features);
         }
         function MM_effectAppearFade(targetElement, duration, from, to, toggle) {
@@ -153,7 +154,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="home">Home</a></li>
                         <li><a href="aboutus">About Us</a></li>
-                        <li><a href="rooms">Rooms</a></li>
+                        <li><a href="rooms" class="underdev">Rooms</a></li>
                         <li><a href="gallery">Gallery</a></li>
                         <li><a href="places">Places</a></li>
                         <li><a href="contact">Contact Us</a></li>
@@ -225,14 +226,14 @@
 
         <!-- footer -->
         <footer>
-            <hr style="border-color:#000000;" />
+            <hr class="footerDivider" />
             <div class="container">
                 <!-- <p class="text-right">All material herein &copy; 2014 – 2015 Ming Group, All Rights Reserved.</p> -->
                 <div class="row-left-flex-container">
                     <table class="pageContact"><tbody>
                         <tr>
-                            <td rowspan="2"><img src="images/z.gif" alt="Contact Info" style="margin-right:10px;" /></td>
-                            <td style="width:40px;">Phone:</td>
+                            <td rowspan="2"><img src="images/z.gif" alt="Contact Info" class="contactIcon" /></td>
+                            <td class="contactSpace1">Phone:</td>
                             <td>+60-9-6228666</td>
                         </tr>
                         <tr>
@@ -250,7 +251,6 @@
         <!-- js --> 
         <!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script-->
-        <script src="js/main.js"></script>
         <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-36251023-1']);

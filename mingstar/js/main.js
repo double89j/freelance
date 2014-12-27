@@ -25,16 +25,22 @@ $(document).ready(function() {
 
     var $content = $('#content'),
 
-        init = function() {
+        init = function(currentPage) {
             // Do this when a page loads
             console.log('init call');
 
-            $content.load('home.html #main>*', function(responseTxt, statusTxt, xhr) {
-                if (statusTxt=='success')
-                    console.log('initialization complete');
-                if (statusTxt=='error')
-                    console.lop('Error: Fail to load home.html.');
-            });
+            if (currentPage=='index.html') {
+                $content.load('home.html #content>*', function(responseTxt, statusTxt, xhr) {
+                    if (statusTxt=='success')
+                        console.log('index page initialization complete');
+                    if (statusTxt=='error')
+                        console.lop('Error: Fail to load home.html.');
+                });
+            }
+            else {
+                currentPage = currentPage.slice(0, currentPage.indexOf('.'));
+                loadPage(currentPage);
+            }
         },
 
         ajaxLoad = function(html) {
@@ -47,10 +53,11 @@ $(document).ready(function() {
         },
 
         loadPage = function(href) {
-            if (href=='index.html')
+            console.log('load page function');
+            if (href=='index.html' || href=='index')
                 href = 'home'
 
-            $content.load(href+'.html #main>*', function(responseTxt, statusTxt, xhr) {
+            $content.load(href+'.html #content>*', function(responseTxt, statusTxt, xhr) {
                 if (statusTxt=='success') {
                     console.log('load complete');
                     ajaxLoad(responseTxt);
@@ -66,19 +73,31 @@ $(document).ready(function() {
             //         console.log('Error: '+xhr.status+": "+xhr.statusTxt);
             // });
 
-            // $.cachedScript('js/'+href+'.js').done(function(script, textStatus) {
-            //     console.log(textStatus);
-            // });
+            $.cachedScript('js/'+href+'.js')
+                .done(function(script, textStatus) {
+                    console.log(textStatus+': script loaded');
+                })
+                .fail(function(jqxhr, settings, exception) {
+                    console.warn('no script found');
+                });
 
-            $.getScript('js/'+href+'.js', function(data, textStatus, jqxhr) {
-                // console.log(data);
-                // console.log(textStatus);
-                // console.log(jqxhr);
-                console.log('script loaded');
-            });
+            // $.getScript('js/'+href+'.js')
+            //     .done(function(script, textStatus) {
+            //         console.log('script loaded');
+            //     })
+            //     .fail(function(jqxhr, settings, exception) {
+            //         console.warn('no script found');
+            //     });
+
+            // $.getScript('js/'+href+'.js', function(data, textStatus, jqxhr) {
+            //     // console.log(data);
+            //     // console.log(textStatus);
+            //     // console.log(jqxhr);
+            //     console.log('script loaded');
+            // });
         };
 
-    init();
+    init(location.href.split('/').pop());
 
     $(window).bind('scroll', function() {
         var navHeight = $('#box1').height();
@@ -95,24 +114,29 @@ $(document).ready(function() {
         }
     });
 
-    $(window).on('popstate', function(evt) {
+    $(window).bind('popstate', function(evt) {
         // if (evt.originalEvent.state !== null)
-            loadPage(location.href.split('/').pop());
+        if (location.hash.length==0) {
+            var page = location.href.split('/').pop();
+            page = page.slice(0, page.indexOf('.'));
+            loadPage(page);
+        }
     });
 
     $('#navbar-collapse-main').on('click', 'a', function(evt) {
         // console.log('item ID: '+$(this).attr('id'));
         var href = $(this).attr('href');
+        console.log('link click');
 
         if (href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) {
-            history.pushState({}, '', href);
+            history.pushState({}, '', href+'.html');
             loadPage(href);
             return false;
         }
     });
 });
 
-function loadpage(page) {
+function loadpage_old(page) {
     var loadHTML = page + '.html';
     $('#content').load(loadHTML, function(responseTxt, statusTxt, xhr) {
         if (statusTxt=='success')
