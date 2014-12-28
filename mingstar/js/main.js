@@ -33,18 +33,30 @@ $(document).ready(function() {
             // Do this when a page loads
             console.log('init call');
 
-            if (currentPage=='index.html') {
-                $content.load('home.html #content>*', function(responseTxt, statusTxt, xhr) {
-                    if (statusTxt=='success')
-                        console.log('index page initialization complete');
-                    if (statusTxt=='error')
-                        console.lop('Error: Fail to load home.html.');
-                });
-            }
-            else {
+            if (currentPage=='index.html')
+                currentPage = 'home'
+            else
                 currentPage = currentPage.slice(0, currentPage.indexOf('.'));
-                loadPage(currentPage);
-            }
+
+            loadPage(currentPage);
+
+            // if (currentPage=='index.html') {
+            //     $content.load('home.html #content>*', function(responseTxt, statusTxt, xhr) {
+            //         if (statusTxt=='success')
+            //             console.log('index page initialization complete');
+            //         if (statusTxt=='error')
+            //             console.lop('Error: Fail to load home.html.');
+            //     });
+            // }
+            // else {
+            //     currentPage = currentPage.slice(0, currentPage.indexOf('.'));
+            //     loadPage(currentPage);
+            // }
+        },
+
+        initTooltipPopover = function() {
+            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="popover"]').popover();
         },
 
         ajaxLoad = function(html) {
@@ -67,6 +79,7 @@ $(document).ready(function() {
             $content.load(href+'.html #content>*', function(responseTxt, statusTxt, xhr) {
                 if (statusTxt=='success') {
                     console.log('load complete');
+                    initTooltipPopover();
                     ajaxLoad(responseTxt);
                 }
                 if (statusTxt=='error')

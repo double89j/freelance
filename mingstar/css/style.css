@@ -1,3 +1,24 @@
+/* temp */
+
+.hideBlock {
+    display: none;
+}
+.popover {
+    color: black;
+}
+.leftDivider {
+    border-left: 1px solid #405B75;
+}
+.rightDivider {
+    border-right: 1px solid #6B839A;
+}
+.topDivider {
+    border-top: 1px solid #6B839A;
+}
+.bottomDivider {
+    border-bottom: 1px solid #405B75;
+}
+
 /* general styles */
 
 html,
@@ -7,6 +28,11 @@ body {
 
     /*background:         url("../images/background.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
     /*margin: 0;*/
+}
+body {
+    #background:         url("../images/background.jpg") no-repeat fixed center center / cover rgba(0, 0, 0, 0);
+    #background:         url("../images/background.jpg") no-repeat fixed center 120px rgba(0, 0, 0, 0);
+    background:         url("../images/background.jpg") no-repeat fixed center 0 / cover rgba(0, 0, 0, 0);
 }
 .langSwitch {
     align-self:         flex-end;
@@ -18,18 +44,6 @@ body {
     font-family:        "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
     font-size:          32px;
     font-weight:        bold;
-}
-.footerDivider {
-    border-color:       #000;
-}
-.pageContact {
-    font-size:          10px;
-}
-.contactIcon {
-    margin-right:       10px;
-}
-.contactSpace1 {
-    width:              40px;
 }
 .underdev {
     pointer-events:     none;
@@ -100,7 +114,7 @@ body {
 
 #box1 {
     #background:         darkblue;
-    background:         url("../images/background.jpg");
+    #background:         url("../images/background.jpg");
     color:              white;
     display:            table;
     width:              100%;
@@ -121,25 +135,27 @@ body {
     #height:             400px;
 }
 #box3 {
-    background-color:   #182C3C;
+    background-color:   #182c3c;
     color:              white;
     #height:             100%;
-    min-height:         500px;
+    #min-height:         500px;
+    min-height:         100%;
+
+    margin-left:        50px;
+    margin-right:       50px;
 }
 
-footer {
-    #background:         #e5e5e5;
-    background:         #cfcfcf;
-    padding:            20px 0;
-}
-footer .glyphicon {
-    color:              #333333;
-    font-size:          60px;
-}
-footer .glyphicon:hover {
-    color:              #EE2E24;
-}
+/* navigation */
 
+nav {
+    position:           absolute;
+    bottom:             0;
+    width:              100%;
+    background:         #fff;
+}
+/*nav li {
+    background:         #f8f8f8;
+}*/
 .goToTop {
     position:           fixed;
     top:                0;
@@ -159,15 +175,54 @@ footer .glyphicon:hover {
     margin-top:         52px;
 }
 
-nav {
-    position:           absolute;
-    bottom:             0;
-    width:              100%;
-    background:         #fff;
+/* footer */
+
+.footerDivider {
+    border-color:       #000;
 }
-nav li {
-    background:         #f8f8f8;
+footer {
+    #background-color:   #e5e5e5;
+    background-color:   #cfcfcf;
+    #background:          -moz-linear-gradient(#182c3c, #cfcfcf 80%);
+    #background:          -o-linear-gradient(#182c3c, #cfcfcf 80%);
+    #background:          -webkit-linear-gradient(#182c3c, #cfcfcf 80%);
+    #background:          linear-gradient(#182c3c, #cfcfcf 80%);
+    #box-shadow:         0 5px 4px #5d5d5d inset;
+    padding:            10px 0;
 }
+/*.contactIcon {
+    margin-right:       10px;
+}*/
+footer .glyphicon.contactIcon {
+    font-size:          24px;
+    margin-right:       10px;
+    margin-top:         4px;
+}
+footer .glyphicon.contactIcon:hover {
+    color:              inherit;
+}
+/*footer .glyphicon {
+    color:              #333333;
+    font-size:          60px;
+}*/
+footer .glyphicon:hover {
+    color:              #EE2E24;
+}
+.pageContact {
+    font-size:          10px;
+}
+.contactSpace1 {
+    width:              40px;
+}
+
+/* bootstrap overwrite */
+
+.navbar {
+    border-radius:      0;
+    margin:             0;
+}
+
+/* google map */
 
 #map-canvas {
     background-color:   #ccc;
@@ -178,13 +233,6 @@ nav li {
 #nameOnMap {
     margin-top:         0;
     width:              130px;
-}
-
-/* bootstrap overwrite */
-
-.navbar {
-    border-radius:      0;
-    margin:             0;
 }
 
 /* image gallery */

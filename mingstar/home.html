@@ -5,64 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Ming Star Hotel - Home</title>
 
-    <!-- Latest compiled and minified Bootstrap CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-    <!-- Latest compiled Bootstrap JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
     <!-- Google Maps JavaScript -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
 
     <!-- JavaScrip -->
     <script src="js/main.js"></script>
-    <script type="text/javascript">
-        // From Ming Star original coding
-        function MM_openBrWindow(theURL, winName, features) { //v2.0
-            window.open(theURL, winName, features);
-        }
-        function MM_effectAppearFade(targetElement, duration, from, to, toggle) {
-            Spry.Effect.DoFade(targetElement, {duration: duration, from: from, to: to, toggle: toggle});
-        }
-        function openGoogleMap() {
-            open('https://www.google.com/maps/d/viewer?ll=5.332071,103.147845&source=embed&iwloc=00045067c9e420974965c&ie=UTF8&msa=0&spn=0,0&hl=en&mid=z-UdJ9CaRHZ8.kWNEoVqUrvDs');
-            return false;
-        }
-    </script>
+    <script src="js/general.js"></script>
+    <script type="text/javascript"></script>
 
     <!-- css -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
+    <!-- #box1 -->
     <div id="box1" class="home">
         <div class="container">
             <div class="row-left-flex-container">
                 <img src="images/pic_top.png" alt="Ming Star Hotel" />
+                <span class="flex-spacer"></span>
+                <a href="#" class="langSwitch underdev" style="margin-right: 15px;">ENGLISH</a>
+                <a href="#" class="langSwitch underdev">中文</a>
             </div>
-        </div>
-    </div>
+        </div><!-- /.container -->
+    </div><!-- #box1 --> 
 
+    <!-- navbar -->
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#navbar-collapse-main">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"></a>
+                <a href="#" class="navbar-brand">Ming Star</a>
             </div>
             <div id="navbar-collapse-main" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="home">Home</a></li>
                     <li><a href="aboutus">About Us</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">
                             Rooms&nbsp;<span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
@@ -78,13 +72,14 @@
                     <li><a href="places">Places</a></li>
                     <li><a href="contact">Contact Us</a></li>
                 </ul>
-            </div>
-        </div>
-    </nav>
+            </div><!-- #navbar-collapse-main -->
+        </div><!-- /.container-fluid -->
+    </nav><!-- /.navbar --> 
 
+    <!-- #box3 -->
     <div id="box3" class="pad-section">
-        <div class="container">
-            <div id="content" class="row">
+        <div id="content" class="container">
+            <div class="row">
                 <div class="col-sm-12">
                     <p class="pageTitle">Welcome</p>
                     <p>
@@ -94,20 +89,173 @@
                         We strike our best to provide everything just for your comfort as every our customers are privileged.
                         You don't only stay here, but you enjoy your stay with us.
                     </p>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <a href="#">
+                        <img src="images/Tag_RoomRate.jpg" alt="Room & Rates"
+                             style="opacity: 1; width: 224px; height: 138px;"
+                             onmouseover="MM_effectAppearFade(this, 500, 0, 100, false)">
+                    </a>
+                    <a href="#">
+                        <img src="images/Tag_promotion.jpg" alt="Check out our latest promotion!"
+                             style="opacity: 1; width: 224px; height: 138px;"
+                             onmouseover="MM_effectAppearFade(this, 500, 0, 100, false)">
+                    </a>
+                    <a href="#">
+                        <img src="images/Tag_BookNow.jpg" alt="Click to Book Now!"
+                             style="opacity: 1; width: 224px; height: 138px;"
+                             onmouseover="MM_effectAppearFade(this, 500, 0, 100, false)">
+                    </a>
+                    <!-- Large modal -->
+                    <button type="button" class="btn btn-primary"
+                            data-target="#myModal" data-toggle="modal">Large modal
+                    </button>
 
+                    <div id="myModal" class="modal fade" tabindex="-1" role="dialog"
+                         data-backdrop="static"
+                         aria-hidden="false" aria-labelledby="myModalLabel" aria-describedby="Test Modal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header" style="color:black;">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 id="myModalLabel" class="modal-title">Modal title</h4>
+                                </div>
+                                <div class="modal-body" style="color:black;">
+                                    <p>One fine body&hellip;</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default pull-left"
+                                            data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+                    <!-- <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+                         aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
+                         aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                ...
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <button type="button" class="btn btn-default" title="Tooltip on left"
+                            data-toggle="tooltip" data-placement="left">Tooltip on left</button>
+                    <button type="button" class="btn btn-default" title="Tooltip on top"
+                            data-toggle="tooltip" data-placement="top">Tooltip on top</button>
+                    <button type="button" class="btn btn-default" title="Tooltip on bottom"
+                            data-toggle="tooltip" data-placement="bottom">Tooltip on bottom</button>
+                    <button type="button" class="btn btn-default" title="Tooltip on right"
+                            data-toggle="tooltip" data-placement="right">Tooltip on right</button>
+
+                    <button id="popoverBtn" type="button" class="btn btn-lg btn-danger" title="Popover title"
+                            data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?">
+                            Click to toggle popover
+                    </button>
+                    <button id="popoverBtn" type="button" class="btn btn-lg btn-danger" title="Popover title"
+                            data-trigger="focus" data-toggle="popover"
+                            data-content="And here's some amazing content. It's very engaging. Right?">
+                            Dismissible popover
+                    </button>
+
+                    <!-- <a href="#" class="btn btn-lg btn-danger" tabindex="0" role="button" title="Dismissible popover"
+                       data-toggle="popover" data-trigger="focus" data-content="And here's some amazing content. \
+                       It's very engaging. Right?">Dismissible popover</a> -->
+
+                    <div class="media video hideBlock">
+                        <!-- 
+                            Media Responsive media elements that scale with your browser.
+                            - http://responsivebp.com/css/media.html#video
+                         -->
+                        <!-- "Video For Everybody" http://camendesign.com/code/video_for_everybody -->
+                        <video poster="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg"
+                               width="640" height="360" controls="controls">
+                            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4" />
+                            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm" />
+                            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg" />
+                            <object width="640" height="360" type="application/x-shockwave-flash"
+                                    data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
+                                <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+                                <param name="allowFullScreen" value="true" />
+                                <param name="wmode" value="transparent" />
+                                <param name="flashVars" 
+                                       value="config={'playlist':[ \
+                                        'http%3A%2F%2Fsandbox.thewikies.com%2Fvfe-generator%2Fimages%2Fbig-buck-bunny_poster.jpg', \
+                                        {'url':'http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4','autoPlay':false}]}" />
+                                <img src="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg"
+                                     alt="Big Buck Bunny" title="No video playback capabilities, please download the video below"
+                                     width="640" height="360" />
+                            </object>
+                        </video>
+                    </div>
+
+                    <object class="hideBlock" 
+                            classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+                            codebase="../../download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
+                            width="715" height="65">
+                        <param name="movie" value="flash/menu_v7.swf">
+                        <param name="quality" value="high">
+                        <param name="menu" value="false">
+                        <!--[if !IE]> <-->
+                        <object data="flash/menu_v7.swf?button=2"
+                                width="715" height="65" type="application/x-shockwave-flash"> 
+                            <param name="quality" value="high">
+                            <param name="menu" value="false">
+                            <param name="pluginurl" value="../../www.macromedia.com/go/getflashplayer">
+                            FAIL (the browser should render some flash content, not this).
+                        </object>
+                        <!--> <![endif]-->
+                    </object>
+                    <script type="text/javascript">
+                        AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','715','height','217','src','flash/Header','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','flash/Header' ); //end AC code
+                    </script>
+                    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+                            codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0"
+                            width="715" height="217">
+                        <param name="movie" value="flash/Header.swf">
+                        <param name="quality" value="high">
+                        <embed src="flash/Header.swf" quality="high"
+                               pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"
+                               type="application/x-shockwave-flash" width="715" height="217"></embed>
+                    </object>
+                    <noscript>
+                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+                                codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0"
+                                width="715" height="217">
+                            <param name="movie" value="flash/Header.swf">
+                            <param name="quality" value="high">
+                            <embed src="flash/Header.swf" quality="high"
+                                   pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"
+                                   type="application/x-shockwave-flash" width="715" height="217"></embed>
+                        </object>
+                    </noscript>
+                    <p>The end</p>
+
+                </div>
+            </div><!-- #content -->
+        </div><!-- /.container -->
+    </div><!-- #box3 --> 
+
+    <!-- footer -->
     <footer>
         <hr class="footerDivider" />
         <div class="container">
             <div class="row">
-                <!-- <div class="col-xs-3 col-sm-3 col-md-3 col-lg-5"> -->
                 <div class="col-sm-3 col-md-3 col-lg-5">
                     <table class="pageContact"><tbody>
                         <tr>
-                            <td rowspan="2"><img src="images/z.gif" alt="Contact Info" class="contactIcon" /></td>
+                            <td rowspan="2"><span class="glyphicon glyphicon-earphone contactIcon"
+                                aria-hidden="true"></span>
+                            </td>
                             <td class="contactSpace1">Phone:</td>
                             <td>+60-9-6228666</td>
                         </tr>
@@ -117,30 +265,11 @@
                         </tr>
                     </tbody></table>
                 </div>
-                <!-- <div class="col-xs-9 col-sm-9 col-md-9 col-lg-7 text-right"> -->
                 <div class="col-sm-9 col-md-9 col-lg-7 text-right">
                     <p>All material herein &copy; 2014 – 2015 Ming Group<br />All Rights Reserved.</p>
                 </div>
-            </div>
-        </div>
-        <!-- <hr class="footerDivider" />
-        <div class="container">
-            <div class="row-left-flex-container">
-                <table class="pageContact"><tbody>
-                    <tr>
-                        <td rowspan="2"><img src="images/z.gif" alt="Contact Info" class="contactIcon" /></td>
-                        <td class="contactSpace1">Phone:</td>
-                        <td>+60-9-6228666</td>
-                    </tr>
-                    <tr>
-                        <td>FAX:</td>
-                        <td>+60-9-6221888</td>
-                    </tr>
-                </tbody></table>
-                <span class="flex-spacer"></span>
-                <p>All material herein &copy; 2014 – 2015 Ming Group, All Rights Reserved.</p>
-            </div>
-        </div> -->
-    </footer>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </footer><!-- footer -->
 </body>
 </html>
