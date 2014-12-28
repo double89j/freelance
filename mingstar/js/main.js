@@ -152,12 +152,9 @@ $(document).ready(function() {
             else
                 history.pushState({}, '', href+'.html');
             loadPage(href);
+            $(".navbar-collapse").collapse('hide');
             return false;
         }
-    });
-
-    $(".navbar-nav li a").click(function(evt) {
-        $(".navbar-collapse").collapse('hide');
     });
 });
 
