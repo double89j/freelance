@@ -109,6 +109,11 @@ body {
 #box1 .row-left-flex-container {
     height:             114px;
 }
+#navbar-collapse-main.navbar-collapse {
+    /*background:         rgb(248,​ 248,​ 248);*/
+    /*padding-left:       0;
+    padding-right:      0;*/
+}
 #box2 {
     background-color:   #EA8200;
     color:              white;
@@ -142,6 +147,13 @@ footer .glyphicon:hover {
     height:             52px;
     z-index:            11;
 }
+.goToTop .navbar-collapse {
+    background:         none repeat scroll 0 0 rgb(248, 248, 248);
+    max-height:         200px;
+}
+/*.goToTop {
+    height:             52px;
+}*/
 .marginFromTop {
     #margin-top:         72px;
     margin-top:         52px;
@@ -178,10 +190,10 @@ nav li {
 /* image gallery */
 /* To do: Add animation support for IE */
 
-* {
+/** {
     margin: 0;
     padding: 0;
-}
+}*/
 
 /*img {border: none;}*/
 

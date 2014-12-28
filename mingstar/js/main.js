@@ -5,6 +5,10 @@
         - http://learn.jquery.com/events/event-delegation/
     history.pushState and jQuery
         - http://rosspenman.com/pushstate-jquery/
+    Set Dropdown Menu height
+        - http://stackoverflow.com/questions/19227496/scrollable-menu-with-bootstrap-3-menu-expanding-its-container-when-it-should-n
+    expanded mobile navbar doesn't collapse after clicking link #12852 
+        - https://github.com/twbs/bootstrap/issues/12852
 */
 $(document).ready(function() {
     jQuery.cachedScript = function(url, options) {
@@ -108,6 +112,19 @@ $(document).ready(function() {
             // $('#box2').removeClass('marginFromTop');
             $('#box3').removeClass('marginFromTop');
         }
+
+        // var navHeight = $('#box1').height();
+        // // ($(window).scrollTop() > navHeight) ? $('nav').addClass('goToTop') : $('nav').removeClass('goToTop');
+        // if ($(window).scrollTop() > navHeight) {
+        //     $('nav').addClass('navbar-fixed-top');
+        //     // $('#box2').addClass('marginFromTop');
+        //     $('#box3').addClass('marginFromTop');
+        // }
+        // else {
+        //     $('nav').removeClass('navbar-fixed-top');
+        //     // $('#box2').removeClass('marginFromTop');
+        //     $('#box3').removeClass('marginFromTop');
+        // }
     });
 
     $(window).bind('popstate', function(evt) {
@@ -130,10 +147,17 @@ $(document).ready(function() {
         console.log('link click');
 
         if (href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) {
-            history.pushState({}, '', href+'.html');
+            if (href=='home')
+                history.pushState({}, '', 'index.html');
+            else
+                history.pushState({}, '', href+'.html');
             loadPage(href);
             return false;
         }
+    });
+
+    $(".navbar-nav li a").click(function(evt) {
+        $(".navbar-collapse").collapse('hide');
     });
 });
 
