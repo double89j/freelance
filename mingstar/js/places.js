@@ -4,7 +4,7 @@
 */
 var hotelLatLng = new google.maps.LatLng(5.332071, 103.147845);
 
-function initialize() {
+function googleMapInit() {
     var mapCanvas = document.getElementById('map-canvas');
     var mapOptions = {
         // center: new google.maps.LatLng(44.5403, -78.5463),
@@ -30,5 +30,5 @@ function initialize() {
         infowindow.open(map, marker);
     });
 }
-// google.maps.event.addDomListener(window, 'load', initialize);
-initialize();
+// google.maps.event.addDomListener(window, 'load', googleMapInit);
+googleMapInit();

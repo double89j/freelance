@@ -18,6 +18,9 @@
 .bottomDivider {
     border-bottom: 1px solid #405B75;
 }
+.underdev {
+    pointer-events:     none;
+}
 
 /* general styles */
 
@@ -32,7 +35,25 @@ body {
 body {
     #background:         url("../images/background.jpg") no-repeat fixed center center / cover rgba(0, 0, 0, 0);
     #background:         url("../images/background.jpg") no-repeat fixed center 120px rgba(0, 0, 0, 0);
-    background:         url("../images/background.jpg") no-repeat fixed center 0 / cover rgba(0, 0, 0, 0);
+    #background:         url("../images/background.jpg") no-repeat fixed center 0 / cover rgba(0, 0, 0, 0);
+    background:         url("../images/1606313.jpg") no-repeat fixed center 0 / cover rgba(0, 0, 0, 0);
+}
+#hotel-name {
+    color:              #424242;
+    font-family:        "Cardo",serif;
+    font-size:          30px;
+    font-weight:        400;
+    outline:            medium none;
+    text-align:         center;
+    text-decoration:    none;
+    transition:         all 0.3s ease-in-out 0s;
+}
+#hotel-name #tagline {
+    color:              #aaa;
+    display:            block;
+    font-size:          12px;
+    letter-spacing:     1.5px;
+    margin:             5px 0 0;
 }
 .langSwitch {
     align-self:         flex-end;
@@ -45,8 +66,10 @@ body {
     font-size:          32px;
     font-weight:        bold;
 }
-.underdev {
-    pointer-events:     none;
+#box3,
+footer {
+    margin-left:        100px;
+    margin-right:       100px;
 }
 
 /* flex section */
@@ -113,8 +136,9 @@ body {
 /* additional sections */
 
 #box1 {
-    #background:         darkblue;
     #background:         url("../images/background.jpg");
+    #background:         url("../images/texture-1.jpeg");
+    background:         #fff;
     color:              white;
     display:            table;
     width:              100%;
@@ -135,14 +159,14 @@ body {
     #height:             400px;
 }
 #box3 {
-    background-color:   #182c3c;
-    color:              white;
+    #background-color:   #182c3c;
+    #background-color:   #151313;
+    background-color:   #fff;
+    box-shadow:         0 1px 6px 1px rgba(0, 0, 0, 0.2);
+    #color:              white;
     #height:             100%;
     #min-height:         500px;
     min-height:         100%;
-
-    margin-left:        50px;
-    margin-right:       50px;
 }
 
 /* navigation */
