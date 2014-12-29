@@ -68,8 +68,20 @@ body {
 }
 #box3,
 footer {
-    margin-left:        100px;
-    margin-right:       100px;
+    /*margin-left:        100px;
+    margin-right:       100px;*/
+    margin-left:        auto;
+    margin-right:       auto;
+    max-width:          960px;
+}
+.flexslider {
+    /*box-shadow:         none;*/
+    margin:             0 auto;
+}
+.flexslider,
+.flexslider .slides img {
+    /*height:             auto;*/
+    width:              750px;
 }
 
 /* flex section */
@@ -115,9 +127,9 @@ footer {
 .pad-section {
     padding:            50px 0;
 }
-.pad-section img {
+/*.pad-section img {
     width:              100%;
-}
+}*/
 
 /* vertical-centered text */
 
