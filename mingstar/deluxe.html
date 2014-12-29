@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Ming Star Hotel - Places</title>
+    <title>Pure CSS3 Animated Sliding Image Gallery - No JS | View in Safari or Chrome</title>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -100,63 +100,42 @@
 
     <!-- #box3 -->
     <div id="box3" class="pad-section">
-        <div id="content" class="container-fluid">
+        <div id="content" class="container">
             <div class="row">
-                <div class="col-sm-5 col-md-6 col-lg-7">
-                    <p class="pageTitle">Map</p>
-                    <p>Explore our interactive map to find out places of interest, driving direction and your way to our hotel</p>
-                    <p>Alternatively, you may download our featured map below:</p>
-                    <p><a onclick="MM_openBrWindow('images/map1.jpg','MAP1','scrollbars=yes,resizable=yes,width=750,height=610')">MAP 1</a></p>
-                    <p><a onclick="MM_openBrWindow('images/map2.jpg','MAP2','status=yes,scrollbars=yes,resizable=yes,width=500,height=400')">MAP 2</a></p>
-                </div>
-                <div class="col-sm-7 col-md-6 col-lg-5">
-                    <div class="col-top-flex-container" style="align-items: flex-end;">
-                        <button type="button" class="btn btn-default"
-                                style="margin-bottom:10px;"
-                                onclick="openGoogleMap()">View on Google Map
-                        </button>
-                        <div id="map-canvas" style="color:black;"></div>
+                <!-- <h1>Pure CSS Sliding Image Gallery - No JS</h1>
+                <h3>View in Safari or Chrome</h3>
+                <p>Works well in Firefox and Opera too but no slidey slidey!</p> -->
+
+                <!-- To do: Use JS looping to load images -->
+                <div class="col-sm-12">
+                    <p class="pageTitle">Gallery</p>
+                    <div id="imgGalleryBox">
+                        <ul id="slider">
+                            <li id="1">
+                                <img src="images/DELUXE ROOM 1.JPG" alt="" width="700" height="438" />
+                                <p><span>Text 1.</span></p>
+                            </li>
+                            <li id="2">
+                                <img src="images/DELUXE ROOM 2.JPG" alt="" width="700" height="438" />
+                                <p><span>Text 2</span></p>
+                            </li>
+                            <li id="3">
+                                <img src="images/DELUXE ROOM 3.JPG" alt="" width="700" height="438" />
+                                <p><span>Text 3</span></p>
+                            </li>
+                            <li id="4">
+                                <img src="images/DELUXE ROOM 4.JPG" alt="" width="700" height="438" />
+                                <p><span>Text 4</span></p>
+                            </li>
+                        </ul>
+
+                        <ul id="thumb">
+                            <li><a href="#1"><img src="images/Deluxe Room 1.JPG" alt="" width="50" height="50" /></a></li>
+                            <li><a href="#2"><img src="images/Deluxe Room 2.JPG" alt="" width="50" height="50" /></a></li>
+                            <li><a href="#3"><img src="images/Deluxe Room 3.JPG" alt="" width="50" height="50" /></a></li>
+                            <li><a href="#4"><img src="images/Deluxe Room 4.JPG" alt="" width="50" height="50" /></a></li>
+                        </ul>
                     </div>
-                    <!-- 
-                    <script type="text/javascript">
-                        function openGoogleMap() {
-                            open('https://www.google.com/maps/d/viewer?ll=5.332071,103.147845&source=embed&iwloc=00045067c9e420974965c&ie=UTF8&msa=0&spn=0,0&hl=en&mid=z-UdJ9CaRHZ8.kWNEoVqUrvDs');
-                            return false;
-                        }
-                    </script>
-                    <script type="text/javascript">
-                        var hotelLatLng = new google.maps.LatLng(5.332071, 103.147845);
-
-                        function initialize() {
-                            var mapCanvas = document.getElementById('map-canvas');
-                            var mapOptions = {
-                                // center: new google.maps.LatLng(44.5403, -78.5463),
-                                center: hotelLatLng,
-                                zoom: 17,
-                                mapTypeId: google.maps.MapTypeId.ROADMAP
-                            }
-                            var map = new google.maps.Map(mapCanvas, mapOptions);
-
-                            var marker = new google.maps.Marker({
-                                position: hotelLatLng
-                                // animation: google.maps.Animation.BOUNCE
-                            });
-                            marker.setMap(map);
-
-                            var infowindow = new google.maps.InfoWindow({
-                                content: '<h5 id="nameOnMap">Ming Star Hotel</h5>We are here!'
-                            });
-
-                            // infowindow.open(map, marker);
-                            google.maps.event.addListener(marker, 'click', function() {
-                                // Open inforwindow on marker click event
-                                infowindow.open(map, marker);
-                            });
-                        }
-                        // google.maps.event.addDomListener(window, 'load', initialize);
-                        initialize();
-                    </script>
-                     -->
                 </div>
             </div><!-- #content -->
         </div><!-- /.container -->

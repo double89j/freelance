@@ -1,2 +1,3 @@
 *.bak
 *.orig
+/mingstar/wwwroot-backup
