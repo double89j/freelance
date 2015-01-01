@@ -68,6 +68,8 @@
     font:               bold 14px/20px Arial;
     text-align:         center;
     z-index:            4;
+    /* in order to make the caption always follow container width */
+    width:              100% !important;
 }
 #slider div.mc-caption a {
     color:              #fb0;
@@ -78,6 +80,9 @@
 
 /* ------ built-in navigation bullets wrapper ------*/
 /* Note: check themes\2\js-image-slider.css to see how to hide nav bullets */
+div.navBulletsWrapper {
+    /*display:            none;*/
+}
 #slider div.navBulletsWrapper  {
     background:         none;
     position:           relative;
