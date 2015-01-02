@@ -10,3 +10,8 @@ $('.flexslider').flexslider({
     pauseOnAction: false,
     controlNav: false
 });
+
+// if ($('#slider')[0].style.length==0) {
+    imageSlider.reload();
+//     console.log('run me');
+// }

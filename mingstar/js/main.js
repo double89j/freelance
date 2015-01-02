@@ -10,7 +10,25 @@
     expanded mobile navbar doesn't collapse after clicking link #12852 
         - https://github.com/twbs/bootstrap/issues/12852
 */
+
+window.myglobal = {};
+(function(context) {
+    context.getHotelName = function() {
+        return 'Ming Star Hotel';
+    };
+    context.getTagline = function() {
+        return 'A Luxury WP Theme';
+    };
+    context.getCopyright = function() {
+        return '<p>All material herein &copy; 2014 – 2015 Ming Group<br />All Rights Reserved.</p>';
+    };
+})(window.myglobal);
+
 $(document).ready(function() {
+    $('#hotelname').text(window.myglobal.getHotelName());
+    $('#tagline').text(window.myglobal.getTagline());
+    $('#copyright').html(window.myglobal.getCopyright());
+
     jQuery.cachedScript = function(url, options) {
          // Allow user to set any option except for dataType, cache, and url
         options = $.extend( options || {}, {
