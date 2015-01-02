@@ -11,10 +11,13 @@
     /*margin:0 auto;*/
 }
 
-#slider,
-#slider div.sliderInner {
+#slider {
     height:             306px; /* Must be the same size as the slider images */
     /*width:              960px;*/
+}
+#slider div.sliderInner {
+    height:             306px; /* Must be the same size as the slider images */
+    width:              100%;
 }
 
 #slider {
