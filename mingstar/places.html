@@ -113,20 +113,28 @@
     <div id="box3" class="pad-section">
         <div id="content" class="container-fluid">
             <div class="row">
-                <div class="col-sm-5 col-md-6 col-lg-6">
+                <div class="col-sm-6 col-md-6 col-lg-6">
                     <p class="pageTitle">Map</p>
                     <p>Explore our interactive map to find out places of interest, driving direction and your way to our hotel</p>
                     <p>Alternatively, you may download our featured map below:</p>
-                    <p><a onclick="MM_openBrWindow('images/map1.jpg','MAP1','scrollbars=yes,resizable=yes,width=750,height=610')">MAP 1</a></p>
-                    <p><a onclick="MM_openBrWindow('images/map2.jpg','MAP2','status=yes,scrollbars=yes,resizable=yes,width=500,height=400')">MAP 2</a></p>
+                    <button id="map1" type="button" class="btn btn-link">MAP1</button>
+                    <button id="map2" type="button" class="btn btn-link">MAP2</button>
+                    <!-- <p><a onclick="MM_openBrWindow('images/map1.jpg','MAP1','scrollbars=yes,resizable=yes,width=750,height=610')">MAP 1</a></p>
+                    <p><a onclick="MM_openBrWindow('images/map2.jpg','MAP2','status=yes,scrollbars=yes,resizable=yes,width=500,height=400')">MAP 2</a></p> -->
+
                 </div>
-                <div class="col-sm-7 col-md-6 col-lg-6">
+                <div class="col-sm-6 col-md-6 col-lg-6">
                     <div class="col-top-flex-container" style="align-items: flex-end;">
                         <button type="button" class="btn btn-default"
                                 style="margin-bottom:10px;"
                                 onclick="openGoogleMap()">View on Google Map
                         </button>
-                        <div id="map-canvas" style="color:black;"></div>
+                        <!-- <div style="width:100%; overflow-x:auto;"> -->
+                            <div id="map-canvas" class="hideBlock" style="color:black;"></div>
+                            <iframe src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=115860096431214721188.00045067c2af1549adaeb&amp;ll=5.332071,103.147845&amp;spn=0,0&amp;iwloc=00045067c9e420974965c&amp;output=embed&amp;s=AARTsJoZwislyC0OJ20cAFwpiUvpW94oSA"
+                                    style="border:0;" 
+                                    width="100%" height="350" seamless="seamless"></iframe>
+                        <!-- </div> -->
                     </div>
                     <!-- 
                     <script type="text/javascript">

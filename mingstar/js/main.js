@@ -59,8 +59,10 @@ $(document).ready(function() {
             // Do this when a page loads
             console.log('init call');
 
-            if (currentPage=='index.html')
-                currentPage = 'home'
+            if (currentPage=='index.html') {
+                // currentPage = 'home'
+                currentPage = 'aboutus'
+            }
             else
                 currentPage = currentPage.slice(0, currentPage.indexOf('.'));
 

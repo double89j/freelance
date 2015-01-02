@@ -56,6 +56,18 @@
         h1 {
             background-color: yellow;
         }*/
+        #readmoretext.myopendown {
+            max-height: 0;
+            overflow: hidden;
+
+            -moz-transition: max-height 0.5s;
+            -o-transition: max-height 0.5s;
+            -webkit-transition: max-height 0.5s;
+            transition: max-height 0.5s;
+        }
+        #readmoretext.myopendown.showtext {
+            max-height: 400px;
+        }
     </style>
     
     <!-- Gallery CSS and JavaScript -->
