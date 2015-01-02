@@ -19,6 +19,12 @@ window.myglobal = {};
     context.getTagline = function() {
         return 'A Luxury WP Theme';
     };
+    context.getHotelPhone = function() {
+        return '+60-9-6228666';
+    };
+    context.getHotelFax = function() {
+        return '+60-9-6221888';
+    };
     context.getCopyright = function() {
         return '<p>All material herein &copy; 2014 – 2015 Ming Group<br />All Rights Reserved.</p>';
     };
@@ -27,6 +33,8 @@ window.myglobal = {};
 $(document).ready(function() {
     $('#hotelname').text(window.myglobal.getHotelName());
     $('#tagline').text(window.myglobal.getTagline());
+    $('#hotelphone').text(window.myglobal.getHotelPhone());
+    $('#hotelfax').text(window.myglobal.getHotelFax());
     $('#copyright').html(window.myglobal.getCopyright());
 
     jQuery.cachedScript = function(url, options) {
