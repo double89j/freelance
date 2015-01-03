@@ -160,7 +160,18 @@ footer {
     #background:         url("../images/background.jpg");
     #background:         url("../images/texture-1.jpeg");
     background:         #fff;
-    color:              white;
+
+    #background:          -webkit-radial-gradient(#dcdcdc, #fff, #dcdcdc);
+    #background:          -o-radial-gradient(#dcdcdc, #fff, #dcdcdc);
+    #background:          -moz-radial-gradient(#dcdcdc, #fff, #dcdcdc);
+    #background:          radial-gradient(#dcdcdc 0%, #fff 20%) 0 8px;
+
+    #background:         -webkit-linear-gradient(#fff, #dcdcdc, #fff);
+    #background:         -o-linear-gradient(#fff, #dcdcdc, #fff);
+    #background:         -moz-linear-gradient(#fff, #dcdcdc, #fff);
+    #background:         linear-gradient(#fff, #dcdcdc, #fff);
+
+    /*color:              white;*/
     display:            table;
     width:              100%;
     /*height:             150px;*/
