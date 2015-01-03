@@ -6,127 +6,87 @@
         - http://formvalidation.io/
     Jsfiddle
         - http://jsfiddle.net/davimoreira/b9yoakyx/
+    Bootstrap DatetimePicker
+        - http://eonasdan.github.io/bootstrap-datetimepicker/
+    Bootstrap DatePicker
+        - https://bootstrap-datepicker.readthedocs.org/en/release/#
 */
 
-// $('#formbutton').click(function(evt) {
-//     evt.preventDefault();
-//     console.log($('#inputName').val());
-// });
-
-// // $('#contactusform').validator();
-// $('#testbutton').click(function(evt) {
-//     evt.preventDefault();
-//     alert('click');
-//     $('#testform').validate({
-//         rules: {
-//             firstname: {
-//                 minlength: 3,
-//                 maxlength: 15,
-//                 required: true
-//             },
-//             lastname: {
-//                 minlength: 3,
-//                 maxlength: 15,
-//                 required: true
-//             }
-//         },
-//         highlight: function(element) {
-//             $(element).closest('.form-group').addClass('has-error');
-//         },
-//         unhighlight: function(element) {
-//             $(element).closest('.form-group').removeClass('has-error');
-//         },
-//         errorElement: 'span',
-//         errorClass: 'help-block',
-//         errorPlacement: function(error, element) {
-//             if(element.parent('.input-group').length) {
-//                 error.insertAfter(element.parent());
-//             } else {
-//                 error.insertAfter(element);
-//             }
-//         }
-//     });
+$('#datepicker').datepicker({
+    format: 'dd MM, yyyy',
+    todayBtn: 'linked',
+    autoclose: true,
+    todayHighlight: true
 });
-
-
-// alert('contact');
-// // $(document).ready(function() {
-//     $('#contactusform')
-//         // IMPORTANT: You must declare .on('init.field.bv')
-//         // before calling .bootstrapValidator(options)
-//         .on('init.field.bv', function(e, data) {
-//             // data.bv      --> The BootstrapValidator instance
-//             // data.field   --> The field name
-//             // data.element --> The field element
-
-//             var $parent    = data.element.parents('.form-group'),
-//                 $icon      = $parent.find('.form-control-feedback[data-bv-icon-for="' + data.field + '"]'),
-//                 options    = data.bv.getOptions(),                      // Entire options
-//                 validators = data.bv.getOptions(data.field).validators; // The field validators
-
-//             if (validators.notEmpty && options.feedbackIcons && options.feedbackIcons.required) {
-//                 // The field uses notEmpty validator
-//                 // Add required icon
-//                 $icon.addClass(options.feedbackIcons.required).show();
-//             }
-//         })
-
-//         .bootstrapValidator({
-//             feedbackIcons: {
-//                 required: 'fa fa-asterisk',
-//                 valid: 'fa fa-check',
-//                 invalid: 'fa fa-times',
-//                 validating: 'fa fa-refresh'
-//             },
-//             fields: {
-//                 name: {
-//                     validators: {
-//                         notEmpty: {
-//                             message: 'The name is required'
-//                         }
-//                     }
-//                 },
-//                 description: {
-//                     validators: {
-//                         stringLength: {
-//                             max: 300,
-//                             message: 'The description must be less than 300 characters long'
-//                         }
-//                     }
-//                 },
-//                 price: {
-//                     validators: {
-//                         notEmpty: {
-//                             message: 'The price is required'
-//                         },
-//                         numeric: {
-//                             message: 'The price must be a number'
-//                         }
-//                     }
-//                 },
-//                 quantity: {
-//                     validators: {
-//                         notEmpty: {
-//                             message: 'The quantity is required'
-//                         },
-//                         integer: {
-//                             message: 'The quantity must be a number'
-//                         }
-//                     }
-//                 }
-//             }
-//         })
-
-//         .on('status.field.bv', function(e, data) {
-//             // Remove the required icon when the field updates its status
-//             var $parent    = data.element.parents('.form-group'),
-//                 $icon      = $parent.find('.form-control-feedback[data-bv-icon-for="' + data.field + '"]'),
-//                 options    = data.bv.getOptions(),                      // Entire options
-//                 validators = data.bv.getOptions(data.field).validators; // The field validators
-
-//             if (validators.notEmpty && options.feedbackIcons && options.feedbackIcons.required) {
-//                 $icon.removeClass(options.feedbackIcons.required).addClass('fa');
-//             }
-//         });
-//     console.log($('#contactusform'));
-// // });
+$('#contactusform').validate({
+    rules: {
+        name: 'required',
+        phone: 'required',
+        email: 'required'
+        // firstname: "required",
+        // lastname: "required",
+        // username: {
+        //     required: true,
+        //     minlength: 2
+        // },
+        // password: {
+        //     required: true,
+        //     minlength: 5
+        // },
+        // confirm_password: {
+        //     required: true,
+        //     minlength: 5,
+        //     equalTo: "#password"
+        // },
+        // email: {
+        //     required: true,
+        //     email: true
+        // },
+        // topic: {
+        //     required: "#newsletter:checked",
+        //     minlength: 2
+        // },
+        // agree: "required"
+    },
+    messages: {
+        name: 'The name is required.',
+        phone: 'The phone is required.',
+        email: 'The email is required.'
+        // firstname: "Please enter your firstname",
+        // lastname: "Please enter your lastname",
+        // username: {
+        //     required: "Please enter a username",
+        //     minlength: "Your username must consist of at least 2 characters"
+        // },
+        // password: {
+        //     required: "Please provide a password",
+        //     minlength: "Your password must be at least 5 characters long"
+        // },
+        // confirm_password: {
+        //     required: "Please provide a password",
+        //     minlength: "Your password must be at least 5 characters long",
+        //     equalTo: "Please enter the same password as above"
+        // },
+        // email: "Please enter a valid email address",
+        // agree: "Please accept our policy"
+    },
+    highlight: function(element) {
+        $(element).closest('.form-group').addClass('has-error');
+    },
+    unhighlight: function(element) {
+        $(element).closest('.form-group').removeClass('has-error');
+    },
+    errorElement: 'span',
+    errorClass: 'help-block',
+    errorPlacement: function(error, element) {
+        if(element.parent('.input-group').length) {
+            error.insertAfter(element.parent());
+        } else {
+            error.insertAfter(element);
+        }
+    }
+});
+$('#formbutton').click(function(evt) {
+    evt.preventDefault();
+    alert('under development');
+});

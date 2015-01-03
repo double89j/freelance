@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Ming Star Hotel - Contact Us</title>
 
-    <!-- jQuery library -->
+    <!-- jQuery library & jQuery Validation Plugin -->
     <script src="jquery-1.11.2/jquery-1.11.2.min.js"></script>
+    <script src="jquery-validation-1.13.1/jquery.validate.min.js"></script>
 
-    <!-- Bootstrap CSS & JavaScript -->
+    <!-- Bootstrap & Bootstrap Datepicker CSS & JavaScript -->
     <script src="bootstrap-3.3.1/js/bootstrap.min.js"></script>
+    <script src="bootstrap-datepicker-1.3.1/js/bootstrap-datepicker.js"></script>
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.3.1/css/datepicker.css">
 
     <!-- Google Maps JavaScript -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -113,15 +116,6 @@
                     <p class="pageTitle">Contact Us</p>
                     <p>Ming Star thanks you once again for visiting our website.</p>
                     <p>Should you have any inquiries, please feel free to contact us via phone, fax or email as shown below.</p>
-                    <!-- <p>
-                        217, Wisma Cemerlang<br />
-                        Jalan Sultan Zainal Abidin,<br />
-                        20000, Kuala Terengganu,<br />
-                        Terengganu, Malaysia.<br /><br />
-                        Phone: +609-6228666<br />
-                        Fax: +609-6227666<br />
-                        Email: sales@mingstarhotel.com
-                    </p> -->
                     <address>
                         <strong>Ming Star Hotel</strong><br>
                         217, Wisma Cemerlang<br />
@@ -146,22 +140,36 @@
                     <hr style="border:1px solid #838383;" />
                     <p>Alternatively, you may fill up our contact form to reach us.</p>
                     <p>Let us hear from you! Your generous input will definitely help us to server you better.</p>
-                    <form id="contactusform">
+
+                    <form id="contactusform" method="post" action="">
                         <div class="form-group">
                             <label for="inputName" class="control-label">Name</label>
-                            <input id="inputName" type="text" class="form-control" placeholder="Enter name">
+                            <input id="inputName" name="name" type="text"
+                                   class="form-control" placeholder="Enter name">
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
                             <label for="inputPhone" class="control-label">Phone</label>
-                            <input id="inputPhone" type="number" class="form-control" placeholder="Enter phone">
+                            <input id="inputPhone" name="phone" type="text"
+                                   class="form-control" placeholder="Enter phone">
                         </div>
                         <div class="form-group">
                             <label for="inputEmail" class="control-label">E-mail</label>
-                            <input id="inputEmail" type="email" class="form-control" placeholder="Enter email">
+                            <input id="inputEmail" name="email" type="email"
+                                   class="form-control" placeholder="Enter email">
                         </div>
                         <div class="form-group">
-                            <label for="inputRoomType">Room Type (Testing)</label>
+                            <label for="datepicker" class="control-label">Check-In Date</label>
+                            <div id="datepicker" class="input-group date">
+                                <input type="text" class="form-control" placeholder="Select date">
+                                <span class="input-group-addon">
+                                    <!-- <i class="glyphicon glyphicon-th"></i> -->
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputRoomType">Room Type</label>
                             <div class="row-left-flex-container" style="flex-wrap:wrap;">
                                 <div style="margin-right:40px;">
                                     <div class="radio">
@@ -199,7 +207,40 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group"
+                             style="display:inline-block; max-width:100px; width:100%; margin-right:35px;">
+                            <label for="adults">Adults</label>
+                            <select id="adults" class="form-control">
+                                    <!-- style="max-width:100px; display:inline-block;"> -->
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div class="form-group"
+                             style="display:inline-block; max-width:100px; width:100%;">
+                            <label for="children">Children</label>
+                            <select id="children" class="form-control">
+                                    <!-- style="max-width:100px; display:inline-block;"> -->
+                                <option value="0">0</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <!-- <div class="form-group">
                             <label for="inputRoomType2">Room Type 2 (Testing)</label>
                             <select id="inputRoomType2" class="form-control">
                                 <option value="option1">Standard Room</option>
@@ -209,41 +250,21 @@
                                 <option value="option5">Executive Room</option>
                                 <option value="option6">Family Room</option>
                             </select>
-                        </div>
+                        </div> -->
+                        <!-- <div class="form-group">
+                            <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div> -->
                         <div class="form-group">
                             <label for="inputNote">Note</label>
-                            <textarea id="inputNote" class="form-control" rows="3"></textarea>
+                            <textarea id="inputNote" class="form-control" rows="3"
+                                      placeholder="Please write here if you have any special note."></textarea>
                         </div>
-                        <!-- <div class="form-group">
-                            <label for="exampleInputFile">File input</label>
-                            <input type="file" id="exampleInputFile">
-                            <p class="help-block">Example block-level help text here.</p>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> Check me out
-                            </label>
-                        </div> -->
                         <button id="formbutton" type="submit" class="btn btn-primary pull-right">Submit</button>
-                    </form>
-
-                    <form id="testform" class="hideBlock">
-                        <div class="form-group">
-                            <label class="control-label" for="firstname">Nome:</label>
-                            <div class="input-group">
-                                <span class="input-group-addon">$</span>
-                                <input class="form-control" placeholder="Insira o seu nome próprio" name="firstname" type="text" />
-                            </div>
-                        </div>
-                            
-                        <div class="form-group">
-                            <label class="control-label" for="lastname">Apelido:</label>
-                            <div class="input-group">
-                                <span class="input-group-addon">€</span>
-                                <input class="form-control" placeholder="Insira o seu apelido" name="lastname" type="text" />
-                            </div>
-                        </div>
-                            <button id="testbutton" type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div><!-- #content -->
