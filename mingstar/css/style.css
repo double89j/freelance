@@ -92,6 +92,14 @@ footer {
 #slider {
     box-shadow:         none !important;
 }
+.mcSlc {
+    width: 100% !important;
+    height: 306px !important;
+}
+#slider,
+.mcSlc {
+    background-position: center !important;
+}
 
 /* flex section */
 
