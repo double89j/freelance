@@ -86,7 +86,7 @@ $('#contactusform').validate({
         }
     }
 });
-$('#formbutton').click(function(evt) {
-    evt.preventDefault();
-    alert('under development');
-});
+// $('#formbutton').click(function(evt) {
+//     evt.preventDefault();
+//     alert('under development');
+// });
