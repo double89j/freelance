@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Pure CSS3 Animated Sliding Image Gallery - No JS | View in Safari or Chrome</title>
+    <title>Deluxe</title>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- jQuery library & jQuery Validation Plugin -->
+    <script src="jquery-1.11.2/jquery-1.11.2.min.js"></script>
+    <script src="jquery-validation-1.13.1/jquery.validate.min.js"></script>
 
-    <!-- Latest compiled and minified Bootstrap JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <!-- Bootstrap & Bootstrap Datepicker CSS & JavaScript -->
+    <script src="bootstrap-3.3.1/js/bootstrap.min.js"></script>
+    <script src="bootstrap-datepicker-1.3.1/js/bootstrap-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.3.1/css/datepicker.css">
 
     <!-- Google Maps JavaScript -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <!-- FlexSlider CSS & JavaScript -->
+    <script src="FlexSlider/jquery-min.js"></script>
+    <script src="FlexSlider/jquery.flexslider.js"></script> 
+    <link rel="stylesheet" type="text/css" href="FlexSlider/flexslider.css">
 
     <!-- JavaScrip -->
     <script src="js/main.js"></script>
@@ -26,42 +32,53 @@
     <link href="css/style.css" rel="stylesheet" />
     
     <!-- Gallery CSS and JavaScript -->
-    <link rel="stylesheet" type="text/css" href="css/gallery-style.css" />
-		<link rel="stylesheet" type="text/css" href="css/elastislide.css" />
-		<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
-			<div class="rg-image-wrapper">
-				{{if itemsCount > 1}}
-					<div class="rg-image-nav">
-						<a href="#" class="rg-image-nav-prev">Previous Image</a>
-						<a href="#" class="rg-image-nav-next">Next Image</a>
-					</div>
-				{{/if}}
-				<div class="rg-image"></div>
-				<div class="rg-loading"></div>
-				<div class="rg-caption-wrapper">
-					<div class="rg-caption" style="display:none;">
-						<p></p>
-					</div>
-				</div>
-			</div>
-		</script>
-		<script type="text/javascript" src="js/gallery.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/gallery-style.css" />
+        <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+        <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
+            <div class="rg-image-wrapper">
+                {{if itemsCount > 1}}
+                    <div class="rg-image-nav">
+                        <a href="#" class="rg-image-nav-prev">Previous Image</a>
+                        <a href="#" class="rg-image-nav-next">Next Image</a>
+                    </div>
+                {{/if}}
+                <div class="rg-image"></div>
+                <div class="rg-loading"></div>
+                <div class="rg-caption-wrapper">
+                    <div class="rg-caption" style="display:none;">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <script type="text/javascript" src="js/deluxe.js"></script>
+        <script type="text/javascript" src="js/standard.js"></script>
+        <script type="text/javascript" src="js/superior.js"></script>
+        <script type="text/javascript" src="js/superiorPlus.js"></script>
+
+    <!-- Image Slider -->
+    <link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="js/js-image-slider.js" type="text/javascript"></script>
+    
+    <!-- Photo Grid -->
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
     <!-- #box1 -->
-    <div id="box1" class="home">
-        <div class="container">
-            <div class="row-left-flex-container">
-                <img src="images/pic_top.png" alt="Ming Star Hotel" />
-                <span class="flex-spacer"></span>
-                <a href="#" class="langSwitch underdev" style="margin-right: 15px;">ENGLISH</a>
-                <a href="#" class="langSwitch underdev">中文</a>
+    <div id="box1">
+        <div class="container-fluid">
+            <div class="row-left-flex-container" style="justify-content: center;">
+                <a id="hotel-name" href="#">
+                    <span id="hotelname"></span>
+                    <!-- <span id="tagline"></span> -->
+                </a>
             </div>
-        </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
     </div><!-- #box1 --> 
 
     <!-- navbar -->
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed"
@@ -78,16 +95,17 @@
                     <li><a href="home" class="underdev">Home</a></li>
                     <li><a href="aboutus">About Us</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">
+                        <a id="rooms" href="#" class="dropdown-toggle" role="button"
+                           data-toggle="dropdown" aria-expanded="false">
                             Rooms&nbsp;<span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Deluxe</a></li>
+                            <li><a href="deluxe">Deluxe</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Superior Plus</a></li>
-                            <li><a href="#">Superior</a></li>
+                            <li><a href="superiorPlus">Superior Plus</a></li>
+                            <li><a href="superior">Superior</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Standard</a></li>
+                            <li><a href="standard">Standard</a></li>
                         </ul>
                     </li>
                     <li><a href="gallery">Gallery</a></li>
@@ -100,51 +118,43 @@
 
     <!-- #box3 -->
     <div id="box3" class="pad-section">
-        <div id="content" class="container">
-            <div class="row">
-                <!-- <h1>Pure CSS Sliding Image Gallery - No JS</h1>
-                <h3>View in Safari or Chrome</h3>
-                <p>Works well in Firefox and Opera too but no slidey slidey!</p> -->
-
-                <!-- To do: Use JS looping to load images -->
-                <div class="col-sm-12">
-                    <p class="pageTitle">Gallery</p>
-                    <div id="imgGalleryBox">
-                        <ul id="slider">
-                            <li id="1">
-                                <img src="images/DELUXE ROOM 1.JPG" alt="" width="700" height="438" />
-                                <p><span>Text 1.</span></p>
-                            </li>
-                            <li id="2">
-                                <img src="images/DELUXE ROOM 2.JPG" alt="" width="700" height="438" />
-                                <p><span>Text 2</span></p>
-                            </li>
-                            <li id="3">
-                                <img src="images/DELUXE ROOM 3.JPG" alt="" width="700" height="438" />
-                                <p><span>Text 3</span></p>
-                            </li>
-                            <li id="4">
-                                <img src="images/DELUXE ROOM 4.JPG" alt="" width="700" height="438" />
-                                <p><span>Text 4</span></p>
-                            </li>
-                        </ul>
-
-                        <ul id="thumb">
-                            <li><a href="#1"><img src="images/Deluxe Room 1.JPG" alt="" width="50" height="50" /></a></li>
-                            <li><a href="#2"><img src="images/Deluxe Room 2.JPG" alt="" width="50" height="50" /></a></li>
-                            <li><a href="#3"><img src="images/Deluxe Room 3.JPG" alt="" width="50" height="50" /></a></li>
-                            <li><a href="#4"><img src="images/Deluxe Room 4.JPG" alt="" width="50" height="50" /></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!-- #content -->
-        </div><!-- /.container -->
-    </div><!-- #box3 --> 
+        <div id="content" class="container-fluid">
+            <div id="rg-gallery" class="rg-gallery">
+                    <div class="rg-thumbs">
+                        <!-- Elastislide Carousel Thumbnail Viewer -->
+                        <div class="es-carousel-wrapper">
+                            <div class="es-nav">
+                                <span class="es-nav-prev">Previous</span>
+                                <span class="es-nav-next">Next</span>
+                            </div>
+                            <div class="es-carousel">
+                                <ul>
+                                    <li><a href="#"><img src="images/Deluxe Room 1.jpg" data-large="images/Deluxe Room 1.jpg" alt="image01" data-description="Sample Text" /></a></li>
+                                    <li><a href="#"><img src="images/Deluxe Room 2.jpg" data-large="images/Deluxe Room 2.jpg" alt="image02" data-description="Sample Text" /></a></li>
+                                    <li><a href="#"><img src="images/Deluxe Room 3.jpg" data-large="images/Deluxe Room 3.jpg" alt="image03" data-description="Sample Text" /></a></li>
+                                    <li><a href="#"><img src="images/Deluxe Room 4.jpg" data-large="images/Deluxe Room 4.jpg" alt="image04" data-description="Sample Text" /></a></li>
+                                    <li><a href="#"><img src="images/Deluxe Room Joined.jpg" data-large="images/Deluxe Room Joined.jpg" alt="image05" data-description="Sample Text" /></a></li>
+                                    <li><a href="#"><img src="images/Deluxe Room King.jpg" data-large="images/Deluxe Room King.jpg" alt="image06" data-description="Sample Text" /></a></li>
+                                    <li><a href="#"><img src="images/Deluxe Room.jpg" data-large="images/Deluxe Room.jpg" alt="image07" data-description="Sample Text" /></a></li>
+                                    <li><a href="#"><img src="images/Deluxe Single 1.jpg" data-large="images/Deluxe Single 1.jpg" alt="image08" data-description="Sample Text" /></a></li>
+                                    <li><a href="#"><img src="images/Deluxe Single 2.jpg" data-large="images/Deluxe Single 2.jpg" alt="image09" data-description="Sample Text" /></a></li>
+                                    <li><a href="#"><img src="images/Deluxe Single 3.jpg" data-large="images/Deluxe Single 3.jpg" alt="image10" data-description="Sample Text" /></a></li>
+                                    <li><a href="#"><img src="images/Deluxe Single 4.jpg" data-large="images/Deluxe Single 4.jpg" alt="image11" data-description="Sample Text" /></a></li>
+                                    <li><a href="#"><img src="images/Deluxe Single Room.jpg" data-large="images/Deluxe Single Room.jpg" alt="image12" data-description="Sample Text" /></a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <!-- End Elastislide Carousel Thumbnail Viewer -->
+                    </div><!-- rg-thumbs -->
+                </div><!-- rg-gallery -->  
+        </div><!-- /.container-fluid -->
+    </div><!-- #box3 -->
+        
 
     <!-- footer -->
     <footer>
         <hr class="footerDivider" />
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-3 col-md-3 col-lg-5">
                     <table class="pageContact"><tbody>
@@ -153,11 +163,11 @@
                                 aria-hidden="true"></span>
                             </td>
                             <td class="contactSpace1">Phone:</td>
-                            <td>+60-9-6228666</td>
+                            <td id="hotelphone"></td>
                         </tr>
                         <tr>
                             <td>FAX:</td>
-                            <td>+60-9-6221888</td>
+                            <td id="hotelfax"></td>
                         </tr>
                     </tbody></table>
                 </div>
