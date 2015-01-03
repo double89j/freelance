@@ -177,8 +177,13 @@ $(document).ready(function() {
     $('#navbar-collapse-main').on('click', 'a', function(evt) {
         // console.log('item ID: '+$(this).attr('id'));
         var href = $(this).attr('href');
+        // if (href=='deluxe') {
+        //     evt.preventDefault();
+        //     alert(href);
+        //     return;
+        // }
         if (href=='#') {
-            evt.preventDefault();
+            // evt.preventDefault();
             return;
         }
 
@@ -187,6 +192,11 @@ $(document).ready(function() {
         if (href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) {
             if (href=='home')
                 history.pushState({}, '', 'index.html');
+            else if (href=='deluxe' || href=='superiorplus' || href=='superior' || href=='standard') {
+                history.pushState({}, '', href+'.html');
+                // close the dropdown
+                $('#rooms').dropdown('toggle');
+            }
             else
                 history.pushState({}, '', href+'.html');
             loadPage(href);
