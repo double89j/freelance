@@ -6,11 +6,11 @@
     <title>Ming Star Hotel - Contact Us</title>
 
     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="jquery-1.11.2/jquery-1.11.2.min.js"></script>
 
     <!-- Bootstrap CSS & JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="bootstrap-3.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.1/css/bootstrap.min.css">
 
     <!-- Google Maps JavaScript -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -57,22 +57,18 @@
 <body>
     <!-- #box1 -->
     <div id="box1" class="home">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row-left-flex-container" style="justify-content: center;">
-                <!-- <img src="images/pic_top.png" alt="Ming Star Hotel" />
-                <span class="flex-spacer"></span>
-                <a href="#" class="langSwitch underdev" style="margin-right: 15px;">ENGLISH</a>
-                <a href="#" class="langSwitch underdev">中文</a> -->
                 <a id="hotel-name" href="#">
                     <span id="hotelname"></span>
                     <span id="tagline"></span>
                 </a>
             </div>
-        </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
     </div><!-- #box1 --> 
 
     <!-- navbar -->
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed"
@@ -150,17 +146,18 @@
                     <hr style="border:1px solid #838383;" />
                     <p>Alternatively, you may fill up our contact form to reach us.</p>
                     <p>Let us hear from you! Your generous input will definitely help us to server you better.</p>
-                    <form>
+                    <form id="contactusform">
                         <div class="form-group">
-                            <label for="inputName">Name</label>
+                            <label for="inputName" class="control-label">Name</label>
                             <input id="inputName" type="text" class="form-control" placeholder="Enter name">
+                            <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPhone">Phone</label>
+                            <label for="inputPhone" class="control-label">Phone</label>
                             <input id="inputPhone" type="number" class="form-control" placeholder="Enter phone">
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail">E-mail</label>
+                            <label for="inputEmail" class="control-label">E-mail</label>
                             <input id="inputEmail" type="email" class="form-control" placeholder="Enter email">
                         </div>
                         <div class="form-group">
@@ -227,11 +224,30 @@
                                 <input type="checkbox"> Check me out
                             </label>
                         </div> -->
-                        <button type="submit" class="btn btn-default pull-right">Submit</button>
+                        <button id="formbutton" type="submit" class="btn btn-primary pull-right">Submit</button>
+                    </form>
+
+                    <form id="testform" class="hideBlock">
+                        <div class="form-group">
+                            <label class="control-label" for="firstname">Nome:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <input class="form-control" placeholder="Insira o seu nome próprio" name="firstname" type="text" />
+                            </div>
+                        </div>
+                            
+                        <div class="form-group">
+                            <label class="control-label" for="lastname">Apelido:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">€</span>
+                                <input class="form-control" placeholder="Insira o seu apelido" name="lastname" type="text" />
+                            </div>
+                        </div>
+                            <button id="testbutton" type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div><!-- #content -->
-        </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
     </div><!-- #box3 --> 
 
     <!-- footer -->
@@ -258,7 +274,7 @@
                     <p>All material herein &copy; 2014 – 2015 Ming Group<br />All Rights Reserved.</p>
                 </div>
             </div><!-- /.row -->
-        </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
     </footer><!-- footer -->
 </body>
 </html>

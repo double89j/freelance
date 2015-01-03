@@ -40,7 +40,10 @@ body {
 }
 #hotel-name {
     color:              #424242;
-    font-family:        "Cardo",serif;
+    #font-family:        "Cardo",serif;
+    #font-family:        Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+    #font-family:        "Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif;
+    font-family:        "Lucida Bright",Georgia,serif;
     font-size:          30px;
     font-weight:        400;
     outline:            medium none;
@@ -51,6 +54,7 @@ body {
 #hotel-name #tagline {
     color:              #aaa;
     display:            block;
+    font-family:        "Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif;
     font-size:          12px;
     letter-spacing:     1.5px;
     margin:             5px 0 0;
@@ -66,13 +70,15 @@ body {
     font-size:          32px;
     font-weight:        bold;
 }
+#box1,
 #box3,
+.navbar,
 footer {
-    /*margin-left:        100px;
-    margin-right:       100px;*/
     margin-left:        auto;
     margin-right:       auto;
     max-width:          960px;
+    /*margin-left:        100px;
+    margin-right:       100px;*/
 }
 .flexslider {
     /*box-shadow:         none;*/
@@ -82,6 +88,9 @@ footer {
 .flexslider .slides img {
     /*height:             auto;*/
     width:              750px;
+}
+#slider {
+    box-shadow:         none !important;
 }
 
 /* flex section */
@@ -125,7 +134,7 @@ footer {
 /* padded section */
 
 .pad-section {
-    padding:            50px 0;
+    padding:            0 0 10px 0;
 }
 /*.pad-section img {
     width:              100%;
@@ -179,6 +188,9 @@ footer {
     #height:             100%;
     #min-height:         500px;
     min-height:         100%;
+}
+#contactusform .has-feedback .form-control-feedback {
+    top: 8px;
 }
 
 /* navigation */
@@ -256,7 +268,29 @@ footer .glyphicon:hover {
 
 .navbar {
     border-radius:      0;
-    margin:             0;
+    margin-top:         0;
+    margin-bottom:      0;
+}
+.navbar-inverse {
+    border:             0;
+}
+.navbar-fixed-top {
+    border-width:       1px;
+    height:             52px;
+}
+.navbar-collapse {
+    background:         none repeat scroll 0 0 rgb(248, 248, 248); /* if use navbar-inverse then disabled this and open below */
+    background-color:   #222;
+}
+.navbar-fixed-top .navbar-collapse/*,
+.navbar-fixed-bottom .navbar-collapse*/ {
+    max-height:         200px;
+}
+.navbar-fixed-top .navbar-collapse/*,
+.navbar-static-top .navbar-collapse,
+.navbar-fixed-bottom .navbar-collapse*/ {
+    padding-left:       15px;
+    padding-right:      15px;
 }
 
 /* google map */

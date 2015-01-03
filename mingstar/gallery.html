@@ -6,11 +6,11 @@
     <title>Pure CSS3 Animated Sliding Image Gallery - No JS | View in Safari or Chrome</title>
 
     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="jquery-1.11.2/jquery-1.11.2.min.js"></script>
 
     <!-- Bootstrap CSS & JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="bootstrap-3.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.1/css/bootstrap.min.css">
 
     <!-- Google Maps JavaScript -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -56,23 +56,19 @@
 </head>
 <body>
     <!-- #box1 -->
-    <div id="box1" class="home">
-        <div class="container">
+    <div id="box1">
+        <div class="container-fluid">
             <div class="row-left-flex-container" style="justify-content: center;">
-                <!-- <img src="images/pic_top.png" alt="Ming Star Hotel" />
-                <span class="flex-spacer"></span>
-                <a href="#" class="langSwitch underdev" style="margin-right: 15px;">ENGLISH</a>
-                <a href="#" class="langSwitch underdev">中文</a> -->
                 <a id="hotel-name" href="#">
                     <span id="hotelname"></span>
                     <span id="tagline"></span>
                 </a>
             </div>
-        </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
     </div><!-- #box1 --> 
 
     <!-- navbar -->
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed"

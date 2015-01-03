@@ -6,11 +6,11 @@
     <title>Ming Star Hotel - Places</title>
 
     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="jquery-1.11.2/jquery-1.11.2.min.js"></script>
 
     <!-- Bootstrap CSS & JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="bootstrap-3.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.1/css/bootstrap.min.css">
 
     <!-- Google Maps JavaScript -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -56,23 +56,19 @@
 </head>
 <body>
     <!-- #box1 -->
-    <div id="box1" class="home">
-        <div class="container">
+    <div id="box1">
+        <div class="container-fluid">
             <div class="row-left-flex-container" style="justify-content: center;">
-                <!-- <img src="images/pic_top.png" alt="Ming Star Hotel" />
-                <span class="flex-spacer"></span>
-                <a href="#" class="langSwitch underdev" style="margin-right: 15px;">ENGLISH</a>
-                <a href="#" class="langSwitch underdev">中文</a> -->
                 <a id="hotel-name" href="#">
                     <span id="hotelname"></span>
                     <span id="tagline"></span>
                 </a>
             </div>
-        </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
     </div><!-- #box1 --> 
 
     <!-- navbar -->
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed"
@@ -119,11 +115,8 @@
                     <p>Alternatively, you may download our featured map below:</p>
                     <button id="map1" type="button" class="btn btn-link">MAP1</button>
                     <button id="map2" type="button" class="btn btn-link">MAP2</button>
-                    <!-- <p><a onclick="MM_openBrWindow('images/map1.jpg','MAP1','scrollbars=yes,resizable=yes,width=750,height=610')">MAP 1</a></p>
-                    <p><a onclick="MM_openBrWindow('images/map2.jpg','MAP2','status=yes,scrollbars=yes,resizable=yes,width=500,height=400')">MAP 2</a></p> -->
-
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-6">
+                <div class="col-sm-6 col-md-6 col-lg-6" style="padding-top:10px;">
                     <div class="col-top-flex-container" style="align-items: flex-end;">
                         <button type="button" class="btn btn-default"
                                 style="margin-bottom:10px;"
@@ -136,49 +129,9 @@
                                     width="100%" height="350" seamless="seamless"></iframe>
                         <!-- </div> -->
                     </div>
-                    <!-- 
-                    <script type="text/javascript">
-                        function openGoogleMap() {
-                            open('https://www.google.com/maps/d/viewer?ll=5.332071,103.147845&source=embed&iwloc=00045067c9e420974965c&ie=UTF8&msa=0&spn=0,0&hl=en&mid=z-UdJ9CaRHZ8.kWNEoVqUrvDs');
-                            return false;
-                        }
-                    </script>
-                    <script type="text/javascript">
-                        var hotelLatLng = new google.maps.LatLng(5.332071, 103.147845);
-
-                        function initialize() {
-                            var mapCanvas = document.getElementById('map-canvas');
-                            var mapOptions = {
-                                // center: new google.maps.LatLng(44.5403, -78.5463),
-                                center: hotelLatLng,
-                                zoom: 17,
-                                mapTypeId: google.maps.MapTypeId.ROADMAP
-                            }
-                            var map = new google.maps.Map(mapCanvas, mapOptions);
-
-                            var marker = new google.maps.Marker({
-                                position: hotelLatLng
-                                // animation: google.maps.Animation.BOUNCE
-                            });
-                            marker.setMap(map);
-
-                            var infowindow = new google.maps.InfoWindow({
-                                content: '<h5 id="nameOnMap">Ming Star Hotel</h5>We are here!'
-                            });
-
-                            // infowindow.open(map, marker);
-                            google.maps.event.addListener(marker, 'click', function() {
-                                // Open inforwindow on marker click event
-                                infowindow.open(map, marker);
-                            });
-                        }
-                        // google.maps.event.addDomListener(window, 'load', initialize);
-                        initialize();
-                    </script>
-                     -->
                 </div>
             </div><!-- #content -->
-        </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
     </div><!-- #box3 --> 
 
     <!-- footer -->
@@ -205,7 +158,7 @@
                     <p>All material herein &copy; 2014 – 2015 Ming Group<br />All Rights Reserved.</p>
                 </div>
             </div><!-- /.row -->
-        </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
     </footer><!-- footer -->
 </body>
 </html>
