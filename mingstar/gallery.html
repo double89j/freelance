@@ -56,6 +56,10 @@
     <!-- Image Slider -->
     <link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
     <script src="js/js-image-slider.js" type="text/javascript"></script>
+    
+    <!-- Photo Grid -->
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
     <!-- #box1 -->
@@ -112,41 +116,27 @@
     <!-- #box3 -->
     <div id="box3" class="pad-section">
         <div id="content" class="container-fluid">
-            <div id="rg-gallery" class="rg-gallery">
-                    <div class="rg-thumbs">
-                        <!-- Elastislide Carousel Thumbnail Viewer -->
-                        <div class="es-carousel-wrapper">
-                            <div class="es-nav">
-                                <span class="es-nav-prev">Previous</span>
-                                <span class="es-nav-next">Next</span>
-                            </div>
-                            <div class="es-carousel">
-                                <ul>
-                                    <li><a href="#"><img src="images/Deluxe Room 1.jpg" data-large="images/Deluxe Room 1.jpg" alt="image01" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Deluxe Room 2.jpg" data-large="images/Deluxe Room 2.jpg" alt="image02" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Deluxe Room 3.jpg" data-large="images/Deluxe Room 3.jpg" alt="image03" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Deluxe Room 4.jpg" data-large="images/Deluxe Room 4.jpg" alt="image04" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Deluxe Room Joined.jpg" data-large="images/Deluxe Room Joined.jpg" alt="image05" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Deluxe Room King.jpg" data-large="images/Deluxe Room King.jpg" alt="image06" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Deluxe Room.jpg" data-large="images/Deluxe Room.jpg" alt="image07" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Deluxe Single 1.jpg" data-large="images/Deluxe Single 1.jpg" alt="image08" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Deluxe Single 2.jpg" data-large="images/Deluxe Single 2.jpg" alt="image09" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Deluxe Single 3.jpg" data-large="images/Deluxe Single 3.jpg" alt="image10" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Deluxe Single 4.jpg" data-large="images/Deluxe Single 4.jpg" alt="image11" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Deluxe Single Room.jpg" data-large="images/Deluxe Single Room.jpg" alt="image12" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Standard Room.jpg" data-large="images/Standard Room.jpg" alt="image13" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Standard Single Room.jpg" data-large="images/Standard Single Room.jpg" alt="image14" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Superior Plus 1.jpg" data-large="images/Superior Plus 1.jpg" alt="image15" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Superior Plus Room.jpg" data-large="images/Superior Plus Room.jpg" alt="image16" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Superior Queen Bed 1.jpg" data-large="images/Superior Queen Bed 1.jpg" alt="image17" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Superior Queen Bed 2.jpg" data-large="images/Superior Queen Bed 2.jpg" alt="image18" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Superior Queen Bed.jpg" data-large="images/Superior Queen Bed.jpg" alt="image19" data-description="Sample Text" /></a></li>
-                                    </ul>
-                            </div>
-                        </div>
-                        <!-- End Elastislide Carousel Thumbnail Viewer -->
-                    </div><!-- rg-thumbs -->
-                </div><!-- rg-gallery -->   
+            <ul class="cbp-rfgrid">
+				<li><a href="images/Deluxe Room 1.jpg"><img id="img-grid" src="images/Deluxe Room 1.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Deluxe Room 2.jpg"><img id="img-grid" src="images/Deluxe Room 2.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Deluxe Room 3.jpg"><img id="img-grid" src="images/Deluxe Room 3.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Deluxe Room 4.jpg"><img id="img-grid" src="images/Deluxe Room 4.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Deluxe Room Joined.jpg"><img id="img-grid" src="images/Deluxe Room Joined.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Deluxe Room King.jpg"><img id="img-grid" src="images/Deluxe Room King.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Deluxe Room.jpg"><img id="img-grid" src="images/Deluxe Room.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Deluxe Single 1.jpg"><img id="img-grid" src="images/Deluxe Single 1.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Deluxe Single 2.jpg"><img id="img-grid" src="images/Deluxe Single 2.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Deluxe Single 3.jpg"><img id="img-grid" src="images/Deluxe Single 3.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Deluxe Single 4.jpg"><img id="img-grid" src="images/Deluxe Single 4.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Deluxe Single Room.jpg"><img id="img-grid" src="images/Deluxe Single Room.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Standard Room.jpg"><img id="img-grid" src="images/Standard Room.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Standard Single Room.jpg"><img id="img-grid" src="images/Standard Single Room.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Superior Plus 1.jpg"><img id="img-grid" src="images/Superior Plus 1.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Superior Plus Room.jpg"><img id="img-grid" src="images/Superior Plus Room.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Superior Queen Bed 1.jpg"><img id="img-grid" src="images/Superior Queen Bed 1.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Superior Queen Bed 2.jpg"><img id="img-grid" src="images/Superior Queen Bed 2.jpg" /><div><h3></h3></div></a></li>
+				<li><a href="images/Superior Queen Bed.jpg"><img id="img-grid" src="images/Superior Queen Bed.jpg" /><div><h3></h3></div></a></li>
+			</ul>   
         </div><!-- /.container-fluid -->
     </div><!-- #box3 -->
         
