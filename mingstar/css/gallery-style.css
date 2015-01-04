@@ -116,8 +116,26 @@
 	padding:0;
 }
 
-#rooms{
+#rooms-title{
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+#rooms-detail-title{
   max-width:80%;
   margin-left: auto;
   margin-right: auto;
+  font-style: italic;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e4e4e4;
+}  
+
+#rooms-detail{
+  max-width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+  list-style: url(../images/checkmark.png);
 }
+
+
