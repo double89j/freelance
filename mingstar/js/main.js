@@ -54,6 +54,7 @@ $(document).ready(function() {
     }
 
     var $content = $('#content'),
+        checkCtrl = false,
 
         init = function(currentPage) {
             // Do this when a page loads
@@ -174,16 +175,30 @@ $(document).ready(function() {
         }
     });
 
+    $(document).keydown(function(evt) {
+        if (evt.keyCode==17)
+            checkCtrl = true;
+    });
+
+    $(document).keyup(function(evt) {
+        checkCtrl = false;
+    });
+
     $('#navbar-collapse-main').on('click', 'a', function(evt) {
         // console.log('item ID: '+$(this).attr('id'));
         var href = $(this).attr('href');
+            href = href.slice(0, href.indexOf('.'));
         // if (href=='deluxe') {
         //     evt.preventDefault();
         //     alert(href);
         //     return;
         // }
-        if (href=='#') {
+        if (href=='#' || href=='') {
             // evt.preventDefault();
+            return;
+        }
+        if (checkCtrl) {
+            // cater ctrl + click event
             return;
         }
 
@@ -195,7 +210,7 @@ $(document).ready(function() {
             else if (href=='deluxe' || href=='superiorplus' || href=='superior' || href=='standard') {
                 history.pushState({}, '', href+'.html');
                 // close the dropdown
-                $('#rooms').dropdown('toggle');
+                $('#rooms-nav').dropdown('toggle');
             }
             else
                 history.pushState({}, '', href+'.html');
