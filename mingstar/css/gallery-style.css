@@ -6,6 +6,10 @@
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 	min-height:20px;
+  max-height:80%;
+  max-width:80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .rg-image{
 	position:relative;
@@ -14,8 +18,8 @@
 }
 .rg-image img{
 	top:0px;
-  max-height:50%;
-	max-width:50%;
+  max-height:80%;
+	max-width:80%;
 }
 .rg-image-nav a{
 	position:absolute;
@@ -23,7 +27,7 @@
 	left:0px;
 	background:#000 url(../images/nav.png) no-repeat -20% 50%;
 	width:28px;
-	height:90%;
+	height:100%;
 	text-indent:-9000px;
 	cursor:pointer;
 	opacity:0.3;
@@ -58,6 +62,9 @@
 }
 .rg-view{
 	height:30px;
+  max-width:80%;
+  margin-left: auto;
+  margin-right: auto;  
 }
 .rg-view a{
 	display:block;
@@ -95,4 +102,22 @@
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 	opacity:0.7;
+}
+
+.rg-thumbs{
+  max-height:80%;
+  max-width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#reset{ 
+	margin:0;
+	padding:0;
+}
+
+#rooms{
+  max-width:80%;
+  margin-left: auto;
+  margin-right: auto;
 }
