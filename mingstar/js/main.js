@@ -60,7 +60,7 @@ $(document).ready(function() {
             // Do this when a page loads
             console.log('init call');
 
-            if (currentPage=='index.html') {
+            if (currentPage=='index.html' || currentPage=='') {
                 // currentPage = 'home'
                 currentPage = 'aboutus'
             }
