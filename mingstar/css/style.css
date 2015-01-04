@@ -285,6 +285,12 @@ footer .glyphicon:hover {
 .contactSpace1 {
     width:              40px;
 }
+.TA_selfserveprop {
+    margin-bottom:      10px;
+}
+.TA_selfserveprop > div {
+    width:              100% !important;
+}
 
 /* bootstrap overwrite */
 
@@ -319,9 +325,10 @@ footer .glyphicon:hover {
 
 #map-canvas {
     background-color:   #ccc;
-    /*float:              right;*/
     height:             350px;
-    width:              425px;
+    #width:              425px;
+    width:              100%;
+    /*float:              right;*/
 }
 #nameOnMap {
     margin-top:         0;

@@ -58,7 +58,7 @@ $(document).ready(function() {
 
         init = function(currentPage) {
             // Do this when a page loads
-            console.log('init call');
+            // console.log('init call');
 
             if (currentPage=='index.html' || currentPage=='') {
                 // currentPage = 'home'
@@ -91,7 +91,7 @@ $(document).ready(function() {
         ajaxLoad = function(html) {
             document.title = html
                 .match(/<title>(.*?)<\/title>/)[1]
-                .trim(); console.log('ajaxLoad called');
+                .trim(); // console.log('ajaxLoad called');
 
             // init();
         },
