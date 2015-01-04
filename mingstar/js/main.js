@@ -89,10 +89,9 @@ $(document).ready(function() {
         },
 
         ajaxLoad = function(html) {
-            console.log('ajaxLoad called');
             document.title = html
                 .match(/<title>(.*?)<\/title>/)[1]
-                .trim();
+                .trim(); console.log('ajaxLoad called');
 
             // init();
         },
@@ -101,27 +100,27 @@ $(document).ready(function() {
             if (href=='#')
                 return;
 
-            console.log('load page function');
             if (href=='index.html' || href=='index')
                 href = 'aboutus';
 
             $content.load(href+'.html #content>*', function(responseTxt, statusTxt, xhr) {
                 if (statusTxt=='success') {
-                    console.log('load complete');
                     initTooltipPopover();
-                    ajaxLoad(responseTxt);
+                    ajaxLoad(responseTxt); // console.log('load complete');
                 }
                 if (statusTxt=='error')
                     console.log('Error: '+xhr.status+": "+xhr.statusTxt);
             });
 
-            $.cachedScript('js/'+href+'.js')
-                .done(function(script, textStatus) {
-                    console.log(textStatus+': script loaded');
-                })
-                .fail(function(jqxhr, settings, exception) {
-                    console.warn('no script found');
-                });
+            setTimeout(function(evt) {
+                $.cachedScript('js/'+href+'.js')
+                    .done(function(script, textStatus) {
+                        console.log(textStatus+': script loaded');
+                    })
+                    .fail(function(jqxhr, settings, exception) {
+                        console.warn('no script found');
+                    });
+            }, 500);
 
             // $.getScript('js/'+href+'.js')
             //     .done(function(script, textStatus) {
@@ -207,8 +206,9 @@ $(document).ready(function() {
         if (href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) {
             if (href=='home')
                 history.pushState({}, '', 'index.html');
-            else if (href=='deluxe' || href=='superiorplus' || href=='superior' || href=='standard') {
+            else if (href=='deluxe' || href=='superiorPlus' || href=='superior' || href=='standard') {
                 history.pushState({}, '', href+'.html');
+                console.log('close');
                 // close the dropdown
                 $('#rooms-nav').dropdown('toggle');
             }
