@@ -103,7 +103,7 @@ $(document).ready(function() {
 
             console.log('load page function');
             if (href=='index.html' || href=='index')
-                href = 'home';
+                href = 'aboutus';
 
             $content.load(href+'.html #content>*', function(responseTxt, statusTxt, xhr) {
                 if (statusTxt=='success') {
