@@ -100,7 +100,7 @@ $(document).ready(function() {
             if (href=='#')
                 return;
 
-            if (href=='index.html' || href=='index' || href=='index')
+            if (href=='index.html' || href=='index' || href=='')
                 href = 'aboutus';
 
             $content.load(href+'.html #content>*', function(responseTxt, statusTxt, xhr) {
