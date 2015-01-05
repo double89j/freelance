@@ -208,14 +208,16 @@ $(document).ready(function() {
                 history.pushState({}, '', 'index.html');
             else if (href=='deluxe' || href=='superiorPlus' || href=='superior' || href=='standard') {
                 history.pushState({}, '', href+'.html');
-                console.log('close');
+                // console.log('close');
                 // close the dropdown
                 $('#rooms-nav').dropdown('toggle');
             }
             else
                 history.pushState({}, '', href+'.html');
+
             loadPage(href);
-            $(".navbar-collapse").collapse('hide');
+            if ($('.navbar-toggle').css('display')=='block')
+                $(".navbar-collapse").collapse('hide');
             return false;
         }
     });

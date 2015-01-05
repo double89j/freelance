@@ -9,11 +9,16 @@
     <script src="jquery-1.11.2/jquery-1.11.2.min.js"></script>
     <script src="jquery-validation-1.13.1/jquery.validate.min.js"></script>
 
-    <!-- Bootstrap & Bootstrap Datepicker CSS & JavaScript -->
+    <!-- Bootstrap & Bootstrap Datepicker & Lightbox CSS & JavaScript -->
+    <script src="bootstrap-lightbox-v0.7.0/scale.fix.js"></script>
+    <script src="bootstrap-lightbox-v0.7.0/prettify/prettify.js"></script>
     <script src="bootstrap-3.3.1/js/bootstrap.min.js"></script>
     <script src="bootstrap-datepicker-1.3.1/js/bootstrap-datepicker.js"></script>
+    <script src="bootstrap-lightbox-v0.7.0/bootstrap-lightbox.min.js"></script>
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.3.1/css/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-lightbox-v0.7.0/bootstrap-lightbox.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-lightbox-v0.7.0/prettify/prettify.css">
 
     <!-- Google Maps JavaScript -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -57,7 +62,7 @@
     
     <!-- Photo Grid -->
     <link rel="stylesheet" type="text/css" href="css/component.css" />
-		<script src="js/modernizr.custom.js"></script>
+        <script src="js/modernizr.custom.js"></script>
 </head>
 <body>
     <!-- #box1 -->
@@ -112,28 +117,159 @@
     <!-- #box3 -->
     <div id="box3" class="pad-section">
         <div id="content" class="container-fluid">
-          <h3 id="rooms-title">Gallery</h3>
-          <ul class="cbp-rfgrid">
-				    <li><a href="images/Deluxe Room 1.jpg"><img id="img-grid" src="images/Deluxe Room 1.jpg" /><div><h3>Deluxe Room 1</h3></div></a></li>
-				    <li><a href="images/Deluxe Room 2.jpg"><img id="img-grid" src="images/Deluxe Room 2.jpg" /><div><h3>Deluxe Room 2</h3></div></a></li>
-				    <li><a href="images/Deluxe Room 3.jpg"><img id="img-grid" src="images/Deluxe Room 3.jpg" /><div><h3>Deluxe Room 3</h3></div></a></li>
-				    <li><a href="images/Deluxe Room 4.jpg"><img id="img-grid" src="images/Deluxe Room 4.jpg" /><div><h3>Deluxe Room 4</h3></div></a></li>
-				    <li><a href="images/Deluxe Room Joined.jpg"><img id="img-grid" src="images/Deluxe Room Joined.jpg" /><div><h3>Deluxe Room Joined</h3></div></a></li>
-				    <li><a href="images/Deluxe Room King.jpg"><img id="img-grid" src="images/Deluxe Room King.jpg" /><div><h3>Deluxe Room King</h3></div></a></li>
-				    <li><a href="images/Deluxe Room.jpg"><img id="img-grid" src="images/Deluxe Room.jpg" /><div><h3>Deluxe Room</h3></div></a></li>
-				    <li><a href="images/Deluxe Single 1.jpg"><img id="img-grid" src="images/Deluxe Single 1.jpg" /><div><h3>Deluxe Single 1</h3></div></a></li>
-				    <li><a href="images/Deluxe Single 2.jpg"><img id="img-grid" src="images/Deluxe Single 2.jpg" /><div><h3>Deluxe Single 2</h3></div></a></li>
-				    <li><a href="images/Deluxe Single 3.jpg"><img id="img-grid" src="images/Deluxe Single 3.jpg" /><div><h3>Deluxe Single 3</h3></div></a></li>
-				    <li><a href="images/Deluxe Single 4.jpg"><img id="img-grid" src="images/Deluxe Single 4.jpg" /><div><h3>Deluxe Single 4</h3></div></a></li>
-				    <li><a href="images/Deluxe Single Room.jpg"><img id="img-grid" src="images/Deluxe Single Room.jpg" /><div><h3>Deluxe Single Room</h3></div></a></li>
-				    <li><a href="images/Standard Room.jpg"><img id="img-grid" src="images/Standard Room.jpg" /><div><h3>Standard Room</h3></div></a></li>
-				    <li><a href="images/Standard Single Room.jpg"><img id="img-grid" src="images/Standard Single Room.jpg" /><div><h3>Standard Single Room</h3></div></a></li>
-				    <li><a href="images/Superior Plus 1.jpg"><img id="img-grid" src="images/Superior Plus 1.jpg" /><div><h3>Superior Plus 1</h3></div></a></li>
-				    <li><a href="images/Superior Plus Room.jpg"><img id="img-grid" src="images/Superior Plus Room.jpg" /><div><h3>Superior Plus Room</h3></div></a></li>
-				    <li><a href="images/Superior Queen Bed 1.jpg"><img id="img-grid" src="images/Superior Queen Bed 1.jpg" /><div><h3>Superior Queen Bed 1</h3></div></a></li>
-				    <li><a href="images/Superior Queen Bed 2.jpg"><img id="img-grid" src="images/Superior Queen Bed 2.jpg" /><div><h3>Superior Queen Bed 2</h3></div></a></li>
-				    <li><a href="images/Superior Queen Bed.jpg"><img id="img-grid" src="images/Superior Queen Bed.jpg" /><div><h3>Superior Queen Bed</h3></div></a></li>
-			    </ul>   
+                <h3 id="rooms-title">Gallery</h3>
+                <ul class="cbp-rfgrid">
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Deluxe Room 1.jpg" /><div><h3>Deluxe Room 1</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Deluxe Room 2.jpg" /><div><h3>Deluxe Room 2</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Deluxe Room 3.jpg" /><div><h3>Deluxe Room 3</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Deluxe Room 4.jpg" /><div><h3>Deluxe Room 4</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Deluxe Room Joined.jpg" /><div><h3>Deluxe Room Joined</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Deluxe Room King.jpg" /><div><h3>Deluxe Room King</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Deluxe Room.jpg" /><div><h3>Deluxe Room</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Deluxe Single 1.jpg" /><div><h3>Deluxe Single 1</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Deluxe Single 2.jpg" /><div><h3>Deluxe Single 2</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Deluxe Single 3.jpg" /><div><h3>Deluxe Single 3</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Deluxe Single 4.jpg" /><div><h3>Deluxe Single 4</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Deluxe Single Room.jpg" /><div><h3>Deluxe Single Room</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Standard Room.jpg" /><div><h3>Standard Room</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Standard Single Room.jpg" /><div><h3>Standard Single Room</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Superior Plus 1.jpg" /><div><h3>Superior Plus 1</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Superior Plus Room.jpg" /><div><h3>Superior Plus Room</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Superior Queen Bed 1.jpg" /><div><h3>Superior Queen Bed 1</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Superior Queen Bed 2.jpg" /><div><h3>Superior Queen Bed 2</h3></div>
+                    </a></li>
+                    <li><a href="#demoLightbox" data-toggle="lightbox">
+                        <img id="img-grid" src="images/Superior Queen Bed.jpg" /><div><h3>Superior Queen Bed</h3></div>
+                    </a></li>
+                </ul>
+                <div id="demoLightbox" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class='lightbox-dialog'>
+                        <div class='lightbox-content'>
+                            <img src="images/Deluxe Room 1.jpg" />
+                            <div class="lightbox-caption"><p>Deluxe Room 1</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Deluxe Room 2.jpg" />
+                            <div class="lightbox-caption"><p>Deluxe Room 2</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Deluxe Room 3.jpg" />
+                            <div class="lightbox-caption"><p>Deluxe Room 3</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Deluxe Room 4.jpg" />
+                            <div class="lightbox-caption"><p>Deluxe Room 4</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Deluxe Room Joined.jpg" />
+                            <div class="lightbox-caption"><p>Deluxe Room Joined</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Deluxe Room King.jpg" />
+                            <div class="lightbox-caption"><p>Deluxe Room King</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Deluxe Room.jpg" />
+                            <div class="lightbox-caption"><p>Deluxe Room</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Deluxe Single 1.jpg" />
+                            <div class="lightbox-caption"><p>Deluxe Single 1</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Deluxe Single 2.jpg" />
+                            <div class="lightbox-caption"><p>Deluxe Single 2</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Deluxe Single 3.jpg" />
+                            <div class="lightbox-caption"><p>Deluxe Single 3</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Deluxe Single 4.jpg" />
+                            <div class="lightbox-caption"><p>Deluxe Single 4</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Deluxe Single Room.jpg" />
+                            <div class="lightbox-caption"><p>Deluxe Single Room</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Standard Room.jpg" />
+                            <div class="lightbox-caption"><p>Standard Room</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Standard Single Room.jpg" />
+                            <div class="lightbox-caption"><p>Standard Single Room</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Superior Plus 1.jpg" />
+                            <div class="lightbox-caption"><p>Superior Plus 1</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Superior Plus Room.jpg" />
+                            <div class="lightbox-caption"><p>Superior Plus Room</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Superior Queen Bed 1.jpg" />
+                            <div class="lightbox-caption"><p>Superior Queen Bed 1</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Superior Queen Bed 2.jpg" />
+                            <div class="lightbox-caption"><p>Superior Queen Bed 2</p></div>
+                        </div>
+                        <div class='lightbox-content'>
+                            <img src="images/Superior Queen Bed.jpg" />
+                            <div class="lightbox-caption"><p>Superior Queen Bed</p></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="example">
+                    <a data-toggle="lightbox" href="#demoLightbox" class="img-thumbnail">
+                        <img src="images/Deluxe Room 2.jpg" alt="Click to view the lightbox">
+                    </a>
+                    <div id="demoLightbox" class="lightbox fade"  tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class='lightbox-dialog'>
+                            <div class='lightbox-content'>
+                                <img src="images/Deluxe Room 2.jpg">
+                                <div class="lightbox-caption"><p>Your caption here</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
         </div><!-- /.container-fluid -->
     </div><!-- #box3 -->
         
