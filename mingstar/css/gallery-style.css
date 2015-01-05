@@ -1,10 +1,11 @@
 .rg-image-wrapper{
 	position:relative;
 	padding:20px 30px;
-	background:transparent url(../images/black.png) repeat top left;
+	background:black;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
+  color:white;
 	min-height:20px;
   max-height:80%;
   max-width:100%;
@@ -25,12 +26,12 @@
 	position:absolute;
 	top:0px;
 	left:0px;
-	background:#000 url(../images/nav.png) no-repeat -20% 50%;
+	background:transparent url(../images/nav.png) no-repeat -20% 50%;
 	width:28px;
 	height:100%;
 	text-indent:-9000px;
 	cursor:pointer;
-	opacity:0.3;
+	opacity:0.5;
 	outline:none;
 	-moz-border-radius: 10px 0px 0px 10px;
 	-webkit-border-radius: 10px 0px 0px 10px;
@@ -45,7 +46,7 @@
 	border-radius: 0px 10px 10px 0px;
 }
 .rg-image-nav a:hover{
-	opacity:0.8;
+	opacity:1.0;
 }
 .rg-caption {
 	text-align:center;
@@ -62,16 +63,16 @@
 }
 .rg-view{
 	height:30px;
-  max-width:80%;
+  max-width:100%;
   margin-left: auto;
   margin-right: auto;  
 }
 .rg-view a{
 	display:block;
 	float:right;
-	width:16px;
-	height:16px;
-	margin-right:3px;
+	width:22px;
+	height:22px;
+	#margin-right:3px;
 	background:#464646 url(../images/views.png) no-repeat top left;
 	border:3px solid #464646;
 	opacity:0.8;
