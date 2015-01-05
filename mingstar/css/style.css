@@ -101,7 +101,8 @@ footer {
 }
 #slider,
 .mcSlc {
-    background-position: center !important;
+    #background-position: center !important;
+    background-position: center bottom !important;
 }
 
 /* flex section */
