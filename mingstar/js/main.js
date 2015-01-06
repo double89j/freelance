@@ -120,7 +120,7 @@ $(document).ready(function() {
                     .fail(function(jqxhr, settings, exception) {
                         console.warn('no script found');
                     });
-            }, 500);
+            }, 300);
 
             // $.getScript('js/'+href+'.js')
             //     .done(function(script, textStatus) {
