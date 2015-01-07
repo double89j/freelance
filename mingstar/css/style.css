@@ -1,7 +1,7 @@
 /* temp */
 
 .hideBlock {
-    display: none;
+    display: none !important;
 }
 .popover {
     color: black;
@@ -73,37 +73,40 @@ body {
 .pageText{
     text-align:         justify;
 }
-#box1,
+/*#box1,
 #box3,
 .navbar,
 footer {
     box-shadow:         0 1px 6px 1px rgba(0, 0, 0, 0.2);
     margin-left:        auto;
     margin-right:       auto;
-    max-width:          960px;
-    /*margin-left:        100px;
-    margin-right:       100px;*/
-}
-.flexslider {
-    /*box-shadow:         none;*/
+    max-width:          1200px;
+}*/
+/*.flexslider {
     margin:             0 auto;
 }
 .flexslider,
 .flexslider .slides img {
-    /*height:             auto;*/
     width:              750px;
-}
+}*/
 #slider {
     box-shadow:         none !important;
 }
+#slider,
 .mcSlc {
-    width: 100% !important;
-    height: 306px !important;
+    height:             480px !important;
+}
+.mcSlc {
+    width:              100% !important;
 }
 #slider,
 .mcSlc {
     #background-position: center !important;
     background-position: center bottom !important;
+    background-size:    100% auto !important;
+}
+#slider div.navBulletsWrapper {
+    top:                494px !important;
 }
 
 /* flex section */
@@ -172,7 +175,8 @@ footer {
 #box1 {
     #background:         url("../images/background.jpg");
     #background:         url("../images/texture-1.jpeg");
-    background:         #fff;
+    #background:         #000;
+    background:         linear-gradient(#fff -30%, #656160);
 
     #background:          -webkit-radial-gradient(#dcdcdc, #fff, #dcdcdc);
     #background:          -o-radial-gradient(#dcdcdc, #fff, #dcdcdc);
@@ -215,6 +219,76 @@ footer {
 }
 #contactusform .has-feedback .form-control-feedback {
     top: 8px;
+}
+.iconContainer {
+    /*background:             grey;*/
+    border:                 1px solid black;
+    padding-bottom:         15px;
+    padding-top:            15px;
+    text-align:             center;
+}
+.iconBox {
+    border-radius:          3px;
+    border:                 1px solid #ececec;
+    height:                 150px;
+    margin-top:             35px;
+    padding-top:            30px;
+}
+.iconBox .glyphicon {
+    background-color:       #c1c89b;
+    border-radius:          3px;
+    font-size:              30px;
+    left:                   50%;
+    margin-left:            -30px;
+    margin-top:             20px;
+    padding:                15px;
+    position:               absolute;
+    top:                    0;
+
+    -ms-transition:         all 0.4s ease 0s;
+    -o-transition:          all 0.4s ease 0s;
+    -webkit-transition:     all 0.4s ease 0s;
+    transition:             all 0.4s ease 0s;
+}
+.iconBox:hover .glyphicon {
+    top:                    -13px;
+    -ms-transform:          rotateY(180deg);
+    -o-transform:           rotateY(180deg);
+    -webkit-transform:      rotateY(180deg);
+    transform:              rotateY(180deg);
+}
+.iconBox > h3 {
+    color:                  #272727;
+    font-family:            Open Sans;
+    font-size:              17px;
+    font-weight:            600;
+    margin:                 8px 0 9px;
+    text-align:             center;
+    text-transform:         uppercase;
+    /*width:                  100%;*/
+}
+.iconBox > p {
+    color: #777777;
+    /*float: left;*/
+    font-family: Noto Sans;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+    margin: 0 0 5px;
+    text-align: center;
+    /*width: 100%;*/
+}
+.iconBox > a {
+    color: #2c9f5c;
+    /*display: table;*/
+    /*float: none;*/
+    font-family: Open Sans;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+    /*margin-bottom: 0;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
 }
 
 /* navigation */
@@ -337,6 +411,10 @@ body.lightbox-open,
     border-radius:      0;
     margin-top:         0;
     margin-bottom:      0;
+}
+.navbar-brand {
+    background:         url("../images/pic_top.png") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+    width:              164px;
 }
 .navbar-inverse {
     border:             0;

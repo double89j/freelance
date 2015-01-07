@@ -153,8 +153,7 @@ $(document).ready(function() {
 
         // ($(window).scrollTop() > navHeight) ? $('nav').addClass('goToTop') : $('nav').removeClass('goToTop');
 
-        var navHeight = $('#box1').height();
-        // ($(window).scrollTop() > navHeight) ? $('nav').addClass('goToTop') : $('nav').removeClass('goToTop');
+        /*var navHeight = $('#box1').height();
         if ($(window).scrollTop() > navHeight) {
             $('nav').addClass('navbar-fixed-top');
             $('#box3').addClass('marginFromTop');
@@ -162,7 +161,7 @@ $(document).ready(function() {
         else {
             $('nav').removeClass('navbar-fixed-top');
             $('#box3').removeClass('marginFromTop');
-        }
+        }*/
     });
 
     $(window).bind('popstate', function(evt) {
