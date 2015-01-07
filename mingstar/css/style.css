@@ -93,6 +93,7 @@ footer {
     box-shadow:         none !important;
 }
 #slider,
+#slider div.sliderInner,
 .mcSlc {
     height:             480px !important;
 }
