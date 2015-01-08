@@ -84,7 +84,7 @@
 /* ------ built-in navigation bullets wrapper ------*/
 /* Note: check themes\2\js-image-slider.css to see how to hide nav bullets */
 div.navBulletsWrapper {
-    /*display:            none;*/
+    display:            none;
 }
 #slider div.navBulletsWrapper  {
     background:         none;
@@ -156,3 +156,24 @@ div.navBulletsWrapper {
     -webkit-transform:  translate3d(0,0,0);
     transform:          translate3d(0,0,0);
 }
+
+/* -- thumbnails -- */
+#thumbs 
+{
+    margin-top:50px;
+    text-align:center;
+    font-size:0;
+}
+#thumbs .thumb 
+{
+    display:inline-block;
+    *display:inline;zoom:1;/*IE6, IE7 hack*/
+    margin:0 1px;/*this determins the distance between each thumbnail*/
+    border:1px solid #333;
+    padding:4px;
+    background:black;
+}
+
+#thumbs .thumb img{border:1px solid #555; cursor:pointer; width:70px; height:44px; opacity:0.5;filter:alpha(opacity=50);}
+#thumbs .thumb-on img{border:1px solid #999; opacity:1;filter:alpha(opacity=100);}
+#slider-room div {-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
