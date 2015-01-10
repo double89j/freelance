@@ -84,7 +84,7 @@
 /* ------ built-in navigation bullets wrapper ------*/
 /* Note: check themes\2\js-image-slider.css to see how to hide nav bullets */
 div.navBulletsWrapper {
-    display:            none;
+    /*display:            none;*/
 }
 #slider div.navBulletsWrapper  {
     background:         none;

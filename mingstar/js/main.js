@@ -68,6 +68,7 @@ $(document).ready(function() {
                 currentPage = currentPage.slice(0, currentPage.indexOf('.'));
 
             loadPage(currentPage);
+            checkGalleryRoomTypeBox();
 
             // if (currentPage=='index.html') {
             //     $content.load('home.html #content>*', function(responseTxt, statusTxt, xhr) {
@@ -136,6 +137,21 @@ $(document).ready(function() {
             //     // console.log(jqxhr);
             //     console.log('script loaded');
             // });
+        },
+
+        checkGalleryRoomTypeBox = function() {
+            // var navWidth = $('#gallery-room-type-box').width();
+            // if ($(window).width() > 1300)
+            //     $('#gallery-room-type-box').addClass('gallery-fixed-box');
+            // else
+            //     $('#gallery-room-type-box').removeClass('gallery-fixed-box');
+
+            // if ($('#gallery-room-type-box').length != 0) {
+            //     if (navWidth > 190)
+            //         $('#gallery-room-type-box').addClass('gallery-fixed-box');
+            //     else
+            //         $('#gallery-room-type-box').removeClass('gallery-fixed-box');
+            // }
         };
 
     init(location.href.split('/').pop());
@@ -162,6 +178,10 @@ $(document).ready(function() {
             $('nav').removeClass('navbar-fixed-top');
             $('#box3').removeClass('marginFromTop');
         }*/
+    });
+
+    $(window).bind('resize', function() {
+        checkGalleryRoomTypeBox();
     });
 
     $(window).bind('popstate', function(evt) {

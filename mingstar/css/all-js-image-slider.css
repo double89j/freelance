@@ -1,0 +1,360 @@
+/* ---------- ---------- ---------- aboutusSlider ---------- ---------- ---------- */
+/* http://www.menucool.com */
+
+#aboutusSliderFrame,
+#aboutusSliderFrame div {
+    box-sizing:         content-box;
+}
+#aboutusSliderFrame {
+    /*position:           relative;
+    width:              100%;*/
+    /*width:960px;*/
+    /*margin:0 auto;*/
+}
+
+#aboutusSlider {
+    height:             306px; /* Must be the same size as the slider images */
+    /*width:              960px;*/
+}
+#aboutusSlider div.sliderInner {
+    height:             306px; /* Must be the same size as the slider images */
+    width:              100%;
+}
+
+#aboutusSlider {
+    background:         #fff url(../images/loading.gif) no-repeat 50% 50%;
+    box-shadow:         0px 1px 5px #999999;
+    margin:             0 auto;
+    position:           relative;
+    transform:          translate3d(0,0,0);
+}
+
+/* image wrapper */
+#aboutusSlider a.imgLink,
+#aboutusSlider div.video {
+    border:             0;
+    height:             100%;
+    left:               0;
+    margin:             0;
+    padding:            0;
+    position:           absolute;
+    top:                0;
+    width:              100%;
+    z-index:            2;
+}
+#aboutusSlider .video {
+    background:         transparent url(video.png) no-repeat 50% 50%;
+}
+
+/* Caption styles */
+#aboutusSlider div.mc-caption-bg,
+#aboutusSlider div.mc-caption-bg2 {
+    bottom:             0;/*if the caption needs to be aligned from top, specify by top instead of bottom. i.e. top:150px;*/
+    font-size:          0;
+    height:             auto;
+    left:               0; /*if the caption needs to be aligned from right, specify by right instead of left. i.e. right:20px;*/
+    overflow:           hidden;
+    padding:            10px 0; /* 10px will increase the height.*/
+    position:           absolute;
+    width:              100%;
+    z-index:            3;
+}
+#aboutusSlider div.mc-caption-bg {
+    /* NOTE: Its opacity is to be set through the sliderOptions.captionOpacity setting in the js-image-slider.js file.*/
+    background:         black; /* or any other colors such as White, or: background:none; */
+}
+#aboutusSlider div.mc-caption-bg2 {
+    background:         none;
+}
+#aboutusSlider div.mc-caption {
+    background:         none;
+    color:              #eee;
+    font:               bold 14px/20px Arial;
+    text-align:         center;
+    z-index:            4;
+    /* in order to make the caption always follow container width */
+    width:              100% !important;
+}
+#aboutusSlider div.mc-caption a {
+    color:              #fb0;
+}
+#aboutusSlider div.mc-caption a:hover {
+    color:              #da0;
+}
+
+/* ------ built-in navigation bullets wrapper ------*/
+/* Note: check themes\2\js-image-slider.css to see how to hide nav bullets */
+#aboutusSliderFrame div.navBulletsWrapper {
+    /*display:            none;*/
+}
+#aboutusSlider div.navBulletsWrapper  {
+    background:         none;
+    position:           relative;
+    text-align:         center;
+    top:                320px; /* Its position is relative to the #aboutusSlider */
+    z-index:            5;
+}
+
+/* each bullet */
+#aboutusSlider div.navBulletsWrapper div {
+    background:         transparent url(../images/bullet.png) no-repeat 0 0;
+    color:              white; /*hide the index number in the bullet element*/
+    cursor:             pointer;
+    *display:            inline;
+    display:            inline-block;
+    font-size:          0;
+    height:             11px;
+    margin:             0 6px; /* set distance between each bullet*/
+    overflow:           hidden;
+    width:              11px; 
+    zoom:               1;
+}
+
+#aboutusSlider div.navBulletsWrapper div.active {
+    background-position:0 -11px;
+}
+
+/* --------- Others ------- */
+
+#aboutusSlider div.loading 
+{
+    background:         transparent url(../images/loading.gif) no-repeat 50% 50%;
+    filter:             alpha(opacity=60);
+    height:             100%;
+    left:               0;
+    opacity:            0.6;
+    position:           absolute;
+    top:                0; 
+    width:              100%;
+    z-index:            9;
+}
+
+#aboutusSlider img,
+#aboutusSlider>b,
+#aboutusSlider a>b {
+    border:             none;
+    display:            none;
+    position:           absolute;
+}
+
+#aboutusSlider div.sliderInner {
+    -webkit-transform:  rotate(0.000001deg); /* fixed the Chrome not crop border-radius bug*/
+    left:               0;
+    overflow:           hidden; 
+    position:           absolute;
+    top:                0;
+}
+
+#aboutusSlider>a,
+#aboutusSlider video,
+#aboutusSlider audio {
+    display:            none;
+}
+#aboutusSlider div {
+    /*-moz-transform:     translate3d(0,0,0);
+    -ms-transform:      translate3d(0,0,0);
+    -o-transform:       translate3d(0,0,0);*/
+    -webkit-transform:  translate3d(0,0,0);
+    transform:          translate3d(0,0,0);
+}
+
+/* -- thumbnails -- */
+#aboutusSliderFrame #thumbs 
+{
+    margin-top:50px;
+    text-align:center;
+    font-size:0;
+}
+#aboutusSliderFrame #thumbs .thumb 
+{
+    display:inline-block;
+    *display:inline;zoom:1;/*IE6, IE7 hack*/
+    margin:0 1px;/*this determins the distance between each thumbnail*/
+    border:1px solid #333;
+    padding:4px;
+    background:black;
+}
+
+#aboutusSliderFrame #thumbs .thumb img{border:1px solid #555; cursor:pointer; width:70px; height:44px; opacity:0.5;filter:alpha(opacity=50);}
+#aboutusSliderFrame #thumbs .thumb-on img{border:1px solid #999; opacity:1;filter:alpha(opacity=100);}
+#aboutusSlider-room div {-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+
+/* ---------- ---------- ---------- deluxeSlider ---------- ---------- ---------- */
+
+#deluxeSliderFrame,
+#deluxeSliderFrame div {
+    box-sizing:         content-box;
+}
+#deluxeSliderFrame {
+    /*position:           relative;
+    width:              100%;*/
+    /*width:960px;*/
+    /*margin:0 auto;*/
+}
+
+#deluxeSlider {
+    height:             306px; /* Must be the same size as the slider images */
+    /*width:              960px;*/
+}
+#deluxeSlider div.sliderInner {
+    height:             306px; /* Must be the same size as the slider images */
+    width:              100%;
+}
+
+#deluxeSlider {
+    background:         #fff url(../images/loading.gif) no-repeat 50% 50%;
+    box-shadow:         0px 1px 5px #999999;
+    margin:             0 auto;
+    position:           relative;
+    transform:          translate3d(0,0,0);
+}
+
+/* image wrapper */
+#deluxeSlider a.imgLink,
+#deluxeSlider div.video {
+    border:             0;
+    height:             100%;
+    left:               0;
+    margin:             0;
+    padding:            0;
+    position:           absolute;
+    top:                0;
+    width:              100%;
+    z-index:            2;
+}
+#deluxeSlider .video {
+    background:         transparent url(video.png) no-repeat 50% 50%;
+}
+
+/* Caption styles */
+#deluxeSlider div.mc-caption-bg,
+#deluxeSlider div.mc-caption-bg2 {
+    bottom:             0;/*if the caption needs to be aligned from top, specify by top instead of bottom. i.e. top:150px;*/
+    font-size:          0;
+    height:             auto;
+    left:               0; /*if the caption needs to be aligned from right, specify by right instead of left. i.e. right:20px;*/
+    overflow:           hidden;
+    padding:            10px 0; /* 10px will increase the height.*/
+    position:           absolute;
+    width:              100%;
+    z-index:            3;
+}
+#deluxeSlider div.mc-caption-bg {
+    /* NOTE: Its opacity is to be set through the sliderOptions.captionOpacity setting in the js-image-slider.js file.*/
+    background:         black; /* or any other colors such as White, or: background:none; */
+}
+#deluxeSlider div.mc-caption-bg2 {
+    background:         none;
+}
+#deluxeSlider div.mc-caption {
+    background:         none;
+    color:              #eee;
+    font:               bold 14px/20px Arial;
+    text-align:         center;
+    z-index:            4;
+    /* in order to make the caption always follow container width */
+    width:              100% !important;
+}
+#deluxeSlider div.mc-caption a {
+    color:              #fb0;
+}
+#deluxeSlider div.mc-caption a:hover {
+    color:              #da0;
+}
+
+/* ------ built-in navigation bullets wrapper ------*/
+/* Note: check themes\2\js-image-slider.css to see how to hide nav bullets */
+#deluxeSliderFrame div.navBulletsWrapper {
+    /*display:            none;*/
+}
+#deluxeSlider div.navBulletsWrapper  {
+    background:         none;
+    position:           relative;
+    text-align:         center;
+    top:                320px; /* Its position is relative to the #deluxeSlider */
+    z-index:            5;
+}
+
+/* each bullet */
+#deluxeSlider div.navBulletsWrapper div {
+    background:         transparent url(../images/bullet.png) no-repeat 0 0;
+    color:              white; /*hide the index number in the bullet element*/
+    cursor:             pointer;
+    *display:            inline;
+    display:            inline-block;
+    font-size:          0;
+    height:             11px;
+    margin:             0 6px; /* set distance between each bullet*/
+    overflow:           hidden;
+    width:              11px; 
+    zoom:               1;
+}
+
+#deluxeSlider div.navBulletsWrapper div.active {
+    background-position:0 -11px;
+}
+
+/* --------- Others ------- */
+
+#deluxeSlider div.loading 
+{
+    background:         transparent url(../images/loading.gif) no-repeat 50% 50%;
+    filter:             alpha(opacity=60);
+    height:             100%;
+    left:               0;
+    opacity:            0.6;
+    position:           absolute;
+    top:                0; 
+    width:              100%;
+    z-index:            9;
+}
+
+#deluxeSlider img,
+#deluxeSlider>b,
+#deluxeSlider a>b {
+    border:             none;
+    display:            none;
+    position:           absolute;
+}
+
+#deluxeSlider div.sliderInner {
+    -webkit-transform:  rotate(0.000001deg); /* fixed the Chrome not crop border-radius bug*/
+    left:               0;
+    overflow:           hidden; 
+    position:           absolute;
+    top:                0;
+}
+
+#deluxeSlider>a,
+#deluxeSlider video,
+#deluxeSlider audio {
+    display:            none;
+}
+#deluxeSlider div {
+    /*-moz-transform:     translate3d(0,0,0);
+    -ms-transform:      translate3d(0,0,0);
+    -o-transform:       translate3d(0,0,0);*/
+    -webkit-transform:  translate3d(0,0,0);
+    transform:          translate3d(0,0,0);
+}
+
+/* -- thumbnails -- */
+#deluxeSliderFrame #thumbs 
+{
+    margin-top:50px;
+    text-align:center;
+    font-size:0;
+}
+#deluxeSliderFrame #thumbs .thumb 
+{
+    display:inline-block;
+    *display:inline;zoom:1;/*IE6, IE7 hack*/
+    margin:0 1px;/*this determins the distance between each thumbnail*/
+    border:1px solid #333;
+    padding:4px;
+    background:black;
+}
+
+#deluxeSliderFrame #thumbs .thumb img{border:1px solid #555; cursor:pointer; width:70px; height:44px; opacity:0.5;filter:alpha(opacity=50);}
+#deluxeSliderFrame #thumbs .thumb-on img{border:1px solid #999; opacity:1;filter:alpha(opacity=100);}
+#deluxeSlider-room div {-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
