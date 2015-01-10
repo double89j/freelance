@@ -1,14 +1,28 @@
 /* temp */
 
+.gallery-slider1-container {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.gallery-test-box {
+    width: 960px;
+    height: 500px;
+}
 .gallery-room-type-box {
     text-align: center;
 }
 .gallery-room-type {
     background-color: lightblue;
-    padding: 10px;
+    padding: 30px 10px;
     text-align: center;
-    width: 120px;
+    width: 100%;
     margin: 0 auto 10px auto;
+}
+.gallery-room-type.last {
+    margin: 0 auto;
 }
 /*.gallery-fixed-box {
     max-width: 180px;
@@ -682,3 +696,107 @@ ul#slider li:not(:target) {
     }
 }
 /*** Mozilla Firefox keyframe end ***/
+
+
+/* ---------- ---------- Jssor Image Slider ---------- ---------- */
+/* Bullet Navigator Skin Begin */
+
+/* jssor slider bullet navigator skin 05 css */
+/*
+.jssorb05 div           (normal)
+.jssorb05 div:hover     (normal mouseover)
+.jssorb05 .av           (active)
+.jssorb05 .av:hover     (active mouseover)
+.jssorb05 .dn           (mousedown)
+*/
+
+.jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+    background: url(../jssor/img/b05.png) no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+.jssorb05 div {
+    background-position: -7px -7px;
+}
+.jssorb05 div:hover, .jssorb05 .av:hover {
+    background-position: -37px -7px;
+}
+.jssorb05 .av {
+    background-position: -67px -7px;
+}
+.jssorb05 .dn, .jssorb05 .dn:hover {
+    background-position: -97px -7px;
+}
+
+/* jssor slider bullet navigator skin 21 css */
+/*
+.jssorb21 div           (normal)
+.jssorb21 div:hover     (normal mouseover)
+.jssorb21 .av           (active)
+.jssorb21 .av:hover     (active mouseover)
+.jssorb21 .dn           (mousedown)
+*/
+
+.jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
+    background: url(../jssor/img/b21.png) no-repeat;
+    overflow:hidden;
+    cursor: pointer;
+}
+.jssorb21 div { background-position: -5px -5px; }
+.jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
+.jssorb21 .av { background-position: -65px -5px; }
+.jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
+
+/* Bullet Navigator Skin End */
+
+/* Arrow Navigator Skin Begin */
+
+/* jssor slider arrow navigator skin 12 css */
+/*
+.jssora12l              (normal)
+.jssora12r              (normal)
+.jssora12l:hover        (normal mouseover)
+.jssora12r:hover        (normal mouseover)
+.jssora12ldn            (mousedown)
+.jssora12rdn            (mousedown)
+*/
+
+.jssora12l, .jssora12r, .jssora12ldn, .jssora12rdn {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    background: url(../jssor/img/a12.png) no-repeat;
+    overflow: hidden;
+}
+.jssora12l { background-position: -16px -37px; }
+.jssora12r { background-position: -75px -37px; }
+.jssora12l:hover { background-position: -136px -37px; }
+.jssora12r:hover { background-position: -195px -37px; }
+.jssora12ldn { background-position: -256px -37px; }
+.jssora12rdn { background-position: -315px -37px; }
+
+/* jssor slider arrow navigator skin 21 css */
+/*
+.jssora21l              (normal)
+.jssora21r              (normal)
+.jssora21l:hover        (normal mouseover)
+.jssora21r:hover        (normal mouseover)
+.jssora21ldn            (mousedown)
+.jssora21rdn            (mousedown)
+*/
+
+.jssora21l, .jssora21r, .jssora21ldn, .jssora21rdn {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    background: url(../jssor/img/a21.png) center center no-repeat;
+    overflow: hidden;
+}
+.jssora21l { background-position: -3px -33px; }
+.jssora21r { background-position: -63px -33px; }
+.jssora21l:hover { background-position: -123px -33px; }
+.jssora21r:hover { background-position: -183px -33px; }
+.jssora21ldn { background-position: -243px -33px; }
+.jssora21rdn { background-position: -303px -33px; }
+
+/* Arrow Navigator Skin End */
