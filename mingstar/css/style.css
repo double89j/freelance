@@ -352,6 +352,12 @@ footer {
     outline:            0 none;
     text-decoration:    none;
 }
+#contactusform {
+    background-color:   rgba(225, 225, 225, 0.15);
+    border:             1px solid rgb(225, 225, 225);
+    border-radius:      5px;
+    padding:            10px;
+}
 #contactusform .has-feedback .form-control-feedback {
     top: 8px;
 }
@@ -471,7 +477,12 @@ body.lightbox-open,
 }*/
 
 /* bootstrap overwrite */
-
+.radio input[type="radio"]/*,
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"]*/ {
+    margin-top:         2px;
+}
 .navbar {
     border-radius:      0;
     margin-top:         0;

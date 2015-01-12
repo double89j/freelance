@@ -16,59 +16,25 @@ $('#datepicker').datepicker({
     format: 'dd MM, yyyy',
     todayBtn: 'linked',
     autoclose: true,
-    todayHighlight: true
+    todayHighlight: true,
+    startDate: 'd'
 });
-$('#contactusform').validate({
+var validateForm = $('#contactusform').validate({
     rules: {
-        name: 'required',
-        phone: 'required',
-        email: 'required'
-        // firstname: "required",
-        // lastname: "required",
-        // username: {
-        //     required: true,
-        //     minlength: 2
-        // },
-        // password: {
-        //     required: true,
-        //     minlength: 5
-        // },
-        // confirm_password: {
-        //     required: true,
-        //     minlength: 5,
-        //     equalTo: "#password"
-        // },
-        // email: {
-        //     required: true,
-        //     email: true
-        // },
-        // topic: {
-        //     required: "#newsletter:checked",
-        //     minlength: 2
-        // },
-        // agree: "required"
+        guest_name: 'required',
+        guest_phone: 'required',
+        guest_email: {
+            required: true,
+            email: true
+        }
     },
     messages: {
-        name: 'The name is required.',
-        phone: 'The phone is required.',
-        email: 'The email is required.'
-        // firstname: "Please enter your firstname",
-        // lastname: "Please enter your lastname",
-        // username: {
-        //     required: "Please enter a username",
-        //     minlength: "Your username must consist of at least 2 characters"
-        // },
-        // password: {
-        //     required: "Please provide a password",
-        //     minlength: "Your password must be at least 5 characters long"
-        // },
-        // confirm_password: {
-        //     required: "Please provide a password",
-        //     minlength: "Your password must be at least 5 characters long",
-        //     equalTo: "Please enter the same password as above"
-        // },
-        // email: "Please enter a valid email address",
-        // agree: "Please accept our policy"
+        guest_name: 'The name is required',
+        guest_phone: 'The phone is required',
+        guest_email: {
+            required: 'The email is required',
+            email: 'Please enter a valid email address'
+        }
     },
     highlight: function(element) {
         $(element).closest('.form-group').addClass('has-error');
@@ -86,7 +52,7 @@ $('#contactusform').validate({
         }
     }
 });
-// $('#formbutton').click(function(evt) {
-//     evt.preventDefault();
-//     alert('under development');
-// });
+$('#resetBtn').click(function(evt) {
+    $('#resetForm').modal('hide');
+    validateForm.resetForm();
+});

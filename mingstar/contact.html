@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Ming Star Hotel - Contact Us</title>
 
-    <!-- jQuery library & jQuery Validation Plugin -->
+    <!-- jQuery library & jQuery Validation & jQuery Form -->
     <script src="jquery-1.11.2/jquery-1.11.2.min.js"></script>
     <script src="jquery-validation-1.13.1/jquery.validate.min.js"></script>
+    <script src="jquery-form-3.51.0/jquery.form.js"></script>
 
     <!-- Bootstrap & Bootstrap Datepicker & Lightbox -->
     <script src="bootstrap-lightbox-v0.7.0/scale.fix.js"></script>
@@ -114,7 +115,8 @@
                 <div class="col-sm-12">
                     <p class="pageTitle">Contact Us / Reservation</p>
                     <p>Ming Star thanks you once again for visiting our website.</p>
-                    <p>Should you have any inquiries, please feel free to contact us via phone, fax or email as shown below.</p>
+                    <p>Should you have any inquiries, please feel free to contact us via phone,
+                       fax or email as shown below.</p>
                     <address>
                         <strong>Ming Star Hotel</strong><br>
                         217, Wisma Cemerlang<br />
@@ -136,135 +138,143 @@
                             </tr>
                         </tbody></table>
                     </address>
+
                     <hr style="border:1px solid #838383;" />
                     <p>Alternatively, you may fill up our contact form to reach us.</p>
                     <p>Let us hear from you! Your generous input will definitely help us to serve you better.</p>
 
-                    <form id="contactusform" method="post" action="">
+                    <form id="contactusform" class="form-horizontal" method="post" action="">
                         <div class="form-group">
-                            <label for="inputName" class="control-label">Name</label>
-                            <input id="inputName" name="name" type="text"
-                                   class="form-control" placeholder="Enter name">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputPhone" class="control-label">Phone</label>
-                            <input id="inputPhone" name="phone" type="text"
-                                   class="form-control" placeholder="Enter phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail" class="control-label">E-mail</label>
-                            <input id="inputEmail" name="email" type="email"
-                                   class="form-control" placeholder="Enter email">
-                        </div>
-                        <div class="form-group">
-                            <label for="datepicker" class="control-label">Check-In Date</label>
-                            <div id="datepicker" class="input-group date">
-                                <input type="text" class="form-control" placeholder="Select date">
-                                <span class="input-group-addon">
-                                    <!-- <i class="glyphicon glyphicon-th"></i> -->
-                                    <i class="glyphicon glyphicon-calendar"></i>
-                                </span>
+                            <label class="control-label col-sm-2 col-md-2 col-lg-2">Name</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10">
+                                <input name="guest_name" type="text" class="form-control" placeholder="Enter name">
+                                <!-- <div class="help-block with-errors"></div> -->
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputRoomType">Room Type</label>
-                            <div class="row-left-flex-container" style="flex-wrap:wrap;">
-                                <div style="margin-right:40px;">
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" value="option1" checked>Standard Room
-                                        </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" value="option2">Superior Room
-                                        </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" value="option3">Superior Plus Room
-                                        </label>
-                                    </div>
+                            <label class="control-label col-sm-2 col-md-2 col-lg-2">Phone</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10">
+                                <input name="guest_phone" type="text" class="form-control" placeholder="Enter phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 col-md-2 col-lg-2">E-mail</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10">
+                                <input name="guest_email" type="email" class="form-control" placeholder="Enter email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 col-md-2 col-lg-2">Check-In Date</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10">
+                                <div id="datepicker" class="input-group date">
+                                    <input name="check_in_date" type="text" class="form-control" placeholder="Select date">
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-calendar"></i>
+                                    </span>
                                 </div>
-                                <div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" value="option4">Deluxe Room
-                                        </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 col-md-2 col-lg-2">Room Type</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10">
+                                <div class="row-left-flex-container" style="flex-wrap:wrap;">
+                                    <div style="margin-right:40px;">
+                                        <div class="radio"><label>
+                                            <input type="radio" name="guest_room_type" value="Standard" checked>Standard Room
+                                        </label></div>
+                                        <div class="radio"><label>
+                                            <input type="radio" name="guest_room_type" value="Superior">Superior Room
+                                        </label></div>
+                                        <div class="radio"><label>
+                                            <input type="radio" name="guest_room_type" value="Superior Plus">Superior Plus Room
+                                        </label></div>
                                     </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" value="option5">Executive Room
-                                        </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" value="option6">Family Room
-                                        </label>
+                                    <div>
+                                        <div class="radio"><label>
+                                            <input type="radio" name="guest_room_type" value="Deluxe">Deluxe Room
+                                        </label></div>
+                                        <div class="radio"><label>
+                                            <input type="radio" name="guest_room_type" value="Executive">Executive Room
+                                        </label></div>
+                                        <div class="radio"><label>
+                                            <input type="radio" name="guest_room_type" value="Family">Family Room
+                                        </label></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group"
-                             style="display:inline-block; max-width:100px; width:100%; margin-right:35px;">
-                            <label for="adults">Adults</label>
-                            <select id="adults" class="form-control">
-                                    <!-- style="max-width:100px; display:inline-block;"> -->
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                            </select>
-                        </div>
-                        <div class="form-group"
-                             style="display:inline-block; max-width:100px; width:100%;">
-                            <label for="children">Children</label>
-                            <select id="children" class="form-control">
-                                    <!-- style="max-width:100px; display:inline-block;"> -->
-                                <option value="0">0</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                            </select>
-                        </div>
-                        <!-- <div class="form-group">
-                            <label for="inputRoomType2">Room Type 2 (Testing)</label>
-                            <select id="inputRoomType2" class="form-control">
-                                <option value="option1">Standard Room</option>
-                                <option value="option2">Superior Room</option>
-                                <option value="option3">Superior Plus Room</option>
-                                <option value="option4">Deluxe Room</option>
-                                <option value="option5">Executive Room</option>
-                                <option value="option6">Family Room</option>
-                            </select>
-                        </div> -->
-                        <!-- <div class="form-group">
-                            <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-                            <div class="input-group">
-                                <div class="input-group-addon">$</div>
-                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-                                <div class="input-group-addon">.00</div>
-                            </div>
-                        </div> -->
                         <div class="form-group">
-                            <label for="inputNote">Note</label>
-                            <textarea id="inputNote" class="form-control" rows="3"
-                                      placeholder="Please write here if you have any special note."></textarea>
+                            <label class="control-label col-sm-2 col-md-2 col-lg-2">Adults</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10">
+                                <select name="adults" class="form-control">
+                                    <option value="None">None</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
                         </div>
-                        <button id="formbutton" type="submit" class="btn btn-primary pull-right">Submit</button>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 col-md-2 col-lg-2">Children</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10">
+                                <select name="children" class="form-control">
+                                    <option value="None">None</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 col-md-2 col-lg-2">Note</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10">
+                                <textarea name="guest_note" class="form-control" rows="3"
+                                          placeholder="Please write here if you have any special note."></textarea>
+                            </div>
+                        </div>
+                        <div class="row-right-flex-container">
+                            <!-- <button id="formReset" type="button" class="btn btn-primary">Reset</button> -->
+                            <!-- Small modal -->
+                            <button type="button" class="btn btn-primary"
+                                    data-toggle="modal" data-target="#resetForm">Reset</button>
+                            <button type="submit" class="btn btn-primary" style="margin-left:15px;">Submit</button>
+
+                            <div id="resetForm" class="modal fade" tabindex="-1" role="dialog"
+                                 aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel">Reset Form</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Are you sure to reset form ?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default"
+                                                    data-dismiss="modal">Close</button>
+                                            <button id="resetBtn" type="button" class="btn btn-primary">Yes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
+
                 </div>
             </div><!-- #content -->
         </div><!-- /.container-fluid -->
