@@ -152,6 +152,12 @@ $(document).ready(function() {
             //     else
             //         $('#gallery-room-type-box').removeClass('gallery-fixed-box');
             // }
+        },
+
+        checkNavbarCollapse = function() {
+            // Still having an issue here which is FOC when toggle collapse
+            if ($('.navbar-collapse').attr('class')=='navbar-collapse collapse in')
+                $('.navbar-collapse').collapse('hide');
         };
 
     init(location.href.split('/').pop());
@@ -182,6 +188,8 @@ $(document).ready(function() {
 
     $(window).bind('resize', function() {
         checkGalleryRoomTypeBox();
+        if ($(window).width() > 760)
+            checkNavbarCollapse();
     });
 
     $(window).bind('popstate', function(evt) {
@@ -236,7 +244,7 @@ $(document).ready(function() {
 
             loadPage(href);
             if ($('.navbar-toggle').css('display')=='block')
-                $(".navbar-collapse").collapse('hide');
+                $('.navbar-collapse').collapse('hide');
             return false;
         }
     });

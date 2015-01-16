@@ -53,6 +53,7 @@ jQuery(document).ready(function ($) {
         $ArrowNavigatorOptions: {
             $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
             $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+            $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
             $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
         }
     };
@@ -97,7 +98,7 @@ jQuery(document).ready(function ($) {
         }
     };
 
-    var jssor_slider2 = new $JssorSlider$("slider2_container", options2);
+    // var jssor_slider2 = new $JssorSlider$("slider2_container", options2);
 
     //responsive code begin
     //you can remove responsive code if you don't want the slider scales while window resizes
@@ -108,11 +109,11 @@ jQuery(document).ready(function ($) {
         else
             window.setTimeout(ScaleSlider, 30);
 
-        var bodyWidth = document.body.clientWidth;
-        if (bodyWidth)
-            jssor_slider2.$ScaleWidth(Math.min(bodyWidth, 1920));
-        else
-            window.setTimeout(ScaleSlider, 30);
+        // var bodyWidth = document.body.clientWidth;
+        // if (bodyWidth)
+        //     jssor_slider2.$ScaleWidth(Math.min(bodyWidth, 1920));
+        // else
+        //     window.setTimeout(ScaleSlider, 30);
     }
     ScaleSlider();
 
@@ -120,6 +121,19 @@ jQuery(document).ready(function ($) {
     $(window).bind("resize", ScaleSlider);
     $(window).bind("orientationchange", ScaleSlider);
     //responsive code end
+
+    $('#standard').click(function(evt) {
+        alert('standard');
+    });
+    $('#superior').click(function(evt) {
+        alert('superior');
+    });
+    $('#deluxe').click(function(evt) {
+        alert('deluxe');
+    });
+    $('#sweet').click(function(evt) {
+        alert('deluxe');
+    });
 });
 
 // jQuery(document).ready(function ($) {

@@ -1,195 +1,269 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Ming Star Hotel - Places</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Ming Star Hotel - Places</title>
 
-    <!-- jQuery library & jQuery Validation & jQuery Form -->
-    <script src="jquery-1.11.2/jquery-1.11.2.min.js"></script>
-    <script src="jquery-validation-1.13.1/jquery.validate.min.js"></script>
-    <script src="jquery-form-3.51.0/jquery.form.js"></script>
+  <!-- jQuery library & jQuery Validation & jQuery Form -->
+  <script src="jquery-1.11.2/jquery-1.11.2.min.js"></script>
+  <script src="jquery-validation-1.13.1/jquery.validate.min.js"></script>
+  <script src="jquery-form-3.51.0/jquery.form.js"></script>
 
-    <!-- Bootstrap & Bootstrap Datepicker & Lightbox -->
-    <script src="bootstrap-lightbox-v0.7.0/scale.fix.js"></script>
-    <script src="bootstrap-lightbox-v0.7.0/prettify/prettify.js"></script>
-    <script src="bootstrap-3.3.1/js/bootstrap.min.js"></script>
-    <script src="bootstrap-datepicker-1.3.1/js/bootstrap-datepicker.js"></script>
-    <script src="bootstrap-lightbox-v0.7.0/bootstrap-lightbox.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.3.1/css/datepicker.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap-lightbox-v0.7.0/bootstrap-lightbox.min.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap-lightbox-v0.7.0/prettify/prettify.css">
+  <!-- Bootstrap & Bootstrap Datepicker & Lightbox -->
+  <script src="bootstrap-lightbox-v0.7.0/scale.fix.js"></script>
+  <script src="bootstrap-lightbox-v0.7.0/prettify/prettify.js"></script>
+  <script src="bootstrap-3.3.1/js/bootstrap.min.js"></script>
+  <script src="bootstrap-datepicker-1.3.1/js/bootstrap-datepicker.js"></script>
+  <script src="bootstrap-lightbox-v0.7.0/bootstrap-lightbox.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="bootstrap-3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.3.1/css/datepicker.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap-lightbox-v0.7.0/bootstrap-lightbox.min.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap-lightbox-v0.7.0/prettify/prettify.css">
 
-    <!-- Google Maps JavaScript -->
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <!-- Google Maps JavaScript -->
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
 
-    <!-- JavaScrip -->
-    <script src="js/main.js"></script>
-    <script src="js/general.js"></script>
-    <script type="text/javascript"></script>
+  <!-- JavaScrip -->
+  <script src="js/main.js"></script>
+  <script src="js/general.js"></script>
+  <script type="text/javascript"></script>
 
-    <!-- css -->
-    <link href="css/style.css" rel="stylesheet" />
-    <style>
-        #legend {
-            background: white;
-            padding: 10px;
-        }
-    </style>
+  <!-- css -->
+  <link href="css/style.css" rel="stylesheet" />
+  <style>
+    #legend {
+      background: white;
+      padding: 10px;
+    }
+  </style>
 
-    
-    <!-- Gallery CSS and JavaScript -->
-        <link rel="stylesheet" type="text/css" href="css/gallery-style.css" />
-        <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
-        <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
-            <div class="rg-image-wrapper">
-                {{if itemsCount > 1}}
-                    <div class="rg-image-nav">
-                        <a href="#" class="rg-image-nav-prev">Previous Image</a>
-                        <a href="#" class="rg-image-nav-next">Next Image</a>
-                    </div>
-                {{/if}}
-                <div class="rg-image"></div>
-                <div class="rg-loading"></div>
-                <div class="rg-caption-wrapper">
-                    <div class="rg-caption" style="display:none;">
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </script>
-        <!--script type="text/javascript" src="js/deluxe.js"></script-->
-        <script type="text/javascript" src="js/standard.js"></script>
-        <script type="text/javascript" src="js/superior.js"></script>
-        <script type="text/javascript" src="js/superiorPlus.js"></script>
+  
+  <!-- Gallery CSS and JavaScript -->
+    <link rel="stylesheet" type="text/css" href="css/gallery-style.css" />
+    <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+    <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
+      <div class="rg-image-wrapper">
+        {{if itemsCount > 1}}
+          <div class="rg-image-nav">
+            <a href="#" class="rg-image-nav-prev">Previous Image</a>
+            <a href="#" class="rg-image-nav-next">Next Image</a>
+          </div>
+        {{/if}}
+        <div class="rg-image"></div>
+        <div class="rg-loading"></div>
+        <div class="rg-caption-wrapper">
+          <div class="rg-caption" style="display:none;">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </script>
+    <!--script type="text/javascript" src="js/deluxe.js"></script-->
+    <script type="text/javascript" src="js/standard.js"></script>
+    <script type="text/javascript" src="js/superior.js"></script>
+    <script type="text/javascript" src="js/superiorPlus.js"></script>
 
-    <!-- Image Slider -->
-    <link href="css/all-js-image-slider.css" rel="stylesheet" type="text/css" />
-    <script src="js/js-image-slider.js" type="text/javascript"></script>
-    
-    <!-- Photo Grid -->
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
-	<script src="js/modernizr.custom.js"></script>
+  <!-- Image Slider -->
+  <link href="css/all-js-image-slider.css" rel="stylesheet" type="text/css" />
+  <script src="js/js-image-slider.js" type="text/javascript"></script>
+  
+  <!-- Photo Grid -->
+  <link rel="stylesheet" type="text/css" href="css/component.css" />
+  <script src="js/modernizr.custom.js"></script>
 
-    <!-- Jssor Slider -->
-    <script type="text/javascript" src="jssor/js/jssor.js"></script>
-    <script type="text/javascript" src="jssor/js/jssor.slider.js"></script>
+  <!-- Jssor Slider -->
+  <script type="text/javascript" src="jssor/js/jssor.js"></script>
+  <script type="text/javascript" src="jssor/js/jssor.slider.js"></script>
 </head>
 <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-inverse" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed"
-                        data-toggle="collapse" data-target="#navbar-collapse-main">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="http://mingstarhotel.com/index-1.html" class="navbar-brand"></a>
+  <!-- navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse" data-target="#navbar-collapse-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="http://mingstarhotel.com/index-1.html" class="navbar-brand"></a>
+      </div>
+      <div id="navbar-collapse-main" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="aboutus.html">About Us</a></li>
+          <li class="dropdown">
+            <a id="rooms-nav" href="#" class="dropdown-toggle" role="button"
+               data-toggle="dropdown" aria-expanded="false">Rooms&nbsp;<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="deluxe.html">Deluxe</a></li>
+              <li class="divider"></li>
+              <li><a href="superiorPlus.html">Superior Plus</a></li>
+              <li><a href="superior.html">Superior</a></li>
+              <li class="divider"></li>
+              <li><a href="standard.html">Standard</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="places.html">Places</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div><!-- #navbar-collapse-main -->
+    </div><!-- /.container-fluid -->
+  </nav><!-- /.navbar --> 
+
+  <!-- #box3 -->
+  <div id="box3" class="pad-section">
+    <div id="content" class="container-fluid">
+      <div class="row pad-top">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+          <p class="pageTitle">Map</p>
+          <p class="pageText">Explore our interactive map to find out places of interest, 
+                              driving direction and your way to our hotel</p>
+            <div style="display:inline-block;">
+              <p>Alternatively, you may download our featured map below:</p>
             </div>
-            <div id="navbar-collapse-main" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li class="dropdown">
-                        <a id="rooms-nav" href="#" class="dropdown-toggle" role="button"
-                           data-toggle="dropdown" aria-expanded="false">
-                            Rooms&nbsp;<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="deluxe.html">Deluxe</a></li>
-                            <li class="divider"></li>
-                            <li><a href="superiorPlus.html">Superior Plus</a></li>
-                            <li><a href="superior.html">Superior</a></li>
-                            <li class="divider"></li>
-                            <li><a href="standard.html">Standard</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="places.html">Places</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div><!-- #navbar-collapse-main -->
-        </div><!-- /.container-fluid -->
-    </nav><!-- /.navbar --> 
+            <div style="display:inline-block;">
+              <button id="map1" type="button" class="btn btn-link">MAP1</button>
+              <button id="map2" type="button" class="btn btn-link">MAP2</button>
+            </div>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+          <div class="col-top-flex-container" style="align-items: flex-end;">
+            <button type="button" class="btn btn-default"
+                    style="margin-bottom:10px;"
+                    onclick="openGoogleMap()">View on Google Map
+            </button>
+<!-- <div id="map-canvas" style="color:black;"></div> -->
+<!-- <div id="legend">My first legend!</div> -->
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3972.5536405932116!2d103.14849099999999!3d5.332085000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b7be74fc4a47b7%3A0xd3329c42f0575055!2sMing+Star+Hotel!5e0!3m2!1sen!2smy!4v1421139841572"
+    width="100%" height="350" frameborder="0" style="border:0"></iframe> -->
+            <iframe src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=115860096431214721188.00045067c2af1549adaeb&amp;ll=5.332071,103.147845&amp;spn=0,0&amp;iwloc=00045067c9e420974965c&amp;output=embed&amp;s=AARTsJoZwislyC0OJ20cAFwpiUvpW94oSA"
+                    width="100%" height="450" scrolling="no" frameborder="0" style="border:0"></iframe>
+          </div>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-sm-10 col-md-10 col-lg-10">
+          <table class="table table-striped">
+            <caption>Point of interest to Mingstar Hotel in Kuala Terengganu</caption>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Point of Interest</th>
+                <th>Distance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">1</th>
+                <td>Tanjung Warisan, Pulau Duyung</td>
+                <td>6.8km</td>
+              </tr>
+              <tr><th scope="row">2</th>
+                <td>Crystal Mosque</td>
+                <td>9.8km</td>
+              </tr>
+              <tr><th scope="row">3</th>
+                <td>Museum</td>
+                <td>7.8km</td>
+              </tr>
+              <tr><th scope="row">4</th>
+                <td>Kampung Cina</td>
+                <td>1.9km</td>
+              </tr>
+              <tr><th scope="row">5</th>
+                <td>Syah Bandar</td>
+                <td>1.2km</td>
+              </tr>
+              <tr><th scope="row">6</th>
+                <td>Batu Buruk Beach</td>
+                <td>2.0km</td>
+              </tr>
+              <tr><th scope="row">7</th>
+                <td>Bus Station</td>
+                <td>1.1km</td>
+              </tr>
+              <tr><th scope="row">8</th>
+                <td>Central Market</td>
+                <td>1.8km</td>
+              </tr>
+              <tr><th scope="row">9</th>
+                <td>Tourist Information Centre</td>
+                <td>1.3km</td>
+              </tr>
+              <tr><th scope="row">10</th>
+                <td>Post Office</td>
+                <td>1.5km</td>
+              </tr>
+              <tr><th scope="row">11</th>
+                <td>Airport</td>
+                <td>16.2km</td>
+              </tr>
+              <tr><th scope="row">12</th>
+                <td>South China Sea</td>
+                <td>400m</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+<!-- <div class="col-sm-6 col-md-6 col-lg-6">
+  <p class="pageTitle">Map</p>
+  <p class="pageText">Explore our interactive map to find out places of interest, driving direction and your way to our hotel</p>
+  <p>Alternatively, you may download our featured map below:</p>
+  <button id="map1" type="button" class="btn btn-link">MAP1</button>
+  <button id="map2" type="button" class="btn btn-link">MAP2</button>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-6" style="padding-top:15px;">
+  <div class="col-top-flex-container" style="align-items: flex-end;">
+    <button type="button" class="btn btn-default"
+        style="margin-bottom:10px;"
+        onclick="openGoogleMap()">View on Google Map
+    </button>
+    <!- <div style="width:100%; overflow-x:auto;"> ->
+      <div id="map-canvas" class="hideBlock" style="color:black;"></div>
+      <iframe src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=115860096431214721188.00045067c2af1549adaeb&amp;ll=5.332071,103.147845&amp;spn=0,0&amp;iwloc=00045067c9e420974965c&amp;output=embed&amp;s=AARTsJoZwislyC0OJ20cAFwpiUvpW94oSA"
+          style="border:0;" 
+          width="100%" height="350" seamless="seamless"></iframe>
+    <!- </div> ->
+  </div>
+</div> -->
+      </div> <!-- /.row -->
+    </div><!-- #content -->
+  </div><!-- #box3 --> 
 
-    <!-- #box3 -->
-    <div id="box3" class="pad-section">
-        <div id="content" class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <p class="pageTitle">Map</p>
-                    <p class="pageText">Explore our interactive map to find out places of interest, driving direction and your way to our hotel</p>
-                        <div style="display:inline-block;">
-                            <p>Alternatively, you may download our featured map below:</p>
-                        </div>
-                        <div style="display:inline-block;">
-                            <button id="map1" type="button" class="btn btn-link">MAP1</button>
-                            <button id="map2" type="button" class="btn btn-link">MAP2</button>
-                        </div>
-                    <div class="col-top-flex-container" style="align-items: flex-end;">
-                        <button type="button" class="btn btn-default"
-                                style="margin-bottom:10px;"
-                                onclick="openGoogleMap()">View on Google Map
-                        </button>
-                        <!-- <div style="width:100%; overflow-x:auto;"> -->
-                            <div id="map-canvas" style="color:black;"></div>
-                            <div id="legend">My first legend!</div>
-                        <!-- </div> -->
-                    </div>
-                </div>
-                <!-- <div class="col-sm-6 col-md-6 col-lg-6">
-                    <p class="pageTitle">Map</p>
-                    <p class="pageText">Explore our interactive map to find out places of interest, driving direction and your way to our hotel</p>
-                    <p>Alternatively, you may download our featured map below:</p>
-                    <button id="map1" type="button" class="btn btn-link">MAP1</button>
-                    <button id="map2" type="button" class="btn btn-link">MAP2</button>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-6" style="padding-top:15px;">
-                    <div class="col-top-flex-container" style="align-items: flex-end;">
-                        <button type="button" class="btn btn-default"
-                                style="margin-bottom:10px;"
-                                onclick="openGoogleMap()">View on Google Map
-                        </button>
-                        <!- <div style="width:100%; overflow-x:auto;"> ->
-                            <div id="map-canvas" class="hideBlock" style="color:black;"></div>
-                            <iframe src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=115860096431214721188.00045067c2af1549adaeb&amp;ll=5.332071,103.147845&amp;spn=0,0&amp;iwloc=00045067c9e420974965c&amp;output=embed&amp;s=AARTsJoZwislyC0OJ20cAFwpiUvpW94oSA"
-                                    style="border:0;" 
-                                    width="100%" height="350" seamless="seamless"></iframe>
-                        <!- </div> ->
-                    </div>
-                </div> -->
-            </div><!-- #content -->
-        </div><!-- /.container-fluid -->
-    </div><!-- #box3 --> 
-
-    <!-- footer -->
-    <footer>
-        <hr class="footerDivider" />
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-3 col-md-3 col-lg-5">
-                    <table class="pageContact"><tbody>
-                        <tr>
-                            <td rowspan="2"><span class="glyphicon glyphicon-earphone contactIcon"
-                                aria-hidden="true"></span>
-                            </td>
-                            <td class="contactSpace1">Phone:</td>
-                            <td id="hotelphone"></td>
-                        </tr>
-                        <tr>
-                            <td>FAX:</td>
-                            <td id="hotelfax"></td>
-                        </tr>
-                    </tbody></table>
-                </div>
-                <div class="col-sm-9 col-md-9 col-lg-7 text-right">
-                    <p>All material herein &copy; 2014 – 2015 Ming Group<br />All Rights Reserved.</p>
-                </div>
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </footer><!-- footer -->
+  <!-- footer -->
+  <footer>
+    <hr class="footerDivider" />
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-5">
+          <table class="pageContact"><tbody>
+            <tr>
+              <td rowspan="2"><span class="glyphicon glyphicon-phone-alt contactIcon" aria-hidden="true"></span></td>
+              <td class="phoneContact">Phone:</td>
+              <td id="hotelphone"></td>
+            </tr>
+            <tr>
+              <td>FAX:</td>
+              <td id="hotelfax"></td>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="col-sm-9 col-md-9 col-lg-7 text-right">
+          <p>All material herein &copy; 2014 – 2015 Ming Group<br />All Rights Reserved.</p>
+        </div>
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </footer><!-- footer -->
 </body>
 </html>

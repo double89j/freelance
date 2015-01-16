@@ -15,11 +15,17 @@
     text-align: center;
 }
 .gallery-room-type {
-    background-color: lightblue;
-    padding: 30px 10px;
+    background-color: rgba(131,211,160, 1);
+    border-radius: 0 0 10px;
+    box-shadow: 0 0 35px #6b915b inset;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    font-size: 19px;
+    margin: 0 auto 10px auto;
+    padding: 5px 10px;
     text-align: center;
     width: 100%;
-    margin: 0 auto 10px auto;
 }
 .gallery-room-type.last {
     margin: 0 auto;
@@ -29,6 +35,9 @@
 }*/
 .hideBlock {
     display: none !important;
+}
+.hiddenBlock {
+    opacity: 0;
 }
 .popover {
     color: black;
@@ -67,6 +76,7 @@ body {
     #background:         url("../images/background.jpg") no-repeat fixed center 120px rgba(0, 0, 0, 0);
     #background:         url("../images/background.jpg") no-repeat fixed center 0 / cover rgba(0, 0, 0, 0);
     #background:         url("../images/1606313.jpg") no-repeat fixed center 0 / cover rgba(0, 0, 0, 0);
+    background-color:   #000;
 }
 #hotel-name {
     color:              #424242;
@@ -207,6 +217,9 @@ footer {
 .pad-section {
     padding:            0 0 10px 0;
 }
+.pad-top {
+    padding-top:        52px;
+}
 /*.pad-section img {
     width:              100%;
 }*/
@@ -280,9 +293,22 @@ footer {
 .btn[id="readmore"].active.focus {
     outline:            0 none;
 }
+#readmoretext.myopendown {
+    border-radius:      10px;
+    border:             1px dashed #bfbfbf;
+    max-height:         0;
+    overflow:           hidden;
+    padding:            0 10px;
+
+    -moz-transition: max-height 0.5s;
+    -o-transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+}
+#readmoretext.myopendown.showtext {
+    max-height: 400px;
+}
 .iconContainer {
-    /*background:             grey;*/
-    border:             1px solid black;
     padding-bottom:     15px;
     padding-top:        15px;
     text-align:         center;
@@ -294,7 +320,7 @@ footer {
     margin-top:         35px;
     padding-top:        30px;
 }
-.iconBox .glyphicon-search {
+.iconBox .glyphicon.buttonIcon {
     background-color:   #c1c89b;
     border-radius:      3px;
     font-size:          30px;
@@ -310,7 +336,7 @@ footer {
     -webkit-transition: all 0.4s ease 0s;
     transition:         all 0.4s ease 0s;
 }
-.iconBox:hover .glyphicon-search {
+.iconBox:hover .glyphicon.buttonIcon {
     top:                -13px;
     -ms-transform:      rotateY(180deg);
     -o-transform:       rotateY(180deg);
@@ -414,7 +440,7 @@ footer {
 footer .glyphicon.contactIcon {
     font-size:          24px;
     margin-right:       10px;
-    margin-top:         4px;
+    /*margin-top:         4px;*/
 }
 footer .glyphicon.contactIcon:hover {
     color:              inherit;
@@ -429,14 +455,8 @@ footer .glyphicon:hover {
 .pageContact {
     font-size:          10px;
 }
-.contactSpace1 {
+.phoneContact {
     width:              40px;
-}
-.TA_selfserveprop {
-    margin-bottom:      10px;
-}
-.TA_selfserveprop > div {
-    width:              100% !important;
 }
 
 /* bootstrap lightbox */
@@ -493,15 +513,32 @@ body.lightbox-open,
     width:              164px;
 }
 .navbar-inverse {
-    border:             0;
+    background-color:   rgba(34, 34, 34, .85);
+    border:             0 !important;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color:              #c5c5c5;
+}
+.navbar-inverse .navbar-toggle {
+    border-color:       #adadad;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color:   #adadad;
 }
 .navbar-fixed-top {
     border-width:       1px;
     height:             52px;
 }
+.navbar-collapse.collapsing,
+.navbar-collapse.in {
+    background-color:   rgba(34, 34, 34, .85);
+}
+.navbar-fixed-top .navbar-collapse,
 .navbar-collapse {
-    background:         none repeat scroll 0 0 rgb(248, 248, 248); /* if use navbar-inverse then disabled this and open below */
-    background-color:   #222;
+    #background:         none repeat scroll 0 0 rgb(248, 248, 248); /* if use navbar-inverse then disabled this and open below */
+    #background-color:   rgba(34, 34, 34, .85) !important;
+    #background-color: inherit;
 }
 .navbar-fixed-top .navbar-collapse/*,
 .navbar-fixed-bottom .navbar-collapse*/ {
@@ -761,6 +798,26 @@ ul#slider li:not(:target) {
 /* Bullet Navigator Skin End */
 
 /* Arrow Navigator Skin Begin */
+
+/*
+.jssorb01 div           (normal)
+.jssorb01 div:hover     (normal mouseover)
+.jssorb01 .av           (active)
+.jssorb01 .av:hover     (active mouseover)
+.jssorb01 .dn           (mousedown)
+*/
+
+.jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
+    filter: alpha(opacity=70);
+    opacity: .7;
+    overflow:hidden;
+    cursor: pointer;
+    border: #000 1px solid;
+}
+.jssorb01 div { background-color: gray; }
+.jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
+.jssorb01 .av { background-color: #fff; }
+.jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
 
 /* jssor slider arrow navigator skin 12 css */
 /*

@@ -71,7 +71,7 @@
 </head>
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-inverse" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed"
@@ -111,25 +111,29 @@
     <!-- #box3 -->
     <div id="box3" class="pad-section">
         <div id="content" class="container-fluid">
-            <h3 id="rooms-title">Standard Room</h3>            
-            <div id="rg-gallery" class="rg-gallery">
-                    <div class="rg-thumbs">
-                        <!-- Elastislide Carousel Thumbnail Viewer -->
-                        <div class="es-carousel-wrapper">
-                            <div class="es-nav">
-                                <span class="es-nav-prev">Previous</span>
-                                <span class="es-nav-next">Next</span>
+            <div class="row pad-top">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h3 id="rooms-title">Standard Room</h3>            
+                    <div id="rg-gallery" class="rg-gallery">
+                        <div class="rg-thumbs">
+                            <!-- Elastislide Carousel Thumbnail Viewer -->
+                            <div class="es-carousel-wrapper">
+                                <div class="es-nav">
+                                    <span class="es-nav-prev">Previous</span>
+                                    <span class="es-nav-next">Next</span>
+                                </div>
+                                <div class="es-carousel">
+                                    <ul id="reset">
+                                        <li><a href="#"><img src="images/Standard Room.jpg" data-large="images/Standard Room.jpg" alt="image13" data-description="Sample Text" /></a></li>
+                                        <li><a href="#"><img src="images/Standard Single Room.jpg" data-large="images/Standard Single Room.jpg" alt="image14" data-description="Sample Text" /></a></li>
+                                        </ul>
+                                </div>
                             </div>
-                            <div class="es-carousel">
-                                <ul id="reset">
-                                    <li><a href="#"><img src="images/Standard Room.jpg" data-large="images/Standard Room.jpg" alt="image13" data-description="Sample Text" /></a></li>
-                                    <li><a href="#"><img src="images/Standard Single Room.jpg" data-large="images/Standard Single Room.jpg" alt="image14" data-description="Sample Text" /></a></li>
-                                    </ul>
-                            </div>
-                        </div>
-                        <!-- End Elastislide Carousel Thumbnail Viewer -->
-                    </div><!-- rg-thumbs -->
-                </div><!-- rg-gallery -->
+                            <!-- End Elastislide Carousel Thumbnail Viewer -->
+                        </div><!-- rg-thumbs -->
+                    </div><!-- rg-gallery -->
+                </div>
+            </div>
             <div class="row">
                 <div class="col-sm-6 col-md-6 col-lg-6">
                     <h4 id="rooms-detail-title">Facilities</h4>
@@ -169,10 +173,10 @@
                 <div class="col-sm-3 col-md-3 col-lg-5">
                     <table class="pageContact"><tbody>
                         <tr>
-                            <td rowspan="2"><span class="glyphicon glyphicon-earphone contactIcon"
+                            <td rowspan="2"><span class="glyphicon glyphicon-phone-alt contactIcon"
                                 aria-hidden="true"></span>
                             </td>
-                            <td class="contactSpace1">Phone:</td>
+                            <td class="phoneContact">Phone:</td>
                             <td id="hotelphone"></td>
                         </tr>
                         <tr>

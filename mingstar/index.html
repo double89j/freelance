@@ -35,11 +35,6 @@
     <link rel="stylesheet" type="text/css" href="bootstrap-lightbox-v0.7.0/bootstrap-lightbox.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap-lightbox-v0.7.0/prettify/prettify.css">
 
-    <!-- TripAdvisor -->
-    <!-- 
-    <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=461&amp;locationId=1222443&amp;lang=en_MY&amp;rating=true&amp;nreviews=4&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=true&amp;border=true&amp;display_version=2"></script>
-     -->
-
     <!-- Google Maps JavaScript -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
 
@@ -76,22 +71,7 @@
             letter-spacing: 1px;
             line-height: 24px;
             margin: 0;
-        }
-        h1 {
-            background-color: yellow;
         }*/
-        #readmoretext.myopendown {
-            max-height: 0;
-            overflow: hidden;
-
-            -moz-transition: max-height 0.5s;
-            -o-transition: max-height 0.5s;
-            -webkit-transition: max-height 0.5s;
-            transition: max-height 0.5s;
-        }
-        #readmoretext.myopendown.showtext {
-            max-height: 400px;
-        }
     </style>
     
     <!-- Gallery CSS and JavaScript -->
@@ -150,7 +130,7 @@
         </div><!-- #box1 --> 
 
         <!-- navbar -->
-        <nav class="navbar navbar-inverse" role="navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -267,10 +247,10 @@
                         <table class="pageContact"><tbody>
                             <tr>
                                 <!-- <td rowspan="2"><img src="images/z.gif" alt="Contact Info" class="contactIcon" /></td> -->
-                                <td rowspan="2"><span class="glyphicon glyphicon-earphone contactIcon"
+                                <td rowspan="2"><span class="glyphicon glyphicon-phone-alt contactIcon"
                                     aria-hidden="true"></span>
                                 </td>
-                                <td class="contactSpace1">Phone:</td>
+                                <td class="phoneContact">Phone:</td>
                                 <td id="hotelphone"></td>
                             </tr>
                             <tr>
@@ -292,7 +272,7 @@
                     <table class="pageContact"><tbody>
                         <tr>
                             <td rowspan="2"><img src="images/z.gif" alt="Contact Info" class="contactIcon" /></td>
-                            <td class="contactSpace1">Phone:</td>
+                            <td class="phoneContact">Phone:</td>
                             <td>+60-9-6228666</td>
                         </tr>
                         <tr>

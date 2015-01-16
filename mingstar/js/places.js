@@ -31,8 +31,8 @@ function googleMapInit() {
 
     var marker = new google.maps.Marker({
         position: hotelLatLng,
-        map: map,
-        icon: iconBase + 'schools_maps.png'
+        map: map
+        // icon: iconBase + 'schools_maps.png'
         // animation: google.maps.Animation.BOUNCE
     });
     // marker.setMap(map);
