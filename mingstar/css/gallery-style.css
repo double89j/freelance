@@ -184,16 +184,21 @@ text-align: center;
 }
 
 .room-link {
-margin-top: 5px;
 width: 23%;
 height: 40px;
-font-size: 20px;
+font-size: 15px;
 font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
 font-style: bold;
 background-color: #202020;
 color: #aaa;
+margin: 1%;
+min-width: 200px;
 }
 
 .room-link :hover {
 color: white;
+}
+
+.room-link label {
+padding: 8px;
 }
