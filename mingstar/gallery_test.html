@@ -1,0 +1,289 @@
+<html class=" js "><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Ming Star Hotel - Gallery</title>
+
+  <!-- jQuery library & jQuery Validation & jQuery Form -->
+  <script src="jquery-1.11.2/jquery-1.11.2.min.js"></script>
+  <script src="jquery-validation-1.13.1/jquery.validate.min.js"></script>
+  <script src="jquery-form-3.51.0/jquery.form.js"></script>
+
+  <!-- Bootstrap & Bootstrap Datepicker & Lightbox -->
+  <script src="bootstrap-lightbox-v0.7.0/scale.fix.js"></script>
+  <script src="bootstrap-lightbox-v0.7.0/prettify/prettify.js"></script>
+  <script src="bootstrap-3.3.1/js/bootstrap.min.js"></script>
+  <script src="bootstrap-datepicker-1.3.1/js/bootstrap-datepicker.js"></script>
+  <script src="bootstrap-lightbox-v0.7.0/bootstrap-lightbox.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="bootstrap-3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.3.1/css/datepicker.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap-lightbox-v0.7.0/bootstrap-lightbox.min.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap-lightbox-v0.7.0/prettify/prettify.css">
+
+  <!-- Google Maps JavaScript -->
+  <script src="https://maps.googleapis.com/maps/api/js"></script><script src="https://maps.gstatic.com/maps-api-v3/api/js/19/6/intl/en_gb/main.js"></script>
+
+  <!-- JavaScrip -->
+  <script src="js/main.js"></script>
+  <script src="js/general.js"></script>
+  <script type="text/javascript"></script>
+
+  <!-- css -->
+  <link href="css/style.css" rel="stylesheet">
+  
+  <!-- Gallery CSS and JavaScript -->
+    <link rel="stylesheet" type="text/css" href="css/gallery-style.css">
+    <link rel="stylesheet" type="text/css" href="css/elastislide.css">
+    <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
+      <div class="rg-image-wrapper">
+        {{if itemsCount > 1}}
+          <div class="rg-image-nav">
+            <a href="#" class="rg-image-nav-prev">Previous Image</a>
+            <a href="#" class="rg-image-nav-next">Next Image</a>
+          </div>
+        {{/if}}
+        <div class="rg-image"></div>
+        <div class="rg-loading"></div>
+        <div class="rg-caption-wrapper">
+          <div class="rg-caption" style="display:none;">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </script>
+    <!--script type="text/javascript" src="js/deluxe.js"></script-->
+    <script type="text/javascript" src="js/standard.js"></script>
+    <script type="text/javascript" src="js/superior.js"></script>
+    <script type="text/javascript" src="js/superiorPlus.js"></script>
+
+  <!-- Image Slider -->
+  <link href="css/all-js-image-slider.css" rel="stylesheet" type="text/css">
+  <script src="js/js-image-slider.js" type="text/javascript"></script>
+  
+  <!-- Photo Grid -->
+  <link rel="stylesheet" type="text/css" href="css/component.css">
+  <script src="js/modernizr.custom.js"></script>
+
+  <!-- Jssor Slider -->
+  <script type="text/javascript" src="jssor/js/jssor.js"></script>
+  <script type="text/javascript" src="jssor/js/jssor.slider.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/19/6/intl/en_gb/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/19/6/intl/en_gb/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/19/6/intl/en_gb/stats.js"></script></head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="http://mingstarhotel.com/index-1.html" class="navbar-brand"></a>
+      </div>
+      <div id="navbar-collapse-main" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="aboutus.html">About Us</a></li>
+          <li class="dropdown">
+            <a id="rooms-nav" href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">Rooms&nbsp;<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="deluxe.html">Deluxe</a></li>
+              <li class="divider"></li>
+              <li><a href="superiorPlus.html">Superior Plus</a></li>
+              <li><a href="superior.html">Superior</a></li>
+              <li class="divider"></li>
+              <li><a href="standard.html">Standard</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="places.html">Places</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div><!-- #navbar-collapse-main -->
+    </div><!-- /.container-fluid -->
+  </nav><!-- /.navbar --> 
+
+  <!-- #box3 -->
+  <div id="box3" class="pad-section">
+    <div id="content" class="container-fluid">
+<div class="row pad-top">
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-sm-10 col-md-10 col-lg-10">
+          <h3 id="rooms-title">Gallery</h3>
+        </div>
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+      </div><div class="row">
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-sm-10 col-md-10 col-lg-10 showbox">
+          <div class="col-sm-12 col-md-2 col-lg-2 showbox">
+            <div class="col-xs-6 col-sm-3 col-md-12 col-lg-12 gallery-room-type-box showbox">
+              <div id="standard" class="showbox gallery-room-type">Standard</div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-12 col-lg-12 gallery-room-type-box showbox">
+              <div id="superior" class="showbox gallery-room-type">Superior</div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-12 col-lg-12 gallery-room-type-box showbox">
+              <div id="deluxe" class="showbox gallery-room-type">Deluxe</div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-12 col-lg-12 gallery-room-type-box showbox">
+              <div id="sweet" class="showbox gallery-room-type">Sweet</div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 showbox" style="padding:0;">
+            <!-- Jssor Slider Begin -->
+            <!-- You can move inline styles to css file or css block. -->
+            <div id="slider1_container" class="gallery-slider1-container gallery-test-box">
+              <!-- Loading Screen -->
+              <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; 
+                            background-color: #000000; top: 0px; left: 0px; width: 100%; height:100%;">
+                </div>
+                <div style="position: absolute; display: block; top: 0px; left: 0px; width: 100%;
+                            height:100%; background: url(jssor/img/loading.gif) no-repeat center center;">
+                </div>
+              </div>
+
+              <!-- Slides Container -->
+              <div u="slides" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 showbox" 
+					style="cursor: move; position: absolute; left: 0px; top: 0px; overflow: hidden;">
+                <div><img u="image" src="room-images/deluxe/323_1.jpg"></div>
+                <div><img u="image" src="room-images/deluxe/323_2.jpg"></div>
+                <div><img u="image" src="room-images/deluxe/323_3.jpg"></div>
+                <div><img u="image" src="room-images/deluxe/323_4.jpg"></div>
+                <div><img u="image" src="room-images/deluxe/323_5.jpg"></div>
+                <div><img u="image" src="room-images/deluxe/323_6.jpg"></div>
+                <div><img u="image" src="room-images/deluxe/323_7.jpg"></div>
+                <div><img u="image" src="room-images/deluxe/323_8.jpg"></div>
+                <div><img u="image" src="room-images/deluxe/323_9.jpg"></div>
+              </div>
+
+              <!-- bullet navigator container -->
+              <!-- <div u="navigator" class="jssorb05" 
+                   style="position: absolute; bottom: 16px; right: 6px;">
+                <!- bullet navigator item prototype ->
+                <div u="prototype" style="position: absolute; width: 16px; height: 16px;"></div>
+              </div> -->
+              <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
+                <!-- bullet navigator item prototype -->
+                <div u="prototype" 
+						style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; 
+                            line-height:19px; color:White; font-size:12px;"></div>
+              </div>
+              <!-- bullet navigator container -->
+              
+              <!-- Arrow Left -->
+              <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0px;"></span>
+<!-- <span u="arrowleft" class="jssora12l"
+      style="width: 30px; height: 46px; top: 50%; left: 0px; margin-top:-23px;"></span> -->
+              <!-- Arrow Right -->
+              <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0px"></span>
+<!-- <span u="arrowright" class="jssora12r"
+      style="width: 30px; height: 46px; top: 50%; right: 0px; margin-top:-23px;"></span> -->
+              <a style="display: none" href="http://www.jssor.com">Image Slider</a>
+            </div>
+            <!-- Jssor Slider End -->
+          </div>
+        </div>
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+
+
+
+
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 showbox hideBlock" 
+			style="padding:0;">
+          <!-- Full Width Test -->
+          <!-- Jssor Slider Begin -->
+          <!-- You can move inline styles to css file or css block. -->
+          <div id="slider2_container" 
+				style="position: relative; margin: 0 auto; top: 0px; left: 0px;
+                width: 1300px; height: 500px; overflow: hidden;">
+            <!-- Loading Screen -->
+            <div u="loading" 
+					style="position: absolute; top: 0px; left: 0px;">
+              <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
+                    top: 0px; left: 0px; width: 100%; height: 100%;">
+              </div>
+              <div style="position: absolute; display: block; 
+                    background: url(jssor/img/loading.gif) no-repeat center center;
+                    top: 0px; left: 0px; width: 100%; height: 100%;">
+              </div>
+            </div>
+            <!-- Slides Container -->
+            <div u="slides" 
+			style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
+                  height: 500px; overflow: hidden;">
+              <div><img u="image" src="room-images/deluxe/333_1.jpg"></div>
+              <div><img u="image" src="room-images/deluxe/333_2.jpg"></div>
+              <div><img u="image" src="room-images/deluxe/333_3.jpg"></div>
+              <div><img u="image" src="room-images/deluxe/333_4.jpg"></div>
+              <div><img u="image" src="room-images/deluxe/333_5.jpg"></div>
+              <div><img u="image" src="room-images/deluxe/333_6.jpg"></div>
+              <div><img u="image" src="room-images/deluxe/333_7.jpg"></div>
+              <div><img u="image" src="room-images/deluxe/333_8.jpg"></div>
+              <div><img u="image" src="room-images/deluxe/333_9.jpg"></div>
+            </div>
+                
+            <!-- bullet navigator container -->
+            <div u="navigator" class="jssorb21" 
+style="position: absolute; bottom: 26px; left: 6px;">
+              <!-- bullet navigator item prototype -->
+              <div u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; 
+                    line-height:19px; color:White; font-size:12px;"></div>
+            </div>
+            <!-- bullet navigator container -->
+
+            <!-- Arrow Left -->
+            <span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;"></span>
+            <!-- Arrow Right -->
+            <span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px"></span>
+            <a style="display: none" href="http://www.jssor.com">Image Slider</a>
+          </div>
+          <!-- Jssor Slider End -->
+        </div>
+      </div></div><!-- #content -->
+  </div><!-- #box3 -->
+
+      <!-- <div class="example">
+        <a data-toggle="lightbox" href="#demoLightbox" class="img-thumbnail">
+          <img src="images/Deluxe Room 2.jpg" alt="Click to view the lightbox">
+        </a>
+        <div id="demoLightbox" class="lightbox fade"  tabindex="-1" role="dialog" aria-hidden="true">
+          <div class='lightbox-dialog'>
+            <div class='lightbox-content'>
+              <img src="images/Deluxe Room 2.jpg">
+              <div class="lightbox-caption"><p>Your caption here</p></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    
+
+  <!-- footer -->
+  <footer>
+    <hr class="footerDivider">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-5">
+          <table class="pageContact"><tbody>
+            <tr>
+              <td rowspan="2"><span class="glyphicon glyphicon-phone-alt contactIcon" aria-hidden="true"></span>
+              </td>
+              <td class="phoneContact">Phone:</td>
+              <td id="hotelphone">+60-9-6228666</td>
+            </tr>
+            <tr>
+              <td>FAX:</td>
+              <td id="hotelfax">+60-9-6221888</td>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="col-sm-9 col-md-9 col-lg-7 text-right">
+          <p>All material here in © 2014 – 2015 Ming Group<br>All Rights Reserved.</p>
+        </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer><!-- footer -->
+
+
+</body></html>
