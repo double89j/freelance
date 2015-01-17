@@ -22,9 +22,8 @@ deluxeImageSlider.reload();*/
 //     if (typeof(window.taValidate) != 'undefined') {
 //       window.taValidate();
 //     }
-// });
-
-    var options3 = {
+// });   
+    var options = {
         $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
         $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
         $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
@@ -63,16 +62,21 @@ deluxeImageSlider.reload();*/
         }
     };
 
-    var jssor_slider3 = new $JssorSlider$("slider3_container", options3);
+    var standard_jssor_slider = new $JssorSlider$("standard_slider_container", options);
+    var superior_jssor_slider = new $JssorSlider$("superior_slider_container", options);
+    var deluxe_jssor_slider = new $JssorSlider$("deluxe_slider_container", options);
 
     //responsive code begin
     //you can remove responsive code if you don't want the slider scales while window resizes
     function ScaleSlider() {
-        var parentWidth = jssor_slider3.$Elmt.parentNode.clientWidth;
-        if (parentWidth)
-            jssor_slider3.$ScaleWidth(Math.min(parentWidth, 960));
-        else
+        var parentWidth = standard_jssor_slider.$Elmt.parentNode.clientWidth;
+        if (parentWidth) {
+          standard_jssor_slider.$ScaleWidth(Math.min(parentWidth, 960));
+          superior_jssor_slider.$ScaleWidth(Math.min(parentWidth, 960));
+          deluxe_jssor_slider.$ScaleWidth(Math.min(parentWidth, 960));
+        } else {
             window.setTimeout(ScaleSlider, 30);
+        }
 
         // var bodyWidth = document.body.clientWidth;
         // if (bodyWidth)
