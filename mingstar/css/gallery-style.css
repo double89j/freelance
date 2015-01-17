@@ -202,3 +202,11 @@ color: white;
 .room-link label {
 padding: 8px;
 }
+
+.back-to-top {
+background-color: #202020;
+color: #ccc;
+font-family: "Cardo", serif;
+border: 0px;
+padding: 5px;
+}
