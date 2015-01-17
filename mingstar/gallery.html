@@ -119,26 +119,51 @@
       </div>
       <div class="row">
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
-        <div class="col-sm-10 col-md-10 col-lg-10 showbox">
-          <div class="col-sm-12 col-md-2 col-lg-2 showbox">
-            <div class="col-xs-6 col-sm-3 col-md-12 col-lg-12 gallery-room-type-box showbox">
-              <div id="standard" class="showbox gallery-room-type">Standard</div>
+        <div class="col-sm-10 col-md-10 col-lg-10">
+          <div class="btn-toolbar hideBlock" role="toolbar" aria-label="Toolbar with button groups"
+               style="margin-bottom:10px;">
+            <div class="btn-group" role="group" aria-label="First group">
+              <button type="button" class="btn btn-default btn-lg">Standard</button>
             </div>
-            <div class="col-xs-6 col-sm-3 col-md-12 col-lg-12 gallery-room-type-box showbox">
-              <div id="superior" class="showbox gallery-room-type">Superior</div>
+            <div class="btn-group" role="group" aria-label="Second group">
+              <button type="button" class="btn btn-default btn-lg">Superior</button>
             </div>
-            <div class="col-xs-6 col-sm-3 col-md-12 col-lg-12 gallery-room-type-box showbox">
-              <div id="deluxe" class="showbox gallery-room-type">Deluxe</div>
+            <div class="btn-group" role="group" aria-label="Third group">
+              <button type="button" class="btn btn-default btn-lg">Deluxe</button>
             </div>
-            <div class="col-xs-6 col-sm-3 col-md-12 col-lg-12 gallery-room-type-box showbox">
-              <div id="sweet" class="showbox gallery-room-type">Sweet</div>
+            <div class="btn-group" role="group" aria-label="Fourth group">
+              <button type="button" class="btn btn-default btn-lg">Sweet</button>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 showbox" style="padding:0;">
-            <!-- Jssor Slider Begin -->
-            <!-- You can move inline styles to css file or css block. -->
-            <div id="slider1_container" class="gallery-slider1-container gallery-test-box">
-              <!-- Loading Screen -->
+          <div class="btn-group btn-group-justified hidden-lg showbox1"
+               role="group" aria-label="Justified button group"
+               style="margin-bottom:10px;">
+            <!-- <a class="btn btn-default btn-lg typeStandard" href="#" role="button">Standard</a>
+            <a class="btn btn-default btn-lg typeSuperior" href="#" role="button">Superior</a>
+            <a class="btn btn-default btn-lg typeDeluxe" href="#" role="button">Deluxe</a>
+            <a class="btn btn-default btn-lg typeSweet" href="#" role="button">Sweet</a> -->
+            
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default btn-lg typeStandard">Standard</button>
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default btn-lg typeSuperior">Superior</button>
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default btn-lg typeDeluxe">Deluxe</button>
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default btn-lg typeSweet">Sweet</button>
+            </div>
+          </div>
+          <div class="col-lg-2 hidden-xs hidden-sm hidden-md showbox1" style="padding-left:0;">
+            <button type="button" class="btn btn-default btn-lg btn-block typeStandard">Standard</button>
+            <button type="button" class="btn btn-default btn-lg btn-block typeSuperior">Superior</button>
+            <button type="button" class="btn btn-default btn-lg btn-block typeDeluxe">Deluxe</button>
+            <button type="button" class="btn btn-default btn-lg btn-block typeSweet">Sweet</button>
+          </div>
+          <div class="col-lg-10 showbox1" style="padding:0;">
+            <div id="standard_container" class="gallery-slider1-container gallery-container">
               <div u="loading" style="position: absolute; top: 0px; left: 0px;">
                 <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; 
                             background-color: #000000; top: 0px; left: 0px; width: 100%; height:100%;">
@@ -148,8 +173,37 @@
                 </div>
               </div>
 
-              <!-- Slides Container -->
-              <div u="slides" class="gallery-test-box" 
+              <div u="slides" class="gallery-container" 
+                   style="cursor: move; position: absolute; left: 0px; top: 0px; overflow: hidden;">
+                <div><img u="image" src="room-images/standard/205_1.jpg" /></div>
+                <div><img u="image" src="room-images/standard/205_2.jpg" /></div>
+                <div><img u="image" src="room-images/standard/205_3.jpg" /></div>
+                <div><img u="image" src="room-images/standard/205_4.jpg" /></div>
+                <div><img u="image" src="room-images/standard/205_5.jpg" /></div>
+              </div>
+
+              <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
+                <div u="prototype" 
+                     style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; 
+                            line-height:19px; color:White; font-size:12px;"></div>
+              </div>
+              
+              <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 50%; left: 0px;"></span>
+              <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 50%; right: 0px"></span>
+              <a style="display: none" href="http://www.jssor.com">Image Slider</a>
+            </div>
+
+            <div id="deluxe_container" class="gallery-slider-container gallery-container" style="display:none;">
+              <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; 
+                            background-color: #000000; top: 0px; left: 0px; width: 100%; height:100%;">
+                </div>
+                <div style="position: absolute; display: block; top: 0px; left: 0px; width: 100%;
+                            height:100%; background: url(jssor/img/loading.gif) no-repeat center center;">
+                </div>
+              </div>
+
+              <div u="slides" class="gallery-container" 
                    style="cursor: move; position: absolute; left: 0px; top: 0px; overflow: hidden;">
                 <div><img u="image" src="room-images/deluxe/323_1.jpg" /></div>
                 <div><img u="image" src="room-images/deluxe/323_2.jpg" /></div>
@@ -162,303 +216,20 @@
                 <div><img u="image" src="room-images/deluxe/323_9.jpg" /></div>
               </div>
 
-              <!-- bullet navigator container -->
-              <!-- <div u="navigator" class="jssorb05" 
-                   style="position: absolute; bottom: 16px; right: 6px;">
-                <!- bullet navigator item prototype ->
-                <div u="prototype" style="position: absolute; width: 16px; height: 16px;"></div>
-              </div> -->
               <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
-                <!-- bullet navigator item prototype -->
                 <div u="prototype" 
                      style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; 
                             line-height:19px; color:White; font-size:12px;"></div>
               </div>
-              <!-- bullet navigator container -->
               
-              <!-- Arrow Left -->
               <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0px;"></span>
-<!-- <span u="arrowleft" class="jssora12l"
-      style="width: 30px; height: 46px; top: 50%; left: 0px; margin-top:-23px;"></span> -->
-              <!-- Arrow Right -->
               <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0px"></span>
-<!-- <span u="arrowright" class="jssora12r"
-      style="width: 30px; height: 46px; top: 50%; right: 0px; margin-top:-23px;"></span> -->
               <a style="display: none" href="http://www.jssor.com">Image Slider</a>
             </div>
-            <!-- Jssor Slider End -->
           </div>
         </div>
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
-
-
-
-
-
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 showbox hideBlock"
-           style="padding:0;">
-          <!-- Full Width Test -->
-          <!-- Jssor Slider Begin -->
-          <!-- You can move inline styles to css file or css block. -->
-          <div id="slider2_container"
-             style="position: relative; margin: 0 auto; top: 0px; left: 0px;
-                width: 1300px; height: 500px; overflow: hidden;">
-            <!-- Loading Screen -->
-            <div u="loading" 
-               style="position: absolute; top: 0px; left: 0px;">
-              <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
-                    top: 0px; left: 0px; width: 100%; height: 100%;">
-              </div>
-              <div style="position: absolute; display: block; 
-                    background: url(jssor/img/loading.gif) no-repeat center center;
-                    top: 0px; left: 0px; width: 100%; height: 100%;">
-              </div>
-            </div>
-            <!-- Slides Container -->
-            <div u="slides" 
-               style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
-                  height: 500px; overflow: hidden;">
-              <div><img u="image" src="room-images/deluxe/333_1.jpg" /></div>
-              <div><img u="image" src="room-images/deluxe/333_2.jpg" /></div>
-              <div><img u="image" src="room-images/deluxe/333_3.jpg" /></div>
-              <div><img u="image" src="room-images/deluxe/333_4.jpg" /></div>
-              <div><img u="image" src="room-images/deluxe/333_5.jpg" /></div>
-              <div><img u="image" src="room-images/deluxe/333_6.jpg" /></div>
-              <div><img u="image" src="room-images/deluxe/333_7.jpg" /></div>
-              <div><img u="image" src="room-images/deluxe/333_8.jpg" /></div>
-              <div><img u="image" src="room-images/deluxe/333_9.jpg" /></div>
-            </div>
-                
-            <!-- bullet navigator container -->
-            <div u="navigator" class="jssorb21" 
-               style="position: absolute; bottom: 26px; left: 6px;">
-              <!-- bullet navigator item prototype -->
-              <div u="prototype" 
-                 style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; 
-                    line-height:19px; color:White; font-size:12px;"></div>
-            </div>
-            <!-- bullet navigator container -->
-
-            <!-- Arrow Left -->
-            <span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;"></span>
-            <!-- Arrow Right -->
-            <span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px"></span>
-            <a style="display: none" href="http://www.jssor.com">Image Slider</a>
-          </div>
-          <!-- Jssor Slider End -->
-        </div>
-      </div>
-      <!-- <ul class="cbp-rfgrid">
-        <li><a href="#demoLightbox1" data-toggle="lightbox">
-          <img id="img-grid" src="images/Deluxe Room 1.jpg" /><div><h3>Deluxe Room 1</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox2" data-toggle="lightbox">
-          <img id="img-grid" src="images/Deluxe Room 2.jpg" /><div><h3>Deluxe Room 2</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox3" data-toggle="lightbox">
-          <img id="img-grid" src="images/Deluxe Room 3.jpg" /><div><h3>Deluxe Room 3</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox4" data-toggle="lightbox">
-          <img id="img-grid" src="images/Deluxe Room 4.jpg" /><div><h3>Deluxe Room 4</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox5" data-toggle="lightbox">
-          <img id="img-grid" src="images/Deluxe Room Joined.jpg" /><div><h3>Deluxe Room Joined</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox6" data-toggle="lightbox">
-          <img id="img-grid" src="images/Deluxe Room King.jpg" /><div><h3>Deluxe Room King</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox7" data-toggle="lightbox">
-          <img id="img-grid" src="images/Deluxe Room.jpg" /><div><h3>Deluxe Room</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox8" data-toggle="lightbox">
-          <img id="img-grid" src="images/Deluxe Single 1.jpg" /><div><h3>Deluxe Single 1</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox9" data-toggle="lightbox">
-          <img id="img-grid" src="images/Deluxe Single 2.jpg" /><div><h3>Deluxe Single 2</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox10" data-toggle="lightbox">
-          <img id="img-grid" src="images/Deluxe Single 3.jpg" /><div><h3>Deluxe Single 3</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox11" data-toggle="lightbox">
-          <img id="img-grid" src="images/Deluxe Single 4.jpg" /><div><h3>Deluxe Single 4</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox12" data-toggle="lightbox">
-          <img id="img-grid" src="images/Deluxe Single Room.jpg" /><div><h3>Deluxe Single Room</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox13" data-toggle="lightbox">
-          <img id="img-grid" src="images/Standard Room.jpg" /><div><h3>Standard Room</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox14" data-toggle="lightbox">
-          <img id="img-grid" src="images/Standard Single Room.jpg" /><div><h3>Standard Single Room</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox15" data-toggle="lightbox">
-          <img id="img-grid" src="images/Superior Plus 1.jpg" /><div><h3>Superior Plus 1</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox16" data-toggle="lightbox">
-          <img id="img-grid" src="images/Superior Plus Room.jpg" /><div><h3>Superior Plus Room</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox17" data-toggle="lightbox">
-          <img id="img-grid" src="images/Superior Queen Bed 1.jpg" /><div><h3>Superior Queen Bed 1</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox18" data-toggle="lightbox">
-          <img id="img-grid" src="images/Superior Queen Bed 2.jpg" /><div><h3>Superior Queen Bed 2</h3></div>
-        </a></li>
-        <li><a href="#demoLightbox19" data-toggle="lightbox">
-          <img id="img-grid" src="images/Superior Queen Bed.jpg" /><div><h3>Superior Queen Bed</h3></div>
-        </a></li>
-      </ul>
-      <div id="demoLightbox1" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>
-          <div class='lightbox-content'>
-            <img src="images/Deluxe Room 1.jpg" />
-            <div class="lightbox-caption"><p>Deluxe Room 1</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox2" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>
-          <div class='lightbox-content'>
-            <img src="images/Deluxe Room 2.jpg" />
-            <div class="lightbox-caption"><p>Deluxe Room 2</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox3" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Deluxe Room 3.jpg" />
-            <div class="lightbox-caption"><p>Deluxe Room 3</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox4" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Deluxe Room 4.jpg" />
-            <div class="lightbox-caption"><p>Deluxe Room 4</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox5" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Deluxe Room Joined.jpg" />
-            <div class="lightbox-caption"><p>Deluxe Room Joined</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox6" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Deluxe Room King.jpg" />
-            <div class="lightbox-caption"><p>Deluxe Room King</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox7" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Deluxe Room.jpg" />
-            <div class="lightbox-caption"><p>Deluxe Room</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox8" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Deluxe Single 1.jpg" />
-            <div class="lightbox-caption"><p>Deluxe Single 1</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox9" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Deluxe Single 2.jpg" />
-            <div class="lightbox-caption"><p>Deluxe Single 2</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox10" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Deluxe Single 3.jpg" />
-            <div class="lightbox-caption"><p>Deluxe Single 3</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox11" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Deluxe Single 4.jpg" />
-            <div class="lightbox-caption"><p>Deluxe Single 4</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox12" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Deluxe Single Room.jpg" />
-            <div class="lightbox-caption"><p>Deluxe Single Room</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox13" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Standard Room.jpg" />
-            <div class="lightbox-caption"><p>Standard Room</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox14" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Standard Single Room.jpg" />
-            <div class="lightbox-caption"><p>Standard Single Room</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox15" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Superior Plus 1.jpg" />
-            <div class="lightbox-caption"><p>Superior Plus 1</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox16" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Superior Plus Room.jpg" />
-            <div class="lightbox-caption"><p>Superior Plus Room</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox17" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Superior Queen Bed 1.jpg" />
-            <div class="lightbox-caption"><p>Superior Queen Bed 1</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox18" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Superior Queen Bed 2.jpg" />
-            <div class="lightbox-caption"><p>Superior Queen Bed 2</p></div>
-          </div>
-        </div>
-      </div>
-      <div id="demoLightbox19" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class='lightbox-dialog'>            
-          <div class='lightbox-content'>
-            <img src="images/Superior Queen Bed.jpg" />
-            <div class="lightbox-caption"><p>Superior Queen Bed</p></div>
-          </div>
-        </div>
-      </div> -->
+      </div><!-- /.row -->
     </div><!-- #content -->
   </div><!-- #box3 -->
 

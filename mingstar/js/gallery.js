@@ -7,7 +7,7 @@
 //     $(this).lightbox();
 // }); 
 
-jQuery(document).ready(function ($) {
+// jQuery(document).ready(function ($) {
 
     var _SlideshowTransitions = [
     //Fade
@@ -57,7 +57,8 @@ jQuery(document).ready(function ($) {
             $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
         }
     };
-    var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+    var deluxe_slider = new $JssorSlider$("deluxe_container", options);
+    var standard_slider = new $JssorSlider$("standard_container", options);
 
     var options2 = {
         $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
@@ -103,9 +104,15 @@ jQuery(document).ready(function ($) {
     //responsive code begin
     //you can remove responsive code if you don't want the slider scales while window resizes
     function ScaleSlider() {
-        var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
-        if (parentWidth)
-            jssor_slider1.$ScaleWidth(Math.min(parentWidth, 960));
+        var deluxeParentWidth = deluxe_slider.$Elmt.parentNode.clientWidth;
+        if (deluxeParentWidth)
+            deluxe_slider.$ScaleWidth(Math.min(deluxeParentWidth, 960));
+        else
+            window.setTimeout(ScaleSlider, 30);
+
+        var standardParentWidth = standard_slider.$Elmt.parentNode.clientWidth;
+        if (standardParentWidth)
+            standard_slider.$ScaleWidth(Math.min(standardParentWidth, 960));
         else
             window.setTimeout(ScaleSlider, 30);
 
@@ -122,19 +129,23 @@ jQuery(document).ready(function ($) {
     $(window).bind("orientationchange", ScaleSlider);
     //responsive code end
 
-    $('#standard').click(function(evt) {
-        alert('standard');
+    $('.typeStandard').click(function(evt) {
+        $('#standard_container').css('display', 'block');
+        $('#deluxe_container').css('display', 'none');
+        standard_slider.$GoTo(0);
     });
-    $('#superior').click(function(evt) {
+    $('.typeSuperior').click(function(evt) {
         alert('superior');
     });
-    $('#deluxe').click(function(evt) {
+    $('.typeDeluxe').click(function(evt) {
+        $('#deluxe_container').css('display', 'block');
+        $('#standard_container').css('display', 'none');
+        deluxe_slider.$GoTo(0)
+    });
+    $('.typeSweet').click(function(evt) {
         alert('deluxe');
     });
-    $('#sweet').click(function(evt) {
-        alert('deluxe');
-    });
-});
+// });
 
 // jQuery(document).ready(function ($) {
 
