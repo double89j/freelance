@@ -48,7 +48,7 @@
 
         $mail->IsHTML(true); //set email format to HTML
 
-        $mail->Subject = "Room Reservation" . date("D d M, Y h:m:s A");
+        $mail->Subject = "Room Reservation - " . date("D d M, Y h:i:s A");
         $mail->Body = $message;
         // $mail->AltBody = $message;
 
