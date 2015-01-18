@@ -778,7 +778,12 @@ ul#slider li:not(:target) {
     width: 97px;
     height: 64px;
     border: 1px solid #000;
-    box-sizing: unset;
+
+    -moz-box-sizing: initial;
+    -webkit-box-sizing: initial;
+    -o-box-sizing: initial;
+    box-sizing: initial;
+
     -moz-transition: border-color .6s;
     -webkit-transition: border-color .6s;
     -o-transition: border-color .6s;

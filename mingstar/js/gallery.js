@@ -80,7 +80,7 @@
             $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
 
             $Loop: 2,                                       //[Optional] Enable loop(circular) of carousel or not, 0: stop, 1: loop, 2 rewind, default value is 1
-            $SpacingX: 6,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+            $SpacingX: 8,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
             $SpacingY: 3,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
             $DisplayPieces: 7,                              //[Optional] Number of pieces to display, default value is 1
             $ParkingPosition: 204,                          //[Optional] The offset position to park thumbnail,
