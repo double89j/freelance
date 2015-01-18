@@ -38,7 +38,18 @@
             $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
             $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
         },
+		
+		$ThumbnailNavigatorOptions: {
+                $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
 
+                    $Loop: 2,                                       //[Optional] Enable loop(circular) of carousel or not, 0: stop, 1: loop, 2 rewind, default value is 1
+                    $SpacingX: 3,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                    $SpacingY: 3,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+                    $DisplayPieces: 8,                              //[Optional] Number of pieces to display, default value is 1
+                    $ParkingPosition: 0
+            },
+		
         $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
             $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
             $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
@@ -116,6 +127,12 @@
             standard_slider.$ScaleWidth(Math.min(standardParentWidth, 960));
         else
             window.setTimeout(ScaleSlider, 30);
+		
+		var superiorParentWidth = superior_slider.$Elmt.parentNode.clientWidth;
+        if (superiorParentWidth)
+            superior_slider.$ScaleWidth(Math.min(standardParentWidth, 960));
+        else
+            window.setTimeout(ScaleSlider, 30);
 
         // var bodyWidth = document.body.clientWidth;
         // if (bodyWidth)
@@ -140,7 +157,7 @@
         $('#standard_container').css('display', 'none');
         $('#deluxe_container').css('display', 'none');
 		$('#superior_container').css('display', 'block');
-        standard_slider.$GoTo(0);
+        superior_slider.$GoTo(0);
     });
 	
     $('.typeDeluxe').click(function(evt) {
