@@ -47,7 +47,7 @@
                     $SpacingX: 3,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
                     $SpacingY: 3,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
                     $DisplayPieces: 8,                              //[Optional] Number of pieces to display, default value is 1
-                    $ParkingPosition: 0
+                    $ParkingPosition: 233
             },
 		
         $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
@@ -161,9 +161,6 @@
     $('.typeSuperior').click(function(evt) {
         $('#standard_container').css('display', 'none');
 		$('#superior_container').css('display', 'block');
-<<<<<<< HEAD
-        superior_slider.$GoTo(0);
-=======
         $('#deluxe_container').css('display', 'none');
         superior_slider.$GoTo(0);
 
@@ -171,7 +168,7 @@
         $('.typeSuperior').addClass('active');
         $('.typeDeluxe').removeClass('active');
         $('.typeSweet').removeClass('active');
->>>>>>> origin/master
+
     });
 	
     $('.typeDeluxe').click(function(evt) {
