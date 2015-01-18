@@ -209,6 +209,8 @@ color: #ccc;
 font-family: "Cardo", serif;
 border: 0px;
 padding: 5px;
+margin-top: 5px;
+margin-left: 0px;
 }
 
 .gallery-title {
