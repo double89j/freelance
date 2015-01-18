@@ -59,6 +59,7 @@
     };
     var deluxe_slider = new $JssorSlider$("deluxe_container", options);
     var standard_slider = new $JssorSlider$("standard_container", options);
+	var superior_slider = new $JssorSlider$("superior_container", options);
 
     var options2 = {
         $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
@@ -132,17 +133,23 @@
     $('.typeStandard').click(function(evt) {
         $('#standard_container').css('display', 'block');
         $('#deluxe_container').css('display', 'none');
+		$('#superior_container').css('display', 'none');
         standard_slider.$GoTo(0);
 
         $('.typeStandard').addClass('active');
         $('.typeDeluxe').removeClass('active');
     });
     $('.typeSuperior').click(function(evt) {
-        alert('superior');
+        $('#standard_container').css('display', 'none');
+        $('#deluxe_container').css('display', 'none');
+		$('#superior_container').css('display', 'block');
+        standard_slider.$GoTo(0);
     });
+	
     $('.typeDeluxe').click(function(evt) {
         $('#deluxe_container').css('display', 'block');
         $('#standard_container').css('display', 'none');
+        $('#superior_container').css('display', 'none');
         deluxe_slider.$GoTo(0);
 
         $('.typeDeluxe').addClass('active');
