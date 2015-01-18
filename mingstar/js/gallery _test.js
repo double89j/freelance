@@ -121,6 +121,18 @@
             standard_slider.$ScaleWidth(Math.min(standardParentWidth, 960));
         else
             window.setTimeout(ScaleSlider, 30);
+<<<<<<< HEAD
+		
+		var superiorParentWidth = superior_slider.$Elmt.parentNode.clientWidth;
+        if (superiorParentWidth)
+            superior_slider.$ScaleWidth(Math.min(standardParentWidth, 960));
+=======
+          
+        var superiorParentWidth = superior_slider.$Elmt.parentNode.clientWidth;
+        if (superiorParentWidth)
+            superior_slider.$ScaleWidth(Math.min(superiorParentWidth, 960));
+        else
+            window.setTimeout(ScaleSlider, 30);
 
         var superiorParentWidth = superior_slider.$Elmt.parentNode.clientWidth;
         if (superiorParentWidth)
@@ -131,6 +143,7 @@
         var deluxeParentWidth = deluxe_slider.$Elmt.parentNode.clientWidth;
         if (deluxeParentWidth)
             deluxe_slider.$ScaleWidth(Math.min(deluxeParentWidth, 960));
+>>>>>>> origin/master
         else
             window.setTimeout(ScaleSlider, 30);
 
