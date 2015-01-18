@@ -211,14 +211,17 @@ text-align: center;
     color: white;
 }
 
+.room-header {
+display:inline;
+}
+
 .back-to-top {
-background-color: #202020;
-color: #ccc;
-font-family: "Cardo", serif;
-border: 0px;
-padding: 5px;
-margin-top: 5px;
-margin-left: 0px;
+color:black;
+margin-left:5px;
+}
+.back-to-top:hover{
+color:black;
+text-decoration:none;
 }
 
 .gallery-title {
