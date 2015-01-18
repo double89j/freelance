@@ -212,9 +212,10 @@ color: #ccc;
 font-family: "Cardo", serif;
 border: 0px;
 padding: 5px;
+margin-top: 5px;
+margin-left: 0px;
 }
 
-#superior_slider_container,
-#deluxe_slider_container {
-    /*display: none;*/
+.gallery-title {
+font-family: Impact, Charcoal, sans-serif;
 }
