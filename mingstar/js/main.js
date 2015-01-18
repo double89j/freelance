@@ -210,7 +210,7 @@ $(document).ready(function() {
         checkCtrl = false;
     });
 
-    $('#navbar-collapse-main').on('click', 'a', function(evt) {
+    $('#navbar-collapse-main1').on('click', 'a', function(evt) {
         // console.log('item ID: '+$(this).attr('id'));
         var href = $(this).attr('href');
             href = href.slice(0, href.indexOf('.'));

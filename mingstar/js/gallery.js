@@ -133,6 +133,9 @@
         $('#standard_container').css('display', 'block');
         $('#deluxe_container').css('display', 'none');
         standard_slider.$GoTo(0);
+
+        $('.typeStandard').addClass('active');
+        $('.typeDeluxe').removeClass('active');
     });
     $('.typeSuperior').click(function(evt) {
         alert('superior');
@@ -140,7 +143,10 @@
     $('.typeDeluxe').click(function(evt) {
         $('#deluxe_container').css('display', 'block');
         $('#standard_container').css('display', 'none');
-        deluxe_slider.$GoTo(0)
+        deluxe_slider.$GoTo(0);
+
+        $('.typeDeluxe').addClass('active');
+        $('.typeStandard').removeClass('active');
     });
     $('.typeSweet').click(function(evt) {
         alert('deluxe');
