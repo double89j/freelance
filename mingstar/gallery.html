@@ -130,7 +130,7 @@
     <button type="button" class="btn btn-default btn-lg">Sweet</button>
   </div>
 </div> -->
-          <div class="btn-group btn-group-justified hidden-lg showbox1"
+          <div class="btn-group btn-group-justified hidden-lg gallery-room-type-container showbox1"
                role="group" aria-label="Justified button group"
                style="margin-bottom:10px;">
 <!-- <a class="btn btn-default btn-lg typeStandard" href="#" role="button">Standard</a>
@@ -147,81 +147,88 @@
             <div class="btn-group" role="group">
               <button type="button" class="btn btn-default btn-lg typeDeluxe">Deluxe</button>
             </div>
-            <div class="btn-group" role="group">
+            <!-- <div class="btn-group" role="group">
               <button type="button" class="btn btn-default btn-lg typeSweet">Sweet</button>
-            </div>
+            </div> -->
           </div>
-          <div class="col-lg-2 hidden-xs hidden-sm hidden-md showbox1" style="padding-left:0;">
+          <div class="col-lg-2 hidden-xs hidden-sm hidden-md gallery-room-type-container showbox1"
+               style="padding-left:0;">
             <button type="button" class="btn btn-default btn-lg btn-block typeStandard active">Standard</button>
             <button type="button" class="btn btn-default btn-lg btn-block typeSuperior">Superior</button>
             <button type="button" class="btn btn-default btn-lg btn-block typeDeluxe">Deluxe</button>
-            <button type="button" class="btn btn-default btn-lg btn-block typeSweet">Sweet</button>
+            <!-- <button type="button" class="btn btn-default btn-lg btn-block typeSweet">Sweet</button> -->
           </div>
           <div class="col-lg-10 showbox1" style="padding:0;">
             
             <!-- Standard Gallery -->
             <div id="standard_container" class="gallery-slider-container gallery-container">
               <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; 
-                            background-color: #000000; top: 0px; left: 0px; width: 100%; height:100%;">
+                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                            background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
                 </div>
-                <div style="position: absolute; display: block; top: 0px; left: 0px; width: 100%;
-                            height:100%; background: url(jssor/img/loading.gif) no-repeat center center;">
+                <div style="position: absolute; display: block;
+                            background: url(jssor/img/loading.gif) no-repeat center center;
+                            top: 0px; left: 0px;width: 100%;height:100%;">
                 </div>
               </div>
 
-              <div u="slides" class="gallery-container" 
-                   style="cursor: move; position: absolute; left: 0px; top: 0px; overflow: hidden;">
-                <div><img u="image" src="room-images/standard/205_1.jpg" /></div>
-                <div><img u="image" src="room-images/standard/205_2.jpg" /></div>
-                <div><img u="image" src="room-images/standard/205_3.jpg" /></div>
-                <div><img u="image" src="room-images/standard/205_4.jpg" /></div>
-                <div><img u="image" src="room-images/standard/205_5.jpg" /></div>
+              <div u="slides"
+                   style="cursor: move; position: absolute; left: 0px; top: 0px;
+                          width: 960px; height: 500px; overflow: hidden;">
+                <div>
+                  <img u="image" src="room-images/standard/205_1.jpg" />
+                  <img u="thumb" src="room-images/standard/thumbnails/205_1.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/standard/205_2.jpg" />
+                  <img u="thumb" src="room-images/standard/thumbnails/205_2.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/standard/205_3.jpg" />
+                  <img u="thumb" src="room-images/standard/thumbnails/205_3.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/standard/205_4.jpg" />
+                  <img u="thumb" src="room-images/standard/thumbnails/205_4.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/standard/205_5.jpg" />
+                  <img u="thumb" src="room-images/standard/thumbnails/205_5.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/standard/205_6.jpg" />
+                  <img u="thumb" src="room-images/standard/thumbnails/205_6.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/standard/205_7.jpg" />
+                  <img u="thumb" src="room-images/standard/thumbnails/205_7.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/standard/304_1.jpg" />
+                  <img u="thumb" src="room-images/standard/thumbnails/304_1.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/standard/305_1.jpg" />
+                  <img u="thumb" src="room-images/standard/thumbnails/305_1.jpg" />
+                </div>
               </div>
+            
+              <div u="thumbnavigator" class="jssort07"
+                   style="position: absolute; width: 960px; height: 100px;
+                          left: 0px; bottom: 0px; overflow: hidden; ">
+                <div style=" background-color: #000; filter:alpha(opacity=30);
+                             opacity:.3; width: 100%; height:100%;"></div>
+                <div u="slides" style="cursor: move;">
+                  <div u="prototype" class="p" style="POSITION: absolute; WIDTH: 99px; HEIGHT: 66px; TOP: 0; LEFT: 0;">
+                    <div u="thumbnailtemplate" class="i" style="position:absolute;"></div>
+                    <div class="o"></div>
+                  </div>
+                </div>
 
-              <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
-                <div u="prototype" 
-                     style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; 
-                            line-height:19px; color:White; font-size:12px;"></div>
+                <span u="arrowleft" class="jssora11l" style="width: 37px; height: 37px; top: 123px; left: 8px;"></span>
+                <span u="arrowright" class="jssora11r" style="width: 37px; height: 37px; top: 123px; right: 8px"></span>
               </div>
-              
-              <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 50%; left: 0px;"></span>
-              <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 50%; right: 0px"></span>
             </div><!-- Standard Gallery -->
-
-            <!-- Deluxe Gallery -->
-            <div id="deluxe_container" class="gallery-slider-container gallery-container" style="display:none;">
-              <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; 
-                            background-color: #000000; top: 0px; left: 0px; width: 100%; height:100%;">
-                </div>
-                <div style="position: absolute; display: block; top: 0px; left: 0px; width: 100%;
-                            height:100%; background: url(jssor/img/loading.gif) no-repeat center center;">
-                </div>
-              </div>
-
-              <div u="slides" class="gallery-container" 
-                   style="cursor: move; position: absolute; left: 0px; top: 0px; overflow: hidden;">
-                <div><img u="image" src="room-images/deluxe/323_1.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_2.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_3.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_4.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_5.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_6.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_7.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_8.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_9.jpg" /></div>
-              </div>
-
-              <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
-                <div u="prototype" 
-                     style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; 
-                            line-height:19px; color:White; font-size:12px;"></div>
-              </div>
-              
-              <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0px;"></span>
-              <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0px"></span>
-            </div><!-- Deluxe Gallery -->
 
             <!-- Superior Gallery -->
             <div id="superior_container" class="gallery-slider-container gallery-container" style="display:none;">
@@ -292,6 +299,76 @@
                 <span u="arrowright" class="jssora11r" style="width: 37px; height: 37px; top: 123px; right: 8px"></span>
               </div>
             </div><!-- Superior Gallery -->
+
+            <!-- Deluxe Gallery -->
+            <div id="deluxe_container" class="gallery-slider-container gallery-container" style="display:none;">
+              <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                            background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+                <div style="position: absolute; display: block;
+                            background: url(jssor/img/loading.gif) no-repeat center center;
+                            top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+              </div>
+
+              <div u="slides"
+                   style="cursor: move; position: absolute; left: 0px; top: 0px;
+                          width: 960px; height: 500px; overflow: hidden;">
+                <div>
+                  <img u="image" src="room-images/deluxe/323_1.jpg" />
+                  <img u="thumb" src="room-images/deluxe/thumbnails/323_1.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/deluxe/323_2.jpg" />
+                  <img u="thumb" src="room-images/deluxe/thumbnails/323_2.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/deluxe/323_3.jpg" />
+                  <img u="thumb" src="room-images/deluxe/thumbnails/323_3.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/deluxe/323_4.jpg" />
+                  <img u="thumb" src="room-images/deluxe/thumbnails/323_4.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/deluxe/323_5.jpg" />
+                  <img u="thumb" src="room-images/deluxe/thumbnails/323_5.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/deluxe/323_6.jpg" />
+                  <img u="thumb" src="room-images/deluxe/thumbnails/323_6.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/deluxe/323_7.jpg" />
+                  <img u="thumb" src="room-images/deluxe/thumbnails/323_7.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/deluxe/323_8.jpg" />
+                  <img u="thumb" src="room-images/deluxe/thumbnails/323_8.jpg" />
+                </div>
+                <div>
+                  <img u="image" src="room-images/deluxe/323_9.jpg" />
+                  <img u="thumb" src="room-images/deluxe/thumbnails/323_9.jpg" />
+                </div>
+              </div>
+            
+              <div u="thumbnavigator" class="jssort07"
+                   style="position: absolute; width: 960px; height: 100px;
+                          left: 0px; bottom: 0px; overflow: hidden; ">
+                <div style=" background-color: #000; filter:alpha(opacity=30);
+                             opacity:.3; width: 100%; height:100%;"></div>
+                <div u="slides" style="cursor: move;">
+                  <div u="prototype" class="p" style="POSITION: absolute; WIDTH: 99px; HEIGHT: 66px; TOP: 0; LEFT: 0;">
+                    <div u="thumbnailtemplate" class="i" style="position:absolute;"></div>
+                    <div class="o"></div>
+                  </div>
+                </div>
+
+                <span u="arrowleft" class="jssora11l" style="width: 37px; height: 37px; top: 123px; left: 8px;"></span>
+                <span u="arrowright" class="jssora11r" style="width: 37px; height: 37px; top: 123px; right: 8px"></span>
+              </div>
+            </div><!-- Deluxe Gallery -->
           </div>
 
         </div><!--col-sm-10 col-md-10 col-lg-10 -->

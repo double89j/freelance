@@ -12,8 +12,15 @@
     #width: 100%;
     height: 500px;
 }
-.gallery-room-type-box {
-    text-align: center;
+.typeStandard,
+.typeSuperior,
+.typeDeluxe,
+.typeSweet {
+    background-color: rgba(245, 245, 245, 0.5);
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
 }
 .gallery-room-type {
     background-color: rgba(131,211,160, 1);

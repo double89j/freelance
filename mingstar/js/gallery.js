@@ -94,9 +94,10 @@
         }
     };
 
-    var standard_slider = new $JssorSlider$("standard_container", options);
+    // var standard_slider = new $JssorSlider$("standard_container", options);
+    var standard_slider = new $JssorSlider$("standard_container", superior_options);
     var superior_slider = new $JssorSlider$("superior_container", superior_options);
-    var deluxe_slider = new $JssorSlider$("deluxe_container", options);
+    var deluxe_slider = new $JssorSlider$("deluxe_container", superior_options);
 
     var options2 = {
         $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
