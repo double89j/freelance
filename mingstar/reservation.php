@@ -28,7 +28,7 @@
         $message .= "No. of Children: $children<br /><br /><br />";
         $message .= "Note: $guest_note<br /><br /><br />";
 
-        $redirect = "contact.html";
+        $redirect = "thankyou.html";
 
         require("class.phpmailer.php");
 
