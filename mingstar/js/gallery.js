@@ -57,9 +57,9 @@
             $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
         }
     };
-    var deluxe_slider = new $JssorSlider$("deluxe_container", options);
     var standard_slider = new $JssorSlider$("standard_container", options);
 	var superior_slider = new $JssorSlider$("superior_container", options);
+    var deluxe_slider = new $JssorSlider$("deluxe_container", options);
 
     var options2 = {
         $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
@@ -105,15 +105,21 @@
     //responsive code begin
     //you can remove responsive code if you don't want the slider scales while window resizes
     function ScaleSlider() {
-        var deluxeParentWidth = deluxe_slider.$Elmt.parentNode.clientWidth;
-        if (deluxeParentWidth)
-            deluxe_slider.$ScaleWidth(Math.min(deluxeParentWidth, 960));
-        else
-            window.setTimeout(ScaleSlider, 30);
-
         var standardParentWidth = standard_slider.$Elmt.parentNode.clientWidth;
         if (standardParentWidth)
             standard_slider.$ScaleWidth(Math.min(standardParentWidth, 960));
+        else
+            window.setTimeout(ScaleSlider, 30);
+
+        var superiorParentWidth = superior_slider.$Elmt.parentNode.clientWidth;
+        if (superiorParentWidth)
+            superior_slider.$ScaleWidth(Math.min(superiorParentWidth, 960));
+        else
+            window.setTimeout(ScaleSlider, 30);
+
+        var deluxeParentWidth = deluxe_slider.$Elmt.parentNode.clientWidth;
+        if (deluxeParentWidth)
+            deluxe_slider.$ScaleWidth(Math.min(deluxeParentWidth, 960));
         else
             window.setTimeout(ScaleSlider, 30);
 
@@ -137,25 +143,42 @@
         standard_slider.$GoTo(0);
 
         $('.typeStandard').addClass('active');
+        $('.typeSuperior').removeClass('active');
         $('.typeDeluxe').removeClass('active');
+        $('.typeSweet').removeClass('active');
     });
     $('.typeSuperior').click(function(evt) {
         $('#standard_container').css('display', 'none');
-        $('#deluxe_container').css('display', 'none');
 		$('#superior_container').css('display', 'block');
-        standard_slider.$GoTo(0);
+        $('#deluxe_container').css('display', 'none');
+        superior_slider.$GoTo(0);
+
+        $('.typeStandard').removeClass('active');
+        $('.typeSuperior').addClass('active');
+        $('.typeDeluxe').removeClass('active');
+        $('.typeSweet').removeClass('active');
     });
 	
     $('.typeDeluxe').click(function(evt) {
-        $('#deluxe_container').css('display', 'block');
         $('#standard_container').css('display', 'none');
         $('#superior_container').css('display', 'none');
+        $('#deluxe_container').css('display', 'block');
         deluxe_slider.$GoTo(0);
 
-        $('.typeDeluxe').addClass('active');
         $('.typeStandard').removeClass('active');
+        $('.typeSuperior').removeClass('active');
+        $('.typeDeluxe').addClass('active');
+        $('.typeSweet').removeClass('active');
     });
     $('.typeSweet').click(function(evt) {
+        $('#standard_container').css('display', 'none');
+        $('#superior_container').css('display', 'none');
+        $('#deluxe_container').css('display', 'none');
+
+        $('.typeStandard').removeClass('active');
+        $('.typeSuperior').removeClass('active');
+        $('.typeDeluxe').removeClass('active');
+        $('.typeSweet').addClass('active');
         alert('deluxe');
     });
 // });
