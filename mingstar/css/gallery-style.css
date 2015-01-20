@@ -156,34 +156,32 @@
 }
 
 .room-price-container {
-    background-color:   rgba(32, 32, 32, 0.75);
-    color:              white;
-    font-family:        "Cardo", serif;
-    font-size:          25px;
-    height:             100px;
-    margin-left:        auto;
-    margin-right:       auto;
-    text-align:         center;
-    width:              95%;
+  background-color:   rgba(32, 32, 32, 0.75);
+  color:              rgba(255, 255, 255, 0.75);
+  font-family:        "Cardo", serif;
+  font-size:          25px;
+  height:             100px;
+  margin-left:        auto;
+  margin-right:       auto;
+  text-align:         center;
+  width:              95%;
+  border:             3px solid rgba(0, 0, 0, 1);
 }
 
-.room-price-container  a.disabled {
-   pointer-events: none;
-   cursor: default;
+.room-price-container:hover {
+  background-color: rgba(32, 32, 32, 0.5);
+  color:            rgba(32, 32, 32, 1);
 }
 
-.room-price {
-height:50px; 
-width:50%; 
-position:absolute; 
-left: 25%;
+.room-price-container h2 {
+  display: inline;
 }
 
-.price-detail {
-font-style: italic;
-font-weight: lighter;
-color: #aaa;
-font-size: 20px;
+.room-price-container h6 {
+  margin-top:   0px;
+  font-style:   italic;
+  font-weight:  lighter;
+  font-size:    20px;
 }
 
 /*.room-type {
@@ -227,12 +225,4 @@ text-decoration:none;
 
 .gallery-title {
 font-family: Impact, Charcoal, sans-serif;
-}
-
-.reservation-link {
-color:white;
-}
-
-.reservation-link:hover {
-color:white;
 }
