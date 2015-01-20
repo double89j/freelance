@@ -26,7 +26,8 @@ window.myglobal = {};
         return '+60-9-6221888';
     };
     context.getCopyright = function() {
-        return '<p>All material herein &copy; 2014 – 2015 Ming Group<br />All Rights Reserved.</p>';
+        return '<p>All material herein &copy; 2014 – 2015 Ming Group<br />All Rights Reserved</p>';
+
     };
 })(window.myglobal);
 

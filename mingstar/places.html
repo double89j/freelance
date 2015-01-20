@@ -5,21 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Ming Star Hotel - Places</title>
 
-  <!-- jQuery library & jQuery Validation & jQuery Form -->
+  <!-- jQuery library -->
   <script src="jquery-1.11.2/jquery-1.11.2.min.js"></script>
-  <script src="jquery-validation-1.13.1/jquery.validate.min.js"></script>
-  <script src="jquery-form-3.51.0/jquery.form.js"></script>
 
-  <!-- Bootstrap & Bootstrap Datepicker & Lightbox -->
-  <script src="bootstrap-lightbox-v0.7.0/scale.fix.js"></script>
-  <script src="bootstrap-lightbox-v0.7.0/prettify/prettify.js"></script>
+  <!-- Bootstrap -->
   <script src="bootstrap-3.3.1/js/bootstrap.min.js"></script>
-  <script src="bootstrap-datepicker-1.3.1/js/bootstrap-datepicker.js"></script>
-  <script src="bootstrap-lightbox-v0.7.0/bootstrap-lightbox.min.js"></script>
   <link rel="stylesheet" type="text/css" href="bootstrap-3.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.3.1/css/datepicker.css">
-  <link rel="stylesheet" type="text/css" href="bootstrap-lightbox-v0.7.0/bootstrap-lightbox.min.css">
-  <link rel="stylesheet" type="text/css" href="bootstrap-lightbox-v0.7.0/prettify/prettify.css">
 
   <!-- Google Maps JavaScript -->
   <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -103,18 +94,33 @@
   </nav><!-- /.navbar --> 
 
   <!-- #box3 -->
-  <div id="box3" class="pad-section">
+  <div id="box3">
     <div id="content" class="container-fluid">
-      <div class="row pad-top">
-        <div class="col-sm-1 col-md-1 col-lg-1"></div>
-        <div class="col-sm-10 col-md-10 col-lg-10">
-          <p class="pageTitle">Map</p>
+      <!-- Google Map -->
+      <div class="row" style="padding-top:72px;">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+          <div class="col-top-flex-container" style="align-items: flex-end;">
+<!-- <div id="map-canvas" style="color:black;"></div> -->
+<!-- <div id="legend">My first legend!</div> -->
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3972.5536405932116!2d103.14849099999999!3d5.332085000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b7be74fc4a47b7%3A0xd3329c42f0575055!2sMing+Star+Hotel!5e0!3m2!1sen!2smy!4v1421139841572"
+    width="100%" height="350" frameborder="0" style="border:0"></iframe> -->
+            <iframe src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=115860096431214721188.00045067c2af1549adaeb&amp;ll=5.332071,103.147845&amp;spn=0,0&amp;iwloc=00045067c9e420974965c&amp;output=embed&amp;s=AARTsJoZwislyC0OJ20cAFwpiUvpW94oSA"
+                    width="100%" height="450" scrolling="no" frameborder="0" style="border:0"></iframe>
+            <button type="button" class="btn btn-default"
+                    style="margin-top:10px;"
+                    onclick="openGoogleMap()">View on Google Map
+            </button>
+          </div>
         </div>
-        <div class="col-sm-1 col-md-1 col-lg-1"></div>
-      </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+      </div><!-- Google Map -->
+
+      <!-- Content Description -->
       <div class="row">
         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+          <p class="pageTitle">Map</p>
           <p class="pageText">Explore our interactive map to find out places of interest, 
                               driving direction and your way to our hotel</p>
             <div style="display:inline-block;">
@@ -124,30 +130,93 @@
               <button id="map1" type="button" class="btn btn-link">MAP1</button>
               <button id="map2" type="button" class="btn btn-link">MAP2</button>
             </div>
+            <hr style="border:1px dotted #838383; margin: 5px 0;">
         </div>
         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-      </div>
-      <div class="row">
-        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-          <div class="col-top-flex-container" style="align-items: flex-end;">
-            <button type="button" class="btn btn-default"
-                    style="margin-bottom:10px;"
-                    onclick="openGoogleMap()">View on Google Map
-            </button>
-<!-- <div id="map-canvas" style="color:black;"></div> -->
-<!-- <div id="legend">My first legend!</div> -->
-<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3972.5536405932116!2d103.14849099999999!3d5.332085000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b7be74fc4a47b7%3A0xd3329c42f0575055!2sMing+Star+Hotel!5e0!3m2!1sen!2smy!4v1421139841572"
-    width="100%" height="350" frameborder="0" style="border:0"></iframe> -->
-            <iframe src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=115860096431214721188.00045067c2af1549adaeb&amp;ll=5.332071,103.147845&amp;spn=0,0&amp;iwloc=00045067c9e420974965c&amp;output=embed&amp;s=AARTsJoZwislyC0OJ20cAFwpiUvpW94oSA"
-                    width="100%" height="450" scrolling="no" frameborder="0" style="border:0"></iframe>
-          </div>
-        </div>
-        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-      </div>
+      </div><!-- Content Description -->
+
       <div class="row">
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
-        <div class="col-sm-10 col-md-10 col-lg-10">
+        <!-- Separate Table on large screen -->
+        <div class="col-sm-5 col-md-5 col-lg-5 hidden-xs hidden-sm">
+          <table class="table table-striped">
+            <caption>Point of interest to Mingstar Hotel in Kuala Terengganu</caption>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Point of Interest</th>
+                <th>Distance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">1</th>
+                <td>Tanjung Warisan, Pulau Duyung</td>
+                <td>6.8km</td>
+              </tr>
+              <tr><th scope="row">2</th>
+                <td>Crystal Mosque</td>
+                <td>9.8km</td>
+              </tr>
+              <tr><th scope="row">3</th>
+                <td>Museum</td>
+                <td>7.8km</td>
+              </tr>
+              <tr><th scope="row">4</th>
+                <td>Kampung Cina</td>
+                <td>1.9km</td>
+              </tr>
+              <tr><th scope="row">5</th>
+                <td>Syah Bandar</td>
+                <td>1.2km</td>
+              </tr>
+              <tr><th scope="row">6</th>
+                <td>Batu Buruk Beach</td>
+                <td>2.0km</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-5 col-md-5 col-lg-5 hidden-xs hidden-sm">
+          <table class="table table-striped">
+            <caption>&nbsp;</caption>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Point of Interest</th>
+                <th>Distance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">7</th>
+                <td>Bus Station</td>
+                <td>1.1km</td>
+              </tr>
+              <tr><th scope="row">8</th>
+                <td>Central Market</td>
+                <td>1.8km</td>
+              </tr>
+              <tr><th scope="row">9</th>
+                <td>Tourist Information Centre</td>
+                <td>1.3km</td>
+              </tr>
+              <tr><th scope="row">10</th>
+                <td>Post Office</td>
+                <td>1.5km</td>
+              </tr>
+              <tr><th scope="row">11</th>
+                <td>Airport</td>
+                <td>16.2km</td>
+              </tr>
+              <tr><th scope="row">12</th>
+                <td>South China Sea</td>
+                <td>400m</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- Separate Table on large screen -->
+
+        <!-- Combine table on other screen -->
+        <div class="col-sm-10 col-md-10 col-lg-10 hidden-md hidden-lg">
           <table class="table table-striped">
             <caption>Point of interest to Mingstar Hotel in Kuala Terengganu</caption>
             <thead>
@@ -208,7 +277,7 @@
               </tr>
             </tbody>
           </table>
-        </div>
+        </div><!-- Combine table on other screen -->
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
 <!-- <div class="col-sm-6 col-md-6 col-lg-6">
   <p class="pageTitle">Map</p>
@@ -237,7 +306,6 @@
 
   <!-- footer -->
   <footer>
-    <hr class="footerDivider" />
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-3 col-lg-5">
@@ -253,9 +321,7 @@
             </tr>
           </tbody></table>
         </div>
-        <div class="col-sm-9 col-md-9 col-lg-7 text-right">
-          <p>All material herein &copy; 2014 – 2015 Ming Group<br />All Rights Reserved.</p>
-        </div>
+        <div id="copyright" class="col-sm-9 col-md-9 col-lg-7 text-right"></div>
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
   </footer><!-- footer -->

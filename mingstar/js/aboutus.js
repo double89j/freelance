@@ -8,30 +8,30 @@ $(document).ready(function() {
         $("#readmoretext").toggleClass("showtext");
     });
     
-    var aboutusSliderOptions = {
-            sliderId: "aboutusSlider",
-            startSlide: 0,
-            effect: "13",
-            effectRandom: false,
-            pauseTime: 5000,
-            transitionTime: 500,
-            slices: 12,
-            boxes: 8,
-            hoverPause: 1,
-            autoAdvance: true,
-            captionOpacity: 0.3,
-            captionEffect: "fade",
-            thumbnailsWrapperId: "thumbs",
-            m: false,
-            license: "mylicense"
-        },
-        aboutusImageSlider = new mcImgSlider(aboutusSliderOptions);
-    aboutusImageSlider.reload();
+    // var aboutusSliderOptions = {
+    //         sliderId: "aboutusSlider",
+    //         startSlide: 0,
+    //         effect: "13",
+    //         effectRandom: false,
+    //         pauseTime: 5000,
+    //         transitionTime: 500,
+    //         slices: 12,
+    //         boxes: 8,
+    //         hoverPause: 1,
+    //         autoAdvance: true,
+    //         captionOpacity: 0.3,
+    //         captionEffect: "fade",
+    //         thumbnailsWrapperId: "thumbs",
+    //         m: false,
+    //         license: "mylicense"
+    //     },
+    //     aboutusImageSlider = new mcImgSlider(aboutusSliderOptions);
+    // aboutusImageSlider.reload();
 
 
     var _SlideshowTransitions = [
-    //Fade
-    { $Duration: 1200, $Opacity: 2 }
+        //Fade
+        { $Duration: 1200, $Opacity: 2 }
     ];
 
     var options = {
@@ -72,27 +72,27 @@ $(document).ready(function() {
         //     $Scale: false,                                  //Scales bullets navigator or not while slider scale
         // },
 
-        $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
-            $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
-            $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-            $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
-            $SpacingX: 10,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
-            $SpacingY: 10                                    //[Optional] Vertical space between each item in pixel, default value is 0
-        },
+        // $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+        //     $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
+        //     $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+        //     $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+        //     $SpacingX: 10,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+        //     $SpacingY: 10                                    //[Optional] Vertical space between each item in pixel, default value is 0
+        // },
 
         $ArrowNavigatorOptions: {                           //[Optional] Options to specify and enable arrow navigator or not
             $Class: $JssorArrowNavigator$,                  //[Requried] Class to create arrow navigator instance
             $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
             $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
             $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
-        },
+        }/*,
 
         $ThumbnailNavigatorOptions: {
             $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
             $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
             $ActionMode: 0,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
             $DisableDrag: true                              //[Optional] Disable drag or not, default value is false
-        }
+        }*/
     };
 
     $('#aboutus_slider_container').removeClass('hideBlock');
