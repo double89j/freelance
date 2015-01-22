@@ -85,9 +85,8 @@
 
   <!-- #box3 -->
   <div id="box3" class="pad-section">
-    <div id="content" class="container-fluid">
-      <!-- Room Type -->
-      <div id="room-type"></div>
+    <div id="content" class="container-fluid room-body">      
+      <div id="room-type"></div><!-- Room Type -->
       <div class="row pad-top room-type-navbar">
         <a href="#standard_room">
           <div class="col-sm-4 col-md-3 col-lg-3">
@@ -111,49 +110,43 @@
         </a>
       </div><!-- Room Type -->
 
-      <div class="row room-container">
-        <!-- Standard Room -->
+      <div class="row room-container"><!-- Standard Row Begin -->        
         <div id="standard_room"></div>
-        <div class="col-sm-12 col-md-12 col-lg-12" style="padding:0;">
+        <div class="col-sm-12 col-md-12 col-lg-12"><!-- Standard Room Begin-->
           <h1 class="room-header">Standard Room</h1>
           <a class="back-to-top" href="#room-type">
             <img src="images/back_to_top.png"></img>
             Back to top
           </a>
-        </div>
-        <!-- Jssor Slider Begin -->
-        <div class="col-sm-12 col-md-12 col-lg-6" style="padding:0;">
-          <div id="standard_slider_container" class="gallery-container">
-            <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+        </div><!-- Standard Room End-->       
+        <div class="col-sm-12 col-md-12 col-lg-12" style="padding:0;"><!-- Jssor Slider Begin -->
+          <div id="standard_slider_container" class="gallery-container"><!-- Gallery Container Begin -->
+            <div u="loading" style="position: absolute; top: 0px; left: 0px;"><!-- Loading Begin -->
               <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; 
                           background-color: #000000; top: 0px; left: 0px; width: 100%; height:100%;">
               </div>
               <div style="position: absolute; display: block; top: 0px; left: 0px; width: 100%;
                           height:100%; background: url(jssor/img/loading.gif) no-repeat center center;">
               </div>
-            </div>
-
-            <div u="slides" class="gallery-container" 
-                 style="cursor: move; position: absolute; left: 0px; top: 0px; overflow: hidden;">
+            </div><!-- Loading End -->           
+            <div u="slides" class="gallery-container"
+                 style="cursor: move; position: absolute; left: 0px; top: 0px; overflow: hidden;"><!-- Slider Image Begin -->
               <div><img u="image" src="room-images/standard/205_1.jpg" /></div>
               <div><img u="image" src="room-images/standard/205_2.jpg" /></div>
               <div><img u="image" src="room-images/standard/205_3.jpg" /></div>
               <div><img u="image" src="room-images/standard/205_4.jpg" /></div>
               <div><img u="image" src="room-images/standard/205_5.jpg" /></div>
-            </div>
-
-            <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
+            </div><!-- Slider Image End -->           
+            <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;"><!-- Navigator Begin -->
               <div u="prototype" 
                    style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; 
                           line-height:19px; color:White; font-size:12px;"></div>
-            </div>
-
+            </div><!-- Navigator End -->            
             <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0px;"></span>
             <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0px"></span>
-          </div>
-        </div><!-- Jssor Slider End -->
-
-        <div class="col-sm-6 col-md-6 col-lg-3">
+          </div><!-- Gallery Container End -->
+        </div><!-- Jssor Slider End -->      
+        <div class="col-sm-6 col-md-6 col-lg-6"><!-- Facilities Begin -->
           <h3 id="rooms-detail-title">Facilities</h3>
           <ul id="rooms-detail">
             <li>Generous Desk</li>
@@ -166,8 +159,9 @@
             <li>Contemporary Style Bathroom</li>
             <li>Coffee &amp; Tea making</li>
           </ul>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-3">
+        </div><!-- Facilities End -->
+        
+        <div class="col-sm-6 col-md-6 col-lg-6"><!-- Booking Begin -->
           <h3 id="rooms-detail-title">Book Now</h3>
           <a href="contact.html">
             <button class="room-price-container">
@@ -175,12 +169,12 @@
               <h6>Per Night<h6>
             </button>
           </a>
-        </div>
-      </div><!-- Standard Room -->
-
+        </div><!-- Booking End -->
+      </div><!-- Standard Row End -->
+      
       <!-- Superior Room -->
       <div id="superior_room"></div>
-      <div class="row room-container">
+      <div class="row room-container room-grey">
         <div class="col-sm-12 col-md-12 col-lg-12" style="padding:0;">
           <h1 class="room-header">Superior Room</h1>
           <a class="back-to-top" href="#room-type">
@@ -188,7 +182,7 @@
             Back to top
           </a>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6" style="padding:0;">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="padding:0;">
           <div id="superior_slider_container" class="gallery-container">
             <div u="loading" style="position: absolute; top: 0px; left: 0px;">
               <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; 
@@ -220,7 +214,7 @@
           </div>
         </div><!-- Jssor Slider End -->
 
-        <div class="col-sm-6 col-md-6 col-lg-3">
+        <div class="col-sm-6 col-md-6 col-lg-6">
         <h3 id="rooms-detail-title">Facilities</h3>
           <ul id="rooms-detail">
             <li>Generous Desk</li>
@@ -234,7 +228,7 @@
             <li>Coffee &amp; Tea making</li>
           </ul>
         </div>
-        <div class="col-sm-6 col-md-6 col-lg-3">
+        <div class="col-sm-6 col-md-6 col-lg-6">
           <h3 id="rooms-detail-title">Book Now</h3>
           <a href="contact.html">
             <button class="room-price-container">
@@ -255,7 +249,7 @@
               Back to top
             </a>
           </div>
-          <div class="col-sm-12 col-md-12 col-lg-6" style="padding:0;">
+          <div class="col-sm-12 col-md-12 col-lg-12" style="padding:0;">
             <div id="deluxe_slider_container" class="gallery-container">
               <div u="loading" style="position: absolute; top: 0px; left: 0px;">
                 <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; 
@@ -290,7 +284,7 @@
             </div>
           </div><!-- Jssor Slider End -->
 
-          <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="col-sm-6 col-md-6 col-lg-6">
             <h3 id="rooms-detail-title">Facilities</h3>
             <ul id="rooms-detail">
               <li>Generous Desk</li>
@@ -305,7 +299,7 @@
               <li>Mini Bar with complimentary snack and juice</li>
             </ul>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="col-sm-6 col-md-6 col-lg-6">
             <h3 id="rooms-detail-title">Book Now</h3>
             <a href="contact.html">
               <button class="room-price-container">

@@ -148,8 +148,8 @@
 .room-container {
     margin-left:    auto;
     margin-right:   auto;
-    max-width:      1600px;
-    margin:         10px 0 0;
+    max-width:      100%;
+    margin:         0;
 }
 .room-container h1 {
     font-family: Impact, Charcoal, sans-serif;
@@ -225,4 +225,14 @@ text-decoration:none;
 
 .gallery-title {
 font-family: Impact, Charcoal, sans-serif;
+}
+
+.room-body {
+  margin-left:  auto;
+  margin-right: auto;
+  max-width:  100%;
+}
+
+.room-grey{
+  background-color: rgba(0,0,0,0.1);
 }

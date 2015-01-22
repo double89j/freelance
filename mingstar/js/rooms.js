@@ -71,9 +71,9 @@ deluxeImageSlider.reload();*/
     function ScaleSlider() {
         var parentWidth = standard_jssor_slider.$Elmt.parentNode.clientWidth;
         if (parentWidth) {
-          standard_jssor_slider.$ScaleWidth(Math.min(parentWidth, 960));
-          superior_jssor_slider.$ScaleWidth(Math.min(parentWidth, 960));
-          deluxe_jssor_slider.$ScaleWidth(Math.min(parentWidth, 960));
+          standard_jssor_slider.$ScaleWidth(Math.min(parentWidth, parentWidth));
+          superior_jssor_slider.$ScaleWidth(Math.min(parentWidth, parentWidth));
+          deluxe_jssor_slider.$ScaleWidth(Math.min(parentWidth, parentWidth));
         } else {
             window.setTimeout(ScaleSlider, 30);
         }
