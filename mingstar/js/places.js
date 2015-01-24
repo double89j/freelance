@@ -6,6 +6,7 @@
 */
 
 $(document).ready(function() {
+
     var hotelLatLng = new google.maps.LatLng(5.332071, 103.147845);
 
     function googleMapInit() {

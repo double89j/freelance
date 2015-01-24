@@ -11,55 +11,20 @@
   <script src="jquery-form-3.51.0/jquery.form.js"></script>
 
   <!-- Bootstrap & Bootstrap Datepicker & Lightbox -->
-  <script src="bootstrap-3.3.1/js/bootstrap.min.js"></script>
+  <script src="bootstrap-3.3.2/js/bootstrap.min.js"></script>
   <script src="bootstrap-datepicker-1.3.1/js/bootstrap-datepicker.js"></script>
-  <link rel="stylesheet" type="text/css" href="bootstrap-3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.3.1/css/datepicker.css">
 
   <!-- JavaScrip -->
   <script src="js/main.js"></script>
   <script src="js/general.js"></script>
+  <script src="js/contact.js"></script>
   <script type="text/javascript"></script>
 
   <!-- css -->
   <link href="css/style.css" rel="stylesheet" />
-  
-  <!-- Gallery CSS and JavaScript -->
-    <link rel="stylesheet" type="text/css" href="css/gallery-style.css" />
-    <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
-    <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
-      <div class="rg-image-wrapper">
-        {{if itemsCount > 1}}
-          <div class="rg-image-nav">
-            <a href="#" class="rg-image-nav-prev">Previous Image</a>
-            <a href="#" class="rg-image-nav-next">Next Image</a>
-          </div>
-        {{/if}}
-        <div class="rg-image"></div>
-        <div class="rg-loading"></div>
-        <div class="rg-caption-wrapper">
-          <div class="rg-caption" style="display:none;">
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </script>
-    <!--script type="text/javascript" src="js/deluxe.js"></script-->
-    <script type="text/javascript" src="js/standard.js"></script>
-    <script type="text/javascript" src="js/superior.js"></script>
-    <script type="text/javascript" src="js/superiorPlus.js"></script>
 
-  <!-- Image Slider -->
-  <link href="css/all-js-image-slider.css" rel="stylesheet" type="text/css" />
-  <script src="js/js-image-slider.js" type="text/javascript"></script>
-  
-  <!-- Photo Grid -->
-  <link rel="stylesheet" type="text/css" href="css/component.css" />
-  <script src="js/modernizr.custom.js"></script>
-
-  <!-- Jssor Slider -->
-  <script type="text/javascript" src="jssor/js/jssor.js"></script>
-  <script type="text/javascript" src="jssor/js/jssor.slider.js"></script>
 </head>
 <body>
   <!-- navbar -->
@@ -77,7 +42,7 @@
       </div>
       <div id="navbar-collapse-main" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="rooms.html">Rooms</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="places.html">Places</a></li>
@@ -85,11 +50,12 @@
         </ul>
       </div><!-- #navbar-collapse-main -->
     </div><!-- /.container-fluid -->
-  </nav><!-- /.navbar --> 
+  </nav><!-- /.navbar -->
 
-  <!-- #box3 -->
-  <div id="box3">
+  <!-- #main-body -->
+  <div id="main-body">
     <div id="content" class="container-fluid">
+
       <div class="row pad-top">
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
         <div class="col-sm-10 col-md-10 col-lg-10">
@@ -97,6 +63,7 @@
         </div>
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
       </div>
+
       <div class="row">
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
         <div class="col-sm-10 col-md-10 col-lg-10">
@@ -134,62 +101,79 @@
 
           <form id="contactusform" class="form-horizontalx" method="post" action="reservation.php">
             <div class="row">
-              <div class="form-group col-md-6 col-lg-6">
+              <!-- Name -->
+              <div class="form-group col-sm-6 col-md-4 col-lg-5">
                 <label>Name</label>
                 <input name="guest_name" type="text" class="form-control" placeholder="Name">
               </div>
-              <div class="form-group col-md-6 col-lg-6">
+              <!-- Phone -->
+              <div class="form-group col-sm-6 col-md-3 col-lg-2">
                 <label>Phone</label>
                 <input name="guest_phone" type="text" class="form-control" placeholder="Phone">
               </div>
-              <div class="form-group col-md-6 col-lg-6">
+              <!-- E-mail -->
+              <div class="form-group col-sm-12 col-md-5 col-lg-5">
                 <label>E-mail</label>
                 <input name="guest_email" type="email" class="form-control" placeholder="Email">
               </div>
-              <div class="form-group col-md-3 col-lg-3">
-                <label>Check-In Date</label>
-                <div class="input-group date datepicker" style="padding:0;">
-                  <input name="check_in_date" type="text" class="form-control" placeholder="Check-in date">
-                  <span class="input-group-addon pointer">
-                    <i class="glyphicon glyphicon-calendar"></i>
-                  </span>
+
+              <div class="form-group col-lg-6" style="margin-bottom:0;">
+                <div class="row">
+                <!-- Room Type -->
+                  <div class="form-group col-lg-12">
+                    <label>Room Type</label>
+                    <select name="guest_room_type" class="form-control">
+                      <!-- <option value="None">Which Type of Room</option> -->
+                      <option value="Standard">Standard Room</option>
+                      <option value="Superior Plus">Superior Plus Room</option>
+                      <option value="Deluxe">Deluxe Room</option>
+                      <option value="Sweet">Sweet Room</option>
+                      <!-- <option value="Superior">Superior Room</option> -->
+                      <!-- <option value="Executive">Executive Room</option> -->
+                      <!-- <option value="Family">Family Room</option> -->
+                    </select>
+                  </div>
+                  <!-- Check-In Date -->
+                  <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                    <label>Check-In Date</label>
+                    <div class="input-group date datepicker" style="padding:0;">
+                      <input name="check_in_date" type="text" class="form-control" placeholder="Check-in date">
+                      <span class="input-group-addon pointer">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Check-Out Date -->
+                  <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                    <label>Check-Out Date</label>
+                    <div class="input-group date datepicker" style="padding:0;">
+                      <input name="check_out_date" type="text" class="form-control" placeholder="Check-out date">
+                      <span class="input-group-addon pointer">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Adults -->
+                  <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                    <label>Adults</label>
+                    <input name="adults" type="text" class="form-control" placeholder="Adults">
+                  </div>
+                  <!-- Kids -->
+                  <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                    <label>Kids</label>
+                    <input name="adults" type="text" class="form-control" placeholder="Kids">
+                  </div>
+
                 </div>
               </div>
-              <div class="form-group col-md-3 col-lg-3">
-                <label>Check-Out Date</label>
-                <div class="input-group date datepicker" style="padding:0;">
-                  <input name="check_out_date" type="text" class="form-control" placeholder="Check-out date">
-                  <span class="input-group-addon pointer">
-                    <i class="glyphicon glyphicon-calendar"></i>
-                  </span>
-                </div>
+              <!-- Remarks -->
+              <div class="form-group col-lg-6">
+                <label>Remarks</label>
+                <textarea name="remarks" class="form-control" style="height:183px;" 
+                          placeholder="Please write here if you have any special note"></textarea>
               </div>
-              <div class="form-group col-md-6 col-lg-6">
-                <label>Room Type</label>
-                <select name="guest_room_type" class="form-control">
-                  <!-- <option value="None">Which Type of Room</option> -->
-                  <option value="Standard">Standard Room</option>
-                  <option value="Superior">Superior Room</option>
-                  <option value="Superior Plus">Superior Plus Room</option>
-                  <option value="Deluxe">Deluxe Room</option>
-                  <option value="Executive">Executive Room</option>
-                  <option value="Family">Family Room</option>
-                </select>
-              </div>
-              <div class="form-group col-md-3 col-lg-3">
-                <label>Adults</label>
-                <input name="adults" type="text" class="form-control" placeholder="Adults">
-              </div>
-              <div class="form-group col-md-3 col-lg-3">
-                <label>Kids</label>
-                <input name="adults" type="text" class="form-control" placeholder="Kids">
-              </div>
-              <div class="form-group col-md-12 col-lg-12">
-                <label>Note</label>
-                <textarea name="guest_note" class="form-control" rows="3"
-                          placeholder="Please write here if you have any special note."></textarea>
-              </div>
-              <div class="form-group col-md-12 col-lg-12">
+
+              <div class="form-group col-lg-12">
                 <div class="row-right-flex-container">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resetForm">Reset</button>
                   <button type="submit" class="btn btn-primary" style="margin-left:15px;">Submit</button>
@@ -203,25 +187,27 @@
                             <span aria-hidden="true">&times;</span>
                           </button>
                           <h4 class="modal-title" id="myModalLabel">Reset Form</h4>
-                        </div>
-                        <div class="modal-body">Are you sure to reset form ?</div>
+                        </div><!-- /.modal-header -->
+                        <div class="modal-body">Are you sure to reset form ?</div><!-- /.modal-body -->
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                           <button id="resetBtn" type="button" class="btn btn-primary">Yes</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                        </div><!-- /.modal-footer -->
+                      </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog modal-sm -->
+                  </div><!-- #resetForm -->
+
+                </div><!-- /.row-right-flex-container -->
+              </div><!-- /.form-group col-lg-12 -->
+
+            </div><!-- /.row -->
           </form>
 
         </div><!-- /.col-sm-10 col-md-10 col-lg-10 -->
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
-      </div><!-- /.col-X -->
+      </div><!-- /.row -->
     </div><!-- #content -->
-  </div><!-- #box3 --> 
+  </div><!-- #main-body --> 
 
   <!-- footer -->
   <footer>

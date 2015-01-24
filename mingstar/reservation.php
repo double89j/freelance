@@ -13,20 +13,26 @@
         $guest_phone = $_POST["guest_phone"];
         $guest_email = $_POST["guest_email"];
         $check_in_date = $_POST["check_in_date"];
+        $check_out_date = $_POST["check_out_date"];
         $guest_room_type = $_POST["guest_room_type"];
         $adults = $_POST["adults"];
         $children = $_POST["children"];
-        $guest_note = $_POST["guest_note"];
+        $remarks = $_POST["remarks"];
 
         $message .= "Online Room Reservation:<br /><br />";
+
         $message .= "Guest Name: $guest_name<br />";
         $message .= "Guest Phone: $guest_phone<br />";
         $message .= "Guest Email: $guest_email<br /><br />";
-        $message .= "Check-in Date: $check_in_date<br />";
+
+        $message .= "Check-In Date: $check_in_date<br />";
+        $message .= "Check-Out Date: $check_out_date<br />";
         $message .= "Room Type: $guest_room_type<br /><br />";
+
         $message .= "No. of Adults: $adults<br />";
         $message .= "No. of Children: $children<br /><br /><br />";
-        $message .= "Note: $guest_note<br /><br /><br />";
+
+        $message .= "Note: $remarks<br /><br /><br />";
 
         $redirect = "thankyou.html";
 

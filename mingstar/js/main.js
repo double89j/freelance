@@ -68,8 +68,10 @@ $(document).ready(function() {
             else
                 currentPage = currentPage.slice(0, currentPage.indexOf('.'));
 
-            loadPage(currentPage);
-            checkGalleryRoomTypeBox();
+            // if (currentPage=='aboutus') // for temperary settings
+            //     loadPage(currentPage);
+            // checkGalleryRoomTypeBox();
+            initTooltipPopover();
 
             // if (currentPage=='index.html') {
             //     $content.load('home.html #content>*', function(responseTxt, statusTxt, xhr) {
@@ -98,62 +100,62 @@ $(document).ready(function() {
             // init();
         },
 
-        loadPage = function(href) {
-            if (href=='#')
-                return;
+        // loadPage = function(href) {
+        //     if (href=='#')
+        //         return;
 
-            if (href=='index.html' || href=='index' || href=='')
-                href = 'aboutus';
+        //     if (href=='index.html' || href=='index' || href=='')
+        //         href = 'aboutus';
 
-            $content.load(href+'.html #content>*', function(responseTxt, statusTxt, xhr) {
-                if (statusTxt=='success') {
-                    initTooltipPopover();
-                    ajaxLoad(responseTxt); // console.log('load complete');
-                }
-                if (statusTxt=='error')
-                    console.log('Error: '+xhr.status+": "+xhr.statusTxt);
-            });
+        //     $content.load(href+'.html #content>*', function(responseTxt, statusTxt, xhr) {
+        //         if (statusTxt=='success') {
+        //             initTooltipPopover();
+        //             ajaxLoad(responseTxt); // console.log('load complete');
+        //         }
+        //         if (statusTxt=='error')
+        //             console.log('Error: '+xhr.status+": "+xhr.statusTxt);
+        //     });
 
-            setTimeout(function(evt) {
-                $.cachedScript('js/'+href+'.js')
-                    .done(function(script, textStatus) {
-                        console.log(textStatus+': script loaded');
-                    })
-                    .fail(function(jqxhr, settings, exception) {
-                        console.warn('no script found');
-                    });
-            }, 300);
+        //     setTimeout(function(evt) {
+        //         $.cachedScript('js/'+href+'.js')
+        //             .done(function(script, textStatus) {
+        //                 console.log(textStatus+': script loaded');
+        //             })
+        //             .fail(function(jqxhr, settings, exception) {
+        //                 console.warn('no script found');
+        //             });
+        //     }, 300);
 
-            // $.getScript('js/'+href+'.js')
-            //     .done(function(script, textStatus) {
-            //         console.log('script loaded');
-            //     })
-            //     .fail(function(jqxhr, settings, exception) {
-            //         console.warn('no script found');
-            //     });
+        //     // $.getScript('js/'+href+'.js')
+        //     //     .done(function(script, textStatus) {
+        //     //         console.log('script loaded');
+        //     //     })
+        //     //     .fail(function(jqxhr, settings, exception) {
+        //     //         console.warn('no script found');
+        //     //     });
 
-            // $.getScript('js/'+href+'.js', function(data, textStatus, jqxhr) {
-            //     // console.log(data);
-            //     // console.log(textStatus);
-            //     // console.log(jqxhr);
-            //     console.log('script loaded');
-            // });
-        },
+        //     // $.getScript('js/'+href+'.js', function(data, textStatus, jqxhr) {
+        //     //     // console.log(data);
+        //     //     // console.log(textStatus);
+        //     //     // console.log(jqxhr);
+        //     //     console.log('script loaded');
+        //     // });
+        // },
 
-        checkGalleryRoomTypeBox = function() {
-            // var navWidth = $('#gallery-room-type-box').width();
-            // if ($(window).width() > 1300)
-            //     $('#gallery-room-type-box').addClass('gallery-fixed-box');
-            // else
-            //     $('#gallery-room-type-box').removeClass('gallery-fixed-box');
+        // checkGalleryRoomTypeBox = function() {
+        //     // var navWidth = $('#gallery-room-type-box').width();
+        //     // if ($(window).width() > 1300)
+        //     //     $('#gallery-room-type-box').addClass('gallery-fixed-box');
+        //     // else
+        //     //     $('#gallery-room-type-box').removeClass('gallery-fixed-box');
 
-            // if ($('#gallery-room-type-box').length != 0) {
-            //     if (navWidth > 190)
-            //         $('#gallery-room-type-box').addClass('gallery-fixed-box');
-            //     else
-            //         $('#gallery-room-type-box').removeClass('gallery-fixed-box');
-            // }
-        },
+        //     // if ($('#gallery-room-type-box').length != 0) {
+        //     //     if (navWidth > 190)
+        //     //         $('#gallery-room-type-box').addClass('gallery-fixed-box');
+        //     //     else
+        //     //         $('#gallery-room-type-box').removeClass('gallery-fixed-box');
+        //     // }
+        // },
 
         checkNavbarCollapse = function() {
             // Still having an issue here which is FOC when toggle collapse
@@ -174,11 +176,11 @@ $(document).ready(function() {
         // var navHeight = $('#box1').height();
         // if ($(window).scrollTop() > navHeight) {
         //     $('nav').addClass('goToTop');
-        //     $('#box3').addClass('marginFromTop');
+        //     $('#main-body').addClass('marginFromTop');
         // }
         // else {
         //     $('nav').removeClass('goToTop');
-        //     $('#box3').removeClass('marginFromTop');
+        //     $('#main-body').removeClass('marginFromTop');
         // }
 
         // ($(window).scrollTop() > navHeight) ? $('nav').addClass('goToTop') : $('nav').removeClass('goToTop');
@@ -186,28 +188,28 @@ $(document).ready(function() {
         /*var navHeight = $('#box1').height();
         if ($(window).scrollTop() > navHeight) {
             $('nav').addClass('navbar-fixed-top');
-            $('#box3').addClass('marginFromTop');
+            $('#main-body').addClass('marginFromTop');
         }
         else {
             $('nav').removeClass('navbar-fixed-top');
-            $('#box3').removeClass('marginFromTop');
+            $('#main-body').removeClass('marginFromTop');
         }*/
     });
 
     $(window).bind('resize', function() {
-        checkGalleryRoomTypeBox();
+        // checkGalleryRoomTypeBox();
         if ($(window).width() > 760)
             checkNavbarCollapse();
     });
 
-    $(window).bind('popstate', function(evt) {
-        // if (evt.originalEvent.state !== null)
-        if (location.hash.length==0) {
-            var page = location.href.split('/').pop();
-            page = page.slice(0, page.indexOf('.'));
-            loadPage(page);
-        }
-    });
+    // $(window).bind('popstate', function(evt) {
+    //     // if (evt.originalEvent.state !== null)
+    //     if (location.hash.length==0) {
+    //         var page = location.href.split('/').pop();
+    //         page = page.slice(0, page.indexOf('.'));
+    //         loadPage(page);
+    //     }
+    // });
 
     $(document).keydown(function(evt) {
         if (evt.keyCode==17)
@@ -222,44 +224,37 @@ $(document).ready(function() {
         $('.vertical-header').toggleClass('show animated bounceInLeft');
     });
 
-    $('#navbar-collapse-main1').on('click', 'a', function(evt) {
-        // console.log('item ID: '+$(this).attr('id'));
-        var href = $(this).attr('href');
-            href = href.slice(0, href.indexOf('.'));
-        // if (href=='deluxe') {
-        //     evt.preventDefault();
-        //     alert(href);
-        //     return;
-        // }
-        if (href=='#' || href=='') {
-            // evt.preventDefault();
-            return;
-        }
-        if (checkCtrl) {
-            // cater ctrl + click event
-            return;
-        }
+    // $('#navbar-collapse-main1').on('click', 'a', function(evt) {
+    //     // console.log('item ID: '+$(this).attr('id'));
+    //     var href = $(this).attr('href');
+    //         href = href.slice(0, href.indexOf('.'));
 
-        console.log('link click');
+    //     if (href=='#' || href=='') {
+    //         return;
+    //     }
+    //     if (checkCtrl) { // cater ctrl + click event
+    //         return;
+    //     }
 
-        if (href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) {
-            if (href=='home')
-                history.pushState({}, '', 'index.html');
-            else if (href=='deluxe' || href=='superiorPlus' || href=='superior' || href=='standard') {
-                history.pushState({}, '', href+'.html');
-                // console.log('close');
-                // close the dropdown
-                $('#rooms-nav').dropdown('toggle');
-            }
-            else
-                history.pushState({}, '', href+'.html');
+    //     console.log('link click');
 
-            loadPage(href);
-            if ($('.navbar-toggle').css('display')=='block')
-                $('.navbar-collapse').collapse('hide');
-            return false;
-        }
-    });
+    //     if (href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) {
+    //         if (href=='home')
+    //             history.pushState({}, '', 'index.html');
+    //         else if (href=='deluxe' || href=='superiorPlus' || href=='superior' || href=='standard') {
+    //             history.pushState({}, '', href+'.html');
+    //             $('#rooms-nav').dropdown('toggle'); // close the dropdown
+    //             // console.log('close');
+    //         }
+    //         else
+    //             history.pushState({}, '', href+'.html');
+
+    //         loadPage(href);
+    //         if ($('.navbar-toggle').css('display')=='block')
+    //             $('.navbar-collapse').collapse('hide');
+    //         return false;
+    //     }
+    // });
 });
 
 function loadpage_old(page) {

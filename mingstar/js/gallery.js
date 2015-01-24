@@ -7,7 +7,7 @@
 //     $(this).lightbox();
 // }); 
 
-// jQuery(document).ready(function ($) {
+jQuery(document).ready(function ($) {
 
     var _SlideshowTransitions = [
         //Fade
@@ -230,7 +230,7 @@
         $('.typeSweet').addClass('active');
         alert('deluxe');
     });
-// });
+});
 
 // jQuery(document).ready(function ($) {
 
