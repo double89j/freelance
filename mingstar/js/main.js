@@ -164,6 +164,13 @@ $(document).ready(function() {
     init(location.href.split('/').pop());
 
     $(window).bind('scroll', function() {
+        if ($(window).scrollTop() > '50') {
+            $('.vertical-header').addClass('sticky');
+        }
+        else {
+            $('.vertical-header').removeClass('sticky');
+        }
+        
         // var navHeight = $('#box1').height();
         // if ($(window).scrollTop() > navHeight) {
         //     $('nav').addClass('goToTop');
@@ -209,6 +216,10 @@ $(document).ready(function() {
 
     $(document).keyup(function(evt) {
         checkCtrl = false;
+    });
+
+    $('.open-menu').on('click', function(evt) {
+        $('.vertical-header').toggleClass('show animated bounceInLeft');
     });
 
     $('#navbar-collapse-main1').on('click', 'a', function(evt) {

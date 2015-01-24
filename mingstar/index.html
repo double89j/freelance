@@ -27,12 +27,12 @@
   <script src="bootstrap-lightbox-v0.7.0/scale.fix.js"></script>
   <script src="bootstrap-lightbox-v0.7.0/prettify/prettify.js"></script>
    -->
-  <script src="bootstrap-3.3.1/js/bootstrap.min.js"></script>
+  <script src="bootstrap-3.3.2/js/bootstrap.min.js"></script>
   <!-- 
   <script src="bootstrap-datepicker-1.3.1/js/bootstrap-datepicker.js"></script>
   <script src="bootstrap-lightbox-v0.7.0/bootstrap-lightbox.min.js"></script>
    -->
-  <link rel="stylesheet" type="text/css" href="bootstrap-3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/css/bootstrap.min.css">
   <!-- 
   <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.3.1/css/datepicker.css">
   <link rel="stylesheet" type="text/css" href="bootstrap-lightbox-v0.7.0/bootstrap-lightbox.min.css">
@@ -56,6 +56,8 @@
 
   <!-- css -->
   <link href="css/style.css" rel="stylesheet" />
+  <link href="css/restinn1.css" rel="stylesheet" />
+  <link href="css/animate.min.css" rel="stylesheet" />
   <style type="text/css" media="screen">
     /*
     float down navbar-fixed-top
@@ -131,7 +133,7 @@
     </div><!-- #box1 --> 
 
     <!-- navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top hideBlock" role="navigation">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -159,7 +161,55 @@
           </ul> -->
         </div><!-- #navbar-collapse-main -->
       </div><!-- /.container-fluid -->
-    </nav><!-- /.navbar --> 
+    </nav><!-- /.navbar -->
+
+    <!-- Vertical header -->
+    <header class="vertical-header">
+      <div class="menu-sec">
+        <nav>
+          <span class="open-menu glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+          <ul>
+            <!-- <li class="active"><a title="" href="#home"><i class="fa fa-home"></i> HOME</a></li> -->
+            <li><a href="aboutus.html">
+              <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+              HOME
+            </a></li>
+            <li><a href="rooms.html">
+              <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+              ROOMS
+            </a></li>
+            <li><a href="gallery.html">
+              <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+              GALLERY
+            </a></li>
+            <li><a href="places.html">
+              <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+              PLACES
+            </a></li>
+            <li><a href="contact.html">
+              <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+              CONTACT US / RESERVATION
+            </a></li> 
+          </ul>
+        </nav>
+      </div>
+      <!-- <div class="header-top">
+        <div class="info-top">
+          <span><i class="fa fa-envelope"></i>email@website.com <br>email@website.com</span>
+        </div>
+        <div class="lang-and-book">
+          <select id="language" style="display: none;">
+            <option>ENGLISH</option>
+            <option>FRENCH</option>
+            <option>RUSSIAN</option>
+            <option>ARABIC</option>
+          </select><div class="minict_wrapper bubble"><input type="text" placeholder="ENGLISH" value=""><ul><li class="" data-value="ENGLISH">ENGLISH</li><li class="" data-value="FRENCH">FRENCH</li><li class="" data-value="RUSSIAN">RUSSIAN</li><li class="" data-value="ARABIC">ARABIC</li><li class="minict_empty">No results match your keyword.</li></ul></div>
+          <button class="btn book-btn" data-toggle="modal" data-target="#book-form">
+            <i class="fa fa-key"></i> Booking Form
+          </button>
+        </div>
+      </div> -->
+    </header><!-- Vertical header -->
 
     <!-- #box2 -->
     <div id="box2" class="pad-section" style="display:none;">
