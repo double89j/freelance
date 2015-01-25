@@ -1,28 +1,30 @@
-/*var deluxeSliderOptions = {
-        sliderId: "deluxeSlider",
-        startSlide: 0,
-        effect: "12",
-        effectRandom: false,
-        pauseTime: 5000,
-        transitionTime: 500,
-        slices: 12,
-        boxes: 8,
-        hoverPause: 1,
-        autoAdvance: true,
-        captionOpacity: 0.3,
-        captionEffect: "fade",
-        thumbnailsWrapperId: "thumbs",
-        m: false,
-        license: "mylicense"
-    },
-    deluxeImageSlider = new mcImgSlider(deluxeSliderOptions);
-deluxeImageSlider.reload();*/
+$(document).ready(function() {
 
-// $.getScript('http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=461&amp;locationId=1222443&amp;lang=en_MY&amp;rating=true&amp;nreviews=4&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=true&amp;border=true&amp;display_version=2', function() {
-//     if (typeof(window.taValidate) != 'undefined') {
-//       window.taValidate();
-//     }
-// });   
+    /*var deluxeSliderOptions = {
+            sliderId: "deluxeSlider",
+            startSlide: 0,
+            effect: "12",
+            effectRandom: false,
+            pauseTime: 5000,
+            transitionTime: 500,
+            slices: 12,
+            boxes: 8,
+            hoverPause: 1,
+            autoAdvance: true,
+            captionOpacity: 0.3,
+            captionEffect: "fade",
+            thumbnailsWrapperId: "thumbs",
+            m: false,
+            license: "mylicense"
+        },
+        deluxeImageSlider = new mcImgSlider(deluxeSliderOptions);
+    deluxeImageSlider.reload();*/
+
+    // $.getScript('http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=461&amp;locationId=1222443&amp;lang=en_MY&amp;rating=true&amp;nreviews=4&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=true&amp;border=true&amp;display_version=2', function() {
+    //     if (typeof(window.taValidate) != 'undefined') {
+    //       window.taValidate();
+    //     }
+    // });   
     var options = {
         $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
         $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
@@ -88,3 +90,5 @@ deluxeImageSlider.reload();*/
     $(window).bind("load", ScaleSlider);
     $(window).bind("resize", ScaleSlider);
     $(window).bind("orientationchange", ScaleSlider);
+
+});

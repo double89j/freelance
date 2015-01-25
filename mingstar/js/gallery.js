@@ -7,7 +7,7 @@
 //     $(this).lightbox();
 // }); 
 
-jQuery(document).ready(function ($) {
+$(document).ready(function() {
 
     var _SlideshowTransitions = [
         //Fade
