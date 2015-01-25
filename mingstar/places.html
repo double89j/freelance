@@ -61,7 +61,7 @@
   <div id="main-body">
     <div id="content" class="container-fluid">
       <!-- Google Map -->
-      <div class="row" style="padding-top:72px;">
+      <div class="row" style="padding:72px 0 10px;">
         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
           <div class="col-top-flex-container" style="align-items: flex-end;">
@@ -81,10 +81,12 @@
       </div><!-- Google Map -->
 
       <!-- Content Description -->
-      <div class="row">
+      <div class="row sec-transparent sec-places">
+        <div class="fixed-img places-img"></div>
         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-          <p class="pageTitle">Map</p>
+          <!-- <p class="pageTitle">Map</p> -->
+          <h3 class="sec-title-1"><span class="substyle">Map From</span>&nbsp;Your Places</h3>
           <p class="pageText">Explore our interactive map to find out places of interest, 
                               driving direction and your way to our hotel</p>
             <div style="display:inline-block;">
@@ -97,9 +99,157 @@
             <hr style="border:1px dotted #838383; margin: 5px 0;">
         </div>
         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="row">
+            <div class="col-sm-1 col-md-1 col-lg-1"></div>
+            <!-- Separate Table on large screen -->
+            <div class="col-sm-5 col-md-5 col-lg-5 hidden-xs hidden-sm">
+              <table class="table table-striped">
+                <caption>Point of interest to Mingstar Hotel in Kuala Terengganu</caption>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Point of Interest</th>
+                    <th>Distance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">1</th>
+                    <td>Tanjung Warisan, Pulau Duyung</td>
+                    <td>6.8km</td>
+                  </tr>
+                  <tr><th scope="row">2</th>
+                    <td>Crystal Mosque</td>
+                    <td>9.8km</td>
+                  </tr>
+                  <tr><th scope="row">3</th>
+                    <td>Museum</td>
+                    <td>7.8km</td>
+                  </tr>
+                  <tr><th scope="row">4</th>
+                    <td>Kampung Cina</td>
+                    <td>1.9km</td>
+                  </tr>
+                  <tr><th scope="row">5</th>
+                    <td>Syah Bandar</td>
+                    <td>1.2km</td>
+                  </tr>
+                  <tr><th scope="row">6</th>
+                    <td>Batu Buruk Beach</td>
+                    <td>2.0km</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-sm-5 col-md-5 col-lg-5 hidden-xs hidden-sm">
+              <table class="table table-striped">
+                <caption>&nbsp;</caption>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Point of Interest</th>
+                    <th>Distance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">7</th>
+                    <td>Bus Station</td>
+                    <td>1.1km</td>
+                  </tr>
+                  <tr><th scope="row">8</th>
+                    <td>Central Market</td>
+                    <td>1.8km</td>
+                  </tr>
+                  <tr><th scope="row">9</th>
+                    <td>Tourist Information Centre</td>
+                    <td>1.3km</td>
+                  </tr>
+                  <tr><th scope="row">10</th>
+                    <td>Post Office</td>
+                    <td>1.5km</td>
+                  </tr>
+                  <tr><th scope="row">11</th>
+                    <td>Airport</td>
+                    <td>16.2km</td>
+                  </tr>
+                  <tr><th scope="row">12</th>
+                    <td>South China Sea</td>
+                    <td>400m</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- Separate Table on large screen -->
+
+            <!-- Combine table on other screen -->
+            <div class="col-sm-10 col-md-10 col-lg-10 hidden-md hidden-lg">
+              <table class="table table-striped">
+                <caption>Point of interest to Mingstar Hotel in Kuala Terengganu</caption>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Point of Interest</th>
+                    <th>Distance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">1</th>
+                    <td>Tanjung Warisan, Pulau Duyung</td>
+                    <td>6.8km</td>
+                  </tr>
+                  <tr><th scope="row">2</th>
+                    <td>Crystal Mosque</td>
+                    <td>9.8km</td>
+                  </tr>
+                  <tr><th scope="row">3</th>
+                    <td>Museum</td>
+                    <td>7.8km</td>
+                  </tr>
+                  <tr><th scope="row">4</th>
+                    <td>Kampung Cina</td>
+                    <td>1.9km</td>
+                  </tr>
+                  <tr><th scope="row">5</th>
+                    <td>Syah Bandar</td>
+                    <td>1.2km</td>
+                  </tr>
+                  <tr><th scope="row">6</th>
+                    <td>Batu Buruk Beach</td>
+                    <td>2.0km</td>
+                  </tr>
+                  <tr><th scope="row">7</th>
+                    <td>Bus Station</td>
+                    <td>1.1km</td>
+                  </tr>
+                  <tr><th scope="row">8</th>
+                    <td>Central Market</td>
+                    <td>1.8km</td>
+                  </tr>
+                  <tr><th scope="row">9</th>
+                    <td>Tourist Information Centre</td>
+                    <td>1.3km</td>
+                  </tr>
+                  <tr><th scope="row">10</th>
+                    <td>Post Office</td>
+                    <td>1.5km</td>
+                  </tr>
+                  <tr><th scope="row">11</th>
+                    <td>Airport</td>
+                    <td>16.2km</td>
+                  </tr>
+                  <tr><th scope="row">12</th>
+                    <td>South China Sea</td>
+                    <td>400m</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- Combine table on other screen -->
+            <div class="col-sm-1 col-md-1 col-lg-1"></div>
+          </div> <!-- /.row -->
+        </div><!-- /.col-sm-1 col-md-1 col-lg-1 -->
       </div><!-- Content Description -->
 
-      <div class="row">
+      <div class="row hideBlock">
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
         <!-- Separate Table on large screen -->
         <div class="col-sm-5 col-md-5 col-lg-5 hidden-xs hidden-sm">

@@ -93,36 +93,43 @@
               </tr>
             </tbody></table>
           </address>
+        </div><!-- /.col-sm-10 col-md-10 col-lg-10 -->
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+      </div><!-- /.row -->
 
-          <hr style="border:1px solid #838383; margin-top:0;">
+      <div class="row sec-transparent sec-contact">
+        <div class="fixed-img contact-img"></div>
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-sm-10 col-md-10 col-lg-10">
+          <!-- <hr style="border:1px solid #838383; margin-top:0;"> -->
           <!-- <p>Alternatively, you may fill up our contact form to reach us.</p>
           <p>Let us hear from you! Your generous input will definitely help us to serve you better.</p> -->
-          <h3 style="text-align:center;">Reservation Form</h3>
+          <h3 class="sec-title-1"><span class="substyle">Make Your</span>&nbsp;Reservation</h3>
 
           <form id="contactusform" class="form-horizontalx" method="post" action="reservation.php">
             <div class="row">
               <!-- Name -->
               <div class="form-group col-sm-6 col-md-4 col-lg-5">
                 <label>Name</label>
-                <input name="guest_name" type="text" class="form-control" placeholder="Name">
+                <input name="guest_name" type="text" class="form-control input-style" placeholder="Name">
               </div>
               <!-- Phone -->
               <div class="form-group col-sm-6 col-md-3 col-lg-2">
                 <label>Phone</label>
-                <input name="guest_phone" type="text" class="form-control" placeholder="Phone">
+                <input name="guest_phone" type="text" class="form-control input-style" placeholder="Phone">
               </div>
               <!-- E-mail -->
               <div class="form-group col-sm-12 col-md-5 col-lg-5">
                 <label>E-mail</label>
-                <input name="guest_email" type="email" class="form-control" placeholder="Email">
+                <input name="guest_email" type="email" class="form-control input-style" placeholder="Email">
               </div>
 
-              <div class="form-group col-lg-6" style="margin-bottom:0;">
+              <div class="form-group col-sm-12 col-md-12 col-lg-6" style="margin-bottom:0;">
                 <div class="row">
                 <!-- Room Type -->
-                  <div class="form-group col-lg-12">
+                  <div class="form-group col-sm-12 col-md-12 col-lg-12">
                     <label>Room Type</label>
-                    <select name="guest_room_type" class="form-control">
+                    <select name="guest_room_type" class="form-control input-style">
                       <!-- <option value="None">Which Type of Room</option> -->
                       <option value="Standard">Standard Room</option>
                       <option value="Superior Plus">Superior Plus Room</option>
@@ -137,7 +144,8 @@
                   <div class="form-group col-sm-6 col-md-6 col-lg-6">
                     <label>Check-In Date</label>
                     <div class="input-group date datepicker" style="padding:0;">
-                      <input name="check_in_date" type="text" class="form-control" placeholder="Check-in date">
+                      <input name="check_in_date" type="text" class="form-control input-style"
+                             placeholder="Check-in date">
                       <span class="input-group-addon pointer">
                         <i class="glyphicon glyphicon-calendar"></i>
                       </span>
@@ -147,7 +155,8 @@
                   <div class="form-group col-sm-6 col-md-6 col-lg-6">
                     <label>Check-Out Date</label>
                     <div class="input-group date datepicker" style="padding:0;">
-                      <input name="check_out_date" type="text" class="form-control" placeholder="Check-out date">
+                      <input name="check_out_date" type="text" class="form-control input-style"
+                             placeholder="Check-out date">
                       <span class="input-group-addon pointer">
                         <i class="glyphicon glyphicon-calendar"></i>
                       </span>
@@ -156,24 +165,24 @@
                   <!-- Adults -->
                   <div class="form-group col-sm-6 col-md-6 col-lg-6">
                     <label>Adults</label>
-                    <input name="adults" type="text" class="form-control" placeholder="Adults">
+                    <input name="adults" type="text" class="form-control input-style" placeholder="Adults">
                   </div>
                   <!-- Kids -->
                   <div class="form-group col-sm-6 col-md-6 col-lg-6">
                     <label>Kids</label>
-                    <input name="adults" type="text" class="form-control" placeholder="Kids">
+                    <input name="adults" type="text" class="form-control input-style" placeholder="Kids">
                   </div>
 
                 </div>
               </div>
               <!-- Remarks -->
-              <div class="form-group col-lg-6">
+              <div class="form-group col-sm-12 col-md-12 col-lg-6">
                 <label>Remarks</label>
-                <textarea name="remarks" class="form-control" style="height:183px;" 
+                <textarea name="remarks" class="form-control input-style" style="height:183px;" 
                           placeholder="Please write here if you have any special note"></textarea>
               </div>
 
-              <div class="form-group col-lg-12">
+              <div class="form-group col-sm-12 col-md-12 col-lg-12">
                 <div class="row-right-flex-container">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resetForm">Reset</button>
                   <button type="submit" class="btn btn-primary" style="margin-left:15px;">Submit</button>
@@ -202,10 +211,10 @@
 
             </div><!-- /.row -->
           </form>
-
-        </div><!-- /.col-sm-10 col-md-10 col-lg-10 -->
+        </div>
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
       </div><!-- /.row -->
+
     </div><!-- #content -->
   </div><!-- #main-body --> 
 
