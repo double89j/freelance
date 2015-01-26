@@ -60,7 +60,8 @@
       <div class="row pad-top">
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
         <div class="col-sm-10 col-md-10 col-lg-10">
-          <p class="pageTitle">Contact Us / Reservation</p>
+          <!-- <p class="pageTitle">Contact Us / Reservation</p> -->
+          <h3 class="sec-title-2"><span class="substyle">Contact Us</span>&nbsp;Anytime</h3>
         </div>
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
       </div><!-- Header -->
@@ -68,32 +69,34 @@
       <div class="row">
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
         <div class="col-sm-10 col-md-10 col-lg-10">
-          <p>Ming Star thanks you once again for visiting our website.</p>
-          <p>Should you have any inquiries, please feel free to contact us via phone, 
-             fax or email as shown below.</p>
-          <address style="display:inline-block; margin-right:30px;">
-            <strong>Ming Star Hotel</strong><br>
-            217, Wisma Cemerlang<br>
-            Jalan Sultan Zainal Abidin,<br>
-            20000, Kuala Terengganu,<br>
-            Terengganu, Malaysia.
-          </address>
-          <address style="display:inline-block;">
-            <table><tbody>
-              <tr>
-                <td style="width:50px;"><abbr title="Phone">Phone:</abbr></td>
-                <td>(+6)09-6228666</td>
-              </tr>
-              <tr>
-                <td><abbr title="Fax">Fax:</abbr></td>
-                <td>(+6)09-6227666</td>
-              </tr>
-              <tr>
-                <td><abbr title="Email">Email:</abbr></td>
-                <td><a href="mailto:#">sales@mingstarhotel.com</a></td>
-              </tr>
-            </tbody></table>
-          </address>
+          <div style="display:table; margin:0 auto;">
+            <p>Ming Star thanks you once again for visiting our website.</p>
+            <p>Should you have any inquiries, please feel free to contact us via phone, 
+               fax or email as shown below.</p>
+            <address style="display:inline-block; margin-right:30px;">
+              <strong>Ming Star Hotel</strong><br>
+              217, Wisma Cemerlang<br>
+              Jalan Sultan Zainal Abidin,<br>
+              20000, Kuala Terengganu,<br>
+              Terengganu, Malaysia.
+            </address>
+            <address style="display:inline-block;">
+              <table><tbody>
+                <tr>
+                  <td style="width:50px;"><abbr title="Phone">Phone:</abbr></td>
+                  <td>(+6)09-6228666</td>
+                </tr>
+                <tr>
+                  <td><abbr title="Fax">Fax:</abbr></td>
+                  <td>(+6)09-6227666</td>
+                </tr>
+                <tr>
+                  <td><abbr title="Email">Email:</abbr></td>
+                  <td><a href="mailto:#">sales@mingstarhotel.com</a></td>
+                </tr>
+              </tbody></table>
+            </address>
+          </div>
         </div><!-- /.col-sm-10 col-md-10 col-lg-10 -->
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
       </div><!-- /.row -->
@@ -212,7 +215,7 @@
 
             </div><!-- /.row -->
           </form>
-        </div>
+        </div><!-- col-sm-10 col-md-10 col-lg-10 -->
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
       </div><!-- /.row -->
 
@@ -223,20 +226,39 @@
   <footer>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-3 col-lg-5">
+        <!-- Greater than col-xs -->
+        <div class="hidden-xs col-sm-3 col-md-3 col-lg-5">
           <table class="pageContact"><tbody>
             <tr>
               <td rowspan="2"><span class="glyphicon glyphicon-phone-alt contactIcon" aria-hidden="true"></span></td>
               <td class="phoneContact">Phone:</td>
-              <td id="hotelphone"></td>
+              <td class="hotelphone"></td>
             </tr>
             <tr>
               <td>FAX:</td>
-              <td id="hotelfax"></td>
+              <td class="hotelfax"></td>
             </tr>
           </tbody></table>
-        </div>
-        <div id="copyright" class="col-sm-9 col-md-9 col-lg-7 text-right"></div>
+        </div><!-- /.hidden-xs col-sm-3 col-md-3 col-lg-5 -->
+        <div class="copyright hidden-xs col-sm-9 col-md-9 col-lg-7 text-right"></div>
+        <!-- Greater than col-xs -->
+
+        <!-- Smaller than col-xs -->
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+          <table class="pageContact" style="margin:0 auto;"><tbody>
+            <tr>
+              <td rowspan="2"><span class="glyphicon glyphicon-phone-alt contactIcon" aria-hidden="true"></span></td>
+              <td class="phoneContact">Phone:</td>
+              <td class="hotelphone"></td>
+            </tr>
+            <tr>
+              <td>FAX:</td>
+              <td class="hotelfax"></td>
+            </tr>
+          </tbody></table>
+        </div><!-- /.hidden-sm hidden-md hidden-lg -->
+        <div class="copyright2 col-xs-12 hidden-sm hidden-md hidden-lg text-right"></div>
+        <!-- Smaller than col-xs -->
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
   </footer><!-- footer -->

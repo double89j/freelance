@@ -321,20 +321,39 @@
   <footer>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-3 col-lg-5">
+        <!-- Greater than col-xs -->
+        <div class="hidden-xs col-sm-3 col-md-3 col-lg-5">
           <table class="pageContact"><tbody>
             <tr>
               <td rowspan="2"><span class="glyphicon glyphicon-phone-alt contactIcon" aria-hidden="true"></span></td>
               <td class="phoneContact">Phone:</td>
-              <td id="hotelphone"></td>
+              <td class="hotelphone"></td>
             </tr>
             <tr>
               <td>FAX:</td>
-              <td id="hotelfax"></td>
+              <td class="hotelfax"></td>
             </tr>
           </tbody></table>
-        </div>
-        <div id="copyright" class="col-sm-9 col-md-9 col-lg-7 text-right"></div>
+        </div><!-- /.hidden-xs col-sm-3 col-md-3 col-lg-5 -->
+        <div class="copyright hidden-xs col-sm-9 col-md-9 col-lg-7 text-right"></div>
+        <!-- Greater than col-xs -->
+
+        <!-- Smaller than col-xs -->
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+          <table class="pageContact" style="margin:0 auto;"><tbody>
+            <tr>
+              <td rowspan="2"><span class="glyphicon glyphicon-phone-alt contactIcon" aria-hidden="true"></span></td>
+              <td class="phoneContact">Phone:</td>
+              <td class="hotelphone"></td>
+            </tr>
+            <tr>
+              <td>FAX:</td>
+              <td class="hotelfax"></td>
+            </tr>
+          </tbody></table>
+        </div><!-- /.hidden-sm hidden-md hidden-lg -->
+        <div class="copyright2 col-xs-12 hidden-sm hidden-md hidden-lg text-right"></div>
+        <!-- Smaller than col-xs -->
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
   </footer><!-- footer -->

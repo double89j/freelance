@@ -284,7 +284,9 @@ footer .glyphicon:hover {
 .phoneContact {
     width:              40px;
 }
-#copyright > p {
+#copyright > p,
+.copyright > p,
+.copyright2 > p {
     font-size:          12px;
     margin:             0;
 }

@@ -26,8 +26,11 @@ window.myglobal = {};
         return '+60-9-6221888';
     };
     context.getCopyright = function() {
-        return '<p>All material herein &copy; 2014 – 2015 Ming Group<br />All Rights Reserved</p>';
-
+        return '<p>All material herein &copy; 2014 – 2015 Ming Group. All Rights Reserved</p>';
+    };
+    context.getCopyright2 = function() {
+        return '<p style="display:table; margin:10px auto 0;">All material herein &copy; 2014 – 2015 Ming Group</p>\
+                <p style="display:table; margin:0 auto;">All Rights Reserved</p>';
     };
 })(window.myglobal);
 
@@ -37,6 +40,11 @@ $(document).ready(function() {
     $('#hotelphone').text(window.myglobal.getHotelPhone());
     $('#hotelfax').text(window.myglobal.getHotelFax());
     $('#copyright').html(window.myglobal.getCopyright());
+
+    $('.hotelphone').text(window.myglobal.getHotelPhone());
+    $('.hotelfax').text(window.myglobal.getHotelFax());
+    $('.copyright').html(window.myglobal.getCopyright());
+    $('.copyright2').html(window.myglobal.getCopyright2());
 
     jQuery.cachedScript = function(url, options) {
          // Allow user to set any option except for dataType, cache, and url
