@@ -363,14 +363,17 @@ header.vertical-header .header-top:before {
 
 /* Sticky */
 
-header.vertical-header.sticky {
+header.vertical-header.sticky,
+header.vertical-header.resize {
     left:               -270px;
 }
-header.vertical-header.sticky nav > .open-menu {
+header.vertical-header.sticky nav > .open-menu,
+header.vertical-header.resize nav > .open-menu {
     display:            block;
     right:              -50px;
 }
-header.vertical-header.sticky.show {
+header.vertical-header.sticky.show,
+header.vertical-header.resize.show {
     left:               0;
 }
 

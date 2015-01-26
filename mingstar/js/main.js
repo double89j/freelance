@@ -208,6 +208,11 @@ $(document).ready(function() {
         // checkGalleryRoomTypeBox();
         if ($(window).width() > 760)
             checkNavbarCollapse();
+
+        if ($(window).width() > 1100)
+            $('.vertical-header').removeClass('resize');
+        else
+            $('.vertical-header').addClass('resize');
     });
 
     // $(window).bind('popstate', function(evt) {
