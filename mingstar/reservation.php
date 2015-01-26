@@ -16,23 +16,42 @@
         $check_out_date = $_POST["check_out_date"];
         $guest_room_type = $_POST["guest_room_type"];
         $adults = $_POST["adults"];
-        $children = $_POST["children"];
+        $kids = $_POST["kids"];
         $remarks = $_POST["remarks"];
 
-        $message .= "Online Room Reservation:<br /><br />";
+        $message .= "<h2>Online Room Reservation</h2>";
+        $message .= "<table><tbody>";
 
-        $message .= "Guest Name: $guest_name<br />";
-        $message .= "Guest Phone: $guest_phone<br />";
-        $message .= "Guest Email: $guest_email<br /><br />";
+        // $message .= "Guest Name: $guest_name<br />";
+        // $message .= "Guest Phone: $guest_phone<br />";
+        // $message .= "Guest Email: $guest_email<br /><br />";
 
-        $message .= "Check-In Date: $check_in_date<br />";
-        $message .= "Check-Out Date: $check_out_date<br />";
-        $message .= "Room Type: $guest_room_type<br /><br />";
+        // $message .= "Check-In Date: $check_in_date<br />";
+        // $message .= "Check-Out Date: $check_out_date<br />";
+        // $message .= "Room Type: $guest_room_type<br /><br />";
 
-        $message .= "No. of Adults: $adults<br />";
-        $message .= "No. of Children: $children<br /><br /><br />";
+        // $message .= "No. of Adults: $adults<br />";
+        // $message .= "No. of Children: $kids<br /><br /><br />";
 
-        $message .= "Note: $remarks<br /><br /><br />";
+        // $message .= "Reamrks: $remarks<br /><br /><br />";
+
+        $message .= "<tr><td style='width:100px;'>Name:</td><td>$guest_name</td></tr>";
+        $message .= "<tr><td>Phone:</td><td>$guest_phone</td></tr>";
+        $message .= "<tr><td>Email:</td><td>$guest_email</td></tr>";
+        $message .= "<tr><td colspan='2'>&nbsp;</td></tr>";
+
+        $message .= "<tr><td>Check-In Date:</td><td>$check_in_date</td></tr>";
+        $message .= "<tr><td>Check-Out Date:</td><td>$check_out_date</td></tr>";
+        $message .= "<tr><td>Room Type:</td><td>$guest_room_type</td></tr>";
+        $message .= "<tr><td colspan='2'>&nbsp;</td></tr>";
+
+        $message .= "<tr><td>No. of Adults:</td><td>$adults</td></tr>";
+        $message .= "<tr><td>No. of Kids:</td><td>$kids</td></tr>";
+        $message .= "<tr><td colspan='2'>&nbsp;</td></tr>";
+
+        $message .= "<tr><td>Reamrks:</td><td>$remarks</td></tr>";
+
+        $message .= "</table></tbody>";
 
         $redirect = "thankyou.html";
 
