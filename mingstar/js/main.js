@@ -80,6 +80,7 @@ $(document).ready(function() {
             //     loadPage(currentPage);
             // checkGalleryRoomTypeBox();
             initTooltipPopover();
+            checkMenuMinimize();
 
             // if (currentPage=='index.html') {
             //     $content.load('home.html #content>*', function(responseTxt, statusTxt, xhr) {
@@ -169,6 +170,13 @@ $(document).ready(function() {
             // Still having an issue here which is FOC when toggle collapse
             if ($('.navbar-collapse').attr('class')=='navbar-collapse collapse in')
                 $('.navbar-collapse').collapse('hide');
+        },
+
+        checkMenuMinimize = function() {
+            if ($(window).width() > 1100)
+                $('.vertical-header').removeClass('resize');
+            else
+                $('.vertical-header').addClass('resize');
         };
 
     init(location.href.split('/').pop());
@@ -209,10 +217,7 @@ $(document).ready(function() {
         if ($(window).width() > 760)
             checkNavbarCollapse();
 
-        if ($(window).width() > 1100)
-            $('.vertical-header').removeClass('resize');
-        else
-            $('.vertical-header').addClass('resize');
+        checkMenuMinimize();
     });
 
     // $(window).bind('popstate', function(evt) {
