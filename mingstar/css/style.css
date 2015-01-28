@@ -568,13 +568,16 @@ header.vertical-header.resize.show {
 
 .sec-contact {
     background:         #5e5e5e;
-    color:              #fff;
+    /*color:              #fff;*/
 }
 .sec-contact label {
     color:              #fff;
 }
 .sec-contact .help-block {
     background:         #edbeb9;
+}
+.sec-contact .modal {
+    /*color:              #000;*/
 }
 .contact-img {
     background:         url("../room-images/superior/324_1.jpg") no-repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0);

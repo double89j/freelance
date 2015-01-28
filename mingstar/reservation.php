@@ -63,8 +63,10 @@
         $mail->Host = "mail.mingstarhotel.com"; // specify SMTP mail server
         $mail->Port = "2525"; // specify SMTP Port
         $mail->SMTPAuth = true; // turn on SMTP authentication
-        $mail->Username = "testuser@mingstarhotel.com"; //Full SMTP username
-        $mail->Password = "TestUser123"; //SMTP password
+        // $mail->Username = "testuser@mingstarhotel.com"; //Full SMTP username
+        // $mail->Password = "TestUser123"; //SMTP password
+        $mail->Username = "sales@mingstarhotel.com"; //Full SMTP username
+        $mail->Password = "ms6228666/"; //SMTP password
 
         $mail->From = "testuser@mingstarhotel.com";
         $mail->FromName = "testuser@mingstarhotel.com";

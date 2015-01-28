@@ -9,6 +9,12 @@
         - http://stackoverflow.com/questions/19227496/scrollable-menu-with-bootstrap-3-menu-expanding-its-container-when-it-should-n
     expanded mobile navbar doesn't collapse after clicking link #12852 
         - https://github.com/twbs/bootstrap/issues/12852
+    float down navbar-fixed-top
+        - http://stackoverflow.com/questions/17684268/bootstrap-nav-bar-how-to-float-down-navbar-fixed-top
+    Sticky Navigation Bar with jQuery and Bootstrap
+        - http://www.jqueryscript.net/menu/Sticky-Navigation-Bar-with-jQuery-Bootstrap.html
+    Bootstrap navigation ( Nav bar )
+        - http://bootstrap-tutorial.bootstraptor.com/post/53191688399/bootstrap-navigation-nav-bar
 */
 
 window.myglobal = {};
@@ -46,54 +52,9 @@ $(document).ready(function() {
     $('.copyright').html(window.myglobal.getCopyright());
     $('.copyright2').html(window.myglobal.getCopyright2());
 
-    jQuery.cachedScript = function(url, options) {
-         // Allow user to set any option except for dataType, cache, and url
-        options = $.extend( options || {}, {
-            dataType: 'script',
-            cache: true,
-            url: url
-        });
-        // Use $.ajax() since it is more flexible than $.getScript
-        // Return the jqXHR object so we can chain callbacks
-        return jQuery.ajax( options );
-    };
-
-    String.prototype.decodeHTML = function() {
-        return $('div', {html: ''+this}).html();
-    }
-
-    var $content = $('#content'),
-        checkCtrl = false,
-
-        init = function(currentPage) {
-            // Do this when a page loads
-            // console.log('init call');
-
-            if (currentPage=='index.html' || currentPage=='') {
-                // currentPage = 'home'
-                currentPage = 'aboutus'
-            }
-            else
-                currentPage = currentPage.slice(0, currentPage.indexOf('.'));
-
-            // if (currentPage=='aboutus') // for temperary settings
-            //     loadPage(currentPage);
-            // checkGalleryRoomTypeBox();
+    var init = function(currentPage) {
             initTooltipPopover();
             checkMenuMinimize();
-
-            // if (currentPage=='index.html') {
-            //     $content.load('home.html #content>*', function(responseTxt, statusTxt, xhr) {
-            //         if (statusTxt=='success')
-            //             console.log('index page initialization complete');
-            //         if (statusTxt=='error')
-            //             console.lop('Error: Fail to load home.html.');
-            //     });
-            // }
-            // else {
-            //     currentPage = currentPage.slice(0, currentPage.indexOf('.'));
-            //     loadPage(currentPage);
-            // }
         },
 
         initTooltipPopover = function() {
@@ -101,75 +62,12 @@ $(document).ready(function() {
             $('[data-toggle="popover"]').popover();
         },
 
-        ajaxLoad = function(html) {
-            document.title = html
-                .match(/<title>(.*?)<\/title>/)[1]
-                .trim(); // console.log('ajaxLoad called');
-
-            // init();
-        },
-
-        // loadPage = function(href) {
-        //     if (href=='#')
-        //         return;
-
-        //     if (href=='index.html' || href=='index' || href=='')
-        //         href = 'aboutus';
-
-        //     $content.load(href+'.html #content>*', function(responseTxt, statusTxt, xhr) {
-        //         if (statusTxt=='success') {
-        //             initTooltipPopover();
-        //             ajaxLoad(responseTxt); // console.log('load complete');
-        //         }
-        //         if (statusTxt=='error')
-        //             console.log('Error: '+xhr.status+": "+xhr.statusTxt);
-        //     });
-
-        //     setTimeout(function(evt) {
-        //         $.cachedScript('js/'+href+'.js')
-        //             .done(function(script, textStatus) {
-        //                 console.log(textStatus+': script loaded');
-        //             })
-        //             .fail(function(jqxhr, settings, exception) {
-        //                 console.warn('no script found');
-        //             });
-        //     }, 300);
-
-        //     // $.getScript('js/'+href+'.js')
-        //     //     .done(function(script, textStatus) {
-        //     //         console.log('script loaded');
-        //     //     })
-        //     //     .fail(function(jqxhr, settings, exception) {
-        //     //         console.warn('no script found');
-        //     //     });
-
-        //     // $.getScript('js/'+href+'.js', function(data, textStatus, jqxhr) {
-        //     //     // console.log(data);
-        //     //     // console.log(textStatus);
-        //     //     // console.log(jqxhr);
-        //     //     console.log('script loaded');
-        //     // });
-        // },
-
-        // checkGalleryRoomTypeBox = function() {
-        //     // var navWidth = $('#gallery-room-type-box').width();
-        //     // if ($(window).width() > 1300)
-        //     //     $('#gallery-room-type-box').addClass('gallery-fixed-box');
-        //     // else
-        //     //     $('#gallery-room-type-box').removeClass('gallery-fixed-box');
-
-        //     // if ($('#gallery-room-type-box').length != 0) {
-        //     //     if (navWidth > 190)
-        //     //         $('#gallery-room-type-box').addClass('gallery-fixed-box');
-        //     //     else
-        //     //         $('#gallery-room-type-box').removeClass('gallery-fixed-box');
-        //     // }
-        // },
-
         checkNavbarCollapse = function() {
-            // Still having an issue here which is FOC when toggle collapse
-            if ($('.navbar-collapse').attr('class')=='navbar-collapse collapse in')
-                $('.navbar-collapse').collapse('hide');
+            if ($(window).width() > 760) {
+                // Still having an issue here which is FOC when toggle collapse
+                if ($('.navbar-collapse').attr('class')=='navbar-collapse collapse in')
+                    $('.navbar-collapse').collapse('hide');
+            }
         },
 
         checkMenuMinimize = function() {
@@ -182,105 +80,18 @@ $(document).ready(function() {
     init(location.href.split('/').pop());
 
     $(window).bind('scroll', function() {
-        if ($(window).scrollTop() > '50') {
+        if ($(window).scrollTop() > '50')
             $('.vertical-header').addClass('sticky');
-        }
-        else {
+        else
             $('.vertical-header').removeClass('sticky');
-        }
-        
-        // var navHeight = $('#box1').height();
-        // if ($(window).scrollTop() > navHeight) {
-        //     $('nav').addClass('goToTop');
-        //     $('#main-body').addClass('marginFromTop');
-        // }
-        // else {
-        //     $('nav').removeClass('goToTop');
-        //     $('#main-body').removeClass('marginFromTop');
-        // }
-
-        // ($(window).scrollTop() > navHeight) ? $('nav').addClass('goToTop') : $('nav').removeClass('goToTop');
-
-        /*var navHeight = $('#box1').height();
-        if ($(window).scrollTop() > navHeight) {
-            $('nav').addClass('navbar-fixed-top');
-            $('#main-body').addClass('marginFromTop');
-        }
-        else {
-            $('nav').removeClass('navbar-fixed-top');
-            $('#main-body').removeClass('marginFromTop');
-        }*/
     });
 
     $(window).bind('resize', function() {
-        // checkGalleryRoomTypeBox();
-        if ($(window).width() > 760)
-            checkNavbarCollapse();
-
+        checkNavbarCollapse();
         checkMenuMinimize();
-    });
-
-    // $(window).bind('popstate', function(evt) {
-    //     // if (evt.originalEvent.state !== null)
-    //     if (location.hash.length==0) {
-    //         var page = location.href.split('/').pop();
-    //         page = page.slice(0, page.indexOf('.'));
-    //         loadPage(page);
-    //     }
-    // });
-
-    $(document).keydown(function(evt) {
-        if (evt.keyCode==17)
-            checkCtrl = true;
-    });
-
-    $(document).keyup(function(evt) {
-        checkCtrl = false;
     });
 
     $('.open-menu').on('click', function(evt) {
         $('.vertical-header').toggleClass('show animated bounceInLeft');
     });
-
-    // $('#navbar-collapse-main1').on('click', 'a', function(evt) {
-    //     // console.log('item ID: '+$(this).attr('id'));
-    //     var href = $(this).attr('href');
-    //         href = href.slice(0, href.indexOf('.'));
-
-    //     if (href=='#' || href=='') {
-    //         return;
-    //     }
-    //     if (checkCtrl) { // cater ctrl + click event
-    //         return;
-    //     }
-
-    //     console.log('link click');
-
-    //     if (href.indexOf(document.domain) > -1 || href.indexOf(':') === -1) {
-    //         if (href=='home')
-    //             history.pushState({}, '', 'index.html');
-    //         else if (href=='deluxe' || href=='superiorPlus' || href=='superior' || href=='standard') {
-    //             history.pushState({}, '', href+'.html');
-    //             $('#rooms-nav').dropdown('toggle'); // close the dropdown
-    //             // console.log('close');
-    //         }
-    //         else
-    //             history.pushState({}, '', href+'.html');
-
-    //         loadPage(href);
-    //         if ($('.navbar-toggle').css('display')=='block')
-    //             $('.navbar-collapse').collapse('hide');
-    //         return false;
-    //     }
-    // });
 });
-
-function loadpage_old(page) {
-    var loadHTML = page + '.html';
-    $('#content').load(loadHTML, function(responseTxt, statusTxt, xhr) {
-        if (statusTxt=='success')
-            console.log('load complete');
-        if (statusTxt=='error')
-            console.log('Error: '+xhr.status+": "+xhr.statusTxt);
-    });
-}

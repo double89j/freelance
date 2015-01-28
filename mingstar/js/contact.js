@@ -17,8 +17,8 @@ $(document).ready(function() {
         format: 'dd MM, yyyy',
         todayBtn: 'linked',
         autoclose: true,
-        todayHighlight: true/*,
-        startDate: 'd'*/
+        todayHighlight: true
+        // startDate: 'd'
     });
     var validateForm = $('#contactusform').validate({
         rules: {
