@@ -5,9 +5,9 @@
 
 $(document).ready(function() {
 
-    $('#readmore').click(function(evt) {
-        $("#readmoretext").toggleClass("showtext");
-    });
+    // $('#readmore').click(function(evt) {
+    //     $("#readmoretext").toggleClass("showtext");
+    // });
     
     // var aboutusSliderOptions = {
     //         sliderId: "aboutusSlider",
@@ -96,8 +96,7 @@ $(document).ready(function() {
         }*/
     };
 
-    $('#aboutus_slider_container').removeClass('hideBlock');
-    var jssor_slider2 = new $JssorSlider$("aboutus_slider_container", options);
+    var jssor_slider2 = new $JssorSlider$("index_container", options);
 
     //responsive code begin
     //you can remove responsive code if you don't want the slider scales while window resizes

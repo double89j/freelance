@@ -199,11 +199,12 @@ $(document).ready(function() {
 
         $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
         $ArrowKeyNavigation: true,                          //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
-        $SlideDuration: 1000,                                //Specifies default duration (swipe) for slide in milliseconds
+        // $SlideDuration: 1000,                                //Specifies default duration (swipe) for slide in milliseconds
 
         $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
             $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
-            $Transitions: _GallerySlideshowTransitions,     //[Required] An array of slideshow transitions to play slideshow
+            // $Transitions: _GallerySlideshowTransitions,     //[Required] An array of slideshow transitions to play slideshow
+            $Transitions: _SlideshowTransitions,     //[Required] An array of slideshow transitions to play slideshow
             $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
             $ShowLink: true                                 //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
         },

@@ -330,14 +330,17 @@ header.vertical-header a:hover {
     background-color:   #2c9f5c;
 }
 header.vertical-header a.navbar-brand {
-    background:         url("../images/pic_top.png") no-repeat scroll center center / 164px auto rgba(0, 0, 0, 0);
+    background:         url("../images/logo-2.png") no-repeat scroll center center / 190px auto rgba(0, 0, 0, 0);
+    #background:         url("../images/pic_top.png") no-repeat scroll center center / 164px auto rgba(0, 0, 0, 0);
     width:              100%;
+    height:             60px
 }
 header.vertical-header a.navbar-brand:hover {
     background-color:   transparent;
     cursor:             auto;
 }
 header.vertical-header .header-top {
+    #background:         #fff;
     background:         rgba(71, 67, 67, 0.95);
     float:              left;
     padding:            20px 20px 5px;
@@ -350,6 +353,7 @@ header.vertical-header .header-top {
 header.vertical-header .header-top:before {
     border-left:        135px solid rgba(0, 0, 0, 0);
     border-right:       135px solid rgba(0, 0, 0, 0);
+    #border-top:         36px solid #fff;
     border-top:         36px solid rgba(71, 67, 67, 0.95);
     bottom:             -36px;
     content:            '';
@@ -432,18 +436,18 @@ header.vertical-header.resize.show {
 #readmoretext.myopendown {
     border-radius:      10px;
     border:             1px dashed #bfbfbf;
-    max-height:         0;
+    #max-height:         0;
     overflow:           hidden;
     padding:            0 10px;
 
-    -moz-transition: max-height 0.5s;
-    -o-transition: max-height 0.5s;
-    -webkit-transition: max-height 0.5s;
-    transition: max-height 0.5s;
+    #-moz-transition: max-height 0.5s;
+    #-o-transition: max-height 0.5s;
+    #-webkit-transition: max-height 0.5s;
+    #transition: max-height 0.5s;
 }
-#readmoretext.myopendown.showtext {
+/*#readmoretext.myopendown.showtext {
     max-height: 400px;
-}
+}*/
 .iconContainer {
     padding-bottom:     15px;
     padding-top:        15px;
@@ -486,13 +490,13 @@ header.vertical-header.resize.show {
     transform:          rotateY(180deg);
 }
 .iconBox .glyphicon-chevron-right {
-    font-size:          10px;
+    font-size:          12px;
     top:                0;
 }
 .iconBox > h3 {
     color:              #272727;
     font-family:        Open Sans;
-    font-size:          17px;
+    font-size:          18px;
     font-weight:        600;
     margin:             8px 0 9px;
     text-align:         center;
@@ -510,7 +514,7 @@ header.vertical-header.resize.show {
 .iconBox > a {
     color:              #2c9f5c;
     font-family:        Open Sans;
-    font-size:          12px;
+    font-size:          15px;
     letter-spacing:     0.3px;
     line-height:        24px;
 }
@@ -533,7 +537,19 @@ header.vertical-header.resize.show {
 /* places page section */
 
 .sec-places {
+    background:         #5e5e5e;
     color:              #fff;
+}
+.sec-places #map1,
+.sec-places #map2 {
+    color:              #fea000;
+}
+.sec-places caption {
+    color:              #e3e3e3;
+}
+.sec-places .table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color:   rgba(249, 249, 249, 0.4);
+    color:              #000;
 }
 .places-img {
     background:         url("../images/mingstar.jpg") no-repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0);
@@ -550,25 +566,32 @@ header.vertical-header.resize.show {
 
 /* contact_reservation page section */
 
+.sec-contact {
+    background:         #5e5e5e;
+    color:              #fff;
+}
 .sec-contact label {
     color:              #fff;
+}
+.sec-contact .help-block {
+    background:         #edbeb9;
 }
 .contact-img {
     background:         url("../room-images/superior/324_1.jpg") no-repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0);
 }
-.input-style {
+/*.input-style {
     background:         rgba(222, 222, 222, 0.15);
     color:              #fff;
-}
+}*/
 .input-style option {
     color:              #000;
 }
 #contactusform {
-    background-color:   rgba(225, 225, 225, 0.15);
     border:             1px solid rgb(225, 225, 225);
     border-radius:      5px;
     padding:            10px 10px 0 10px;
     margin:             0 0 20px;
+    /*background-color:   rgba(225, 225, 225, 0.15);*/
 }
 #contactusform .has-feedback .form-control-feedback {
     top: 8px;
@@ -695,10 +718,6 @@ body.lightbox-open,
 
 /* bootstrap overwrite */
 
-.table-striped > tbody > tr:nth-of-type(2n+1) {
-    background-color:   rgba(249, 249, 249, 0.4);
-    color:              #000;
-}
 .radio input[type="radio"]/*,
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
@@ -711,8 +730,9 @@ body.lightbox-open,
     margin-bottom:      0;
 }
 .navbar .navbar-brand {
-    background:         url("../images/pic_top.png") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+    background:         url("../images/logo-2.png") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
     width:              164px;
+    /*background:         url("../images/pic_top.png") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);*/
 }
 .navbar-inverse {
     background-color:   rgba(34, 34, 34, 0.95);
@@ -730,7 +750,8 @@ body.lightbox-open,
 }
 .navbar-fixed-top {
     border-width:       1px;
-    height:             52px;
+    height:             50px;
+    /*height:             52px;*/
 }
 .navbar-collapse.collapsing,
 .navbar-collapse.in {
@@ -1215,5 +1236,18 @@ ul#slider li:not(:target) {
 .jssora21r:hover { background-position: -183px -33px; }
 .jssora21ldn { background-position: -243px -33px; }
 .jssora21rdn { background-position: -303px -33px; }
+
+#index_container .jssora21l, .jssora21r {
+    opacity: 0;
+
+    -moz-transition: opacity 0.25s linear;
+    -moz-transition: opacity 0.25s linear;
+    -o-transition: opacity 0.25s linear;
+    -webkit-transition: opacity 0.25s linear;
+    transition: opacity 0.25s linear;
+}
+#index_container .jssora21l:hover, .jssora21r:hover {
+    opacity: 1;
+}
 
         /* Arrow Navigator Skin End */
