@@ -1,3 +1,8 @@
+/*
+    Scroll to a div using jquery
+        - http://stackoverflow.com/questions/3432656/scroll-to-a-div-using-jquery
+*/
+
 $(document).ready(function() {
 
     /*var deluxeSliderOptions = {
@@ -90,5 +95,20 @@ $(document).ready(function() {
     $(window).bind("load", ScaleSlider);
     $(window).bind("resize", ScaleSlider);
     $(window).bind("orientationchange", ScaleSlider);
+    //responsive code end
 
+    function goToByScroll(id){
+          // Reove "link" from the ID
+        id = id.replace("link", "");
+          // Scroll
+        $('html,body').animate({
+            scrollTop: $("#"+id).offset().top
+        }, 'slow');
+    }
+    $(".room-type-navbar > a, .back-to-top").click(function(evt) { 
+          // Prevent a page reload when a link is pressed
+        evt.preventDefault(); 
+          // Call the scroll function
+        goToByScroll($(this).attr("id"));           
+    });
 });
