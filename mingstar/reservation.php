@@ -68,9 +68,12 @@
         $mail->Username = "sales@mingstarhotel.com"; //Full SMTP username
         $mail->Password = "ms6228666/"; //SMTP password
 
-        $mail->From = "testuser@mingstarhotel.com";
-        $mail->FromName = "testuser@mingstarhotel.com";
-        $mail->AddAddress("testuser@mingstarhotel.com");
+        // $mail->From = "testuser@mingstarhotel.com";
+        // $mail->FromName = "testuser@mingstarhotel.com";
+        // $mail->AddAddress("testuser@mingstarhotel.com");
+        $mail->From = "sales@mingstarhotel.com";
+        $mail->FromName = "sales@mingstarhotel.com";
+        $mail->AddAddress("sales@mingstarhotel.com");
         $mail->AddReplyTo($email, $name);
 
         $mail->IsHTML(true); //set email format to HTML
