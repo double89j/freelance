@@ -1,8 +1,3 @@
-/*
-    Scroll to a div using jquery
-        - http://stackoverflow.com/questions/3432656/scroll-to-a-div-using-jquery
-*/
-
 $(document).ready(function() {
 
     var options = {
@@ -15,8 +10,6 @@ $(document).ready(function() {
         $SlideEasing: $JssorEasing$.$EaseOutQuint,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
         $SlideDuration: 1000,                               //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
         $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
-        //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
-        //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
         $SlideSpacing: 0,                                   //[Optional] Space between each slide in pixels, default value is 0
         $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
         $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
@@ -49,7 +42,6 @@ $(document).ready(function() {
     var deluxe_jssor_slider = new $JssorSlider$("deluxe_slider_container", options);
 
     //responsive code begin
-    //you can remove responsive code if you don't want the slider scales while window resizes
     function ScaleSlider() {
         var standardParentWidth = standard_jssor_slider.$Elmt.parentNode.clientWidth;
         var superiorParentWidth = superior_jssor_slider.$Elmt.parentNode.clientWidth;
@@ -69,12 +61,6 @@ $(document).ready(function() {
           deluxe_jssor_slider.$ScaleWidth(Math.min(deluxeParentWidth, deluxeParentWidth));
         else
             window.setTimeout(ScaleSlider, 30);
-
-        // var bodyWidth = document.body.clientWidth;
-        // if (bodyWidth)
-        //     jssor_slider2.$ScaleWidth(Math.min(bodyWidth, 1920));
-        // else
-        //     window.setTimeout(ScaleSlider, 30);
     }
     ScaleSlider();
     $(window).bind("load", ScaleSlider);
@@ -83,17 +69,13 @@ $(document).ready(function() {
     //responsive code end
 
     function goToByScroll(id){
-          // Reove "link" from the ID
         id = id.replace("link", "");
-          // Scroll
         $('html,body').animate({
             scrollTop: $("#"+id).offset().top
         }, 'slow');
     }
     $(".room-type-navbar > div > a, .back-to-top, .back-to-top2").click(function(evt) { 
-          // Prevent a page reload when a link is pressed
         evt.preventDefault(); 
-          // Call the scroll function
         goToByScroll($(this).attr("id"));           
     });
 });

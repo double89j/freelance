@@ -1,14 +1,5 @@
-/*
-    How to animate height from 0 to auto using CSS Transitions
-        - http://css3.bradshawenterprises.com/animating_height/
-*/
-
 $(document).ready(function() {
 
-    // $('#readmore').click(function(evt) {
-    //     $("#readmoretext").toggleClass("showtext");
-    // });
-    
     var _SlideshowTransitions = [
         //Fade
         { $Duration: 1200, $Opacity: 2 }
@@ -21,11 +12,7 @@ $(document).ready(function() {
         $PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
 
         $ArrowKeyNavigation: true,                          //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
-        // $SlideEasing: $JssorEasing$.$EaseOutQuint,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
-        // $SlideDuration: 1000,                               //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
         $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
-        // $SlideWidth: 600,                                   //[Optional] Width of every slide in pixels, default value is width of 'slides' container
-        // $SlideHeight: 300,                                  //[Optional] Height of every slide in pixels, default value is height of 'slides' container
         $SlideSpacing: 0,                                   //[Optional] Space between each slide in pixels, default value is 0
         $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
         $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
@@ -51,7 +38,6 @@ $(document).ready(function() {
     var jssor_slider2 = new $JssorSlider$("index_container", options);
 
     //responsive code begin
-    //you can remove responsive code if you don't want the slider scales while window resizes
     function ScaleSlider() {
         var bodyWidth = document.body.clientWidth;
         if (bodyWidth)

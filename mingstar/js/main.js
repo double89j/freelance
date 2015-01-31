@@ -1,22 +1,3 @@
-/*
-    jquery Documentation
-
-    Event Delegation
-        - http://learn.jquery.com/events/event-delegation/
-    history.pushState and jQuery
-        - http://rosspenman.com/pushstate-jquery/
-    Set Dropdown Menu height
-        - http://stackoverflow.com/questions/19227496/scrollable-menu-with-bootstrap-3-menu-expanding-its-container-when-it-should-n
-    expanded mobile navbar doesn't collapse after clicking link #12852 
-        - https://github.com/twbs/bootstrap/issues/12852
-    float down navbar-fixed-top
-        - http://stackoverflow.com/questions/17684268/bootstrap-nav-bar-how-to-float-down-navbar-fixed-top
-    Sticky Navigation Bar with jQuery and Bootstrap
-        - http://www.jqueryscript.net/menu/Sticky-Navigation-Bar-with-jQuery-Bootstrap.html
-    Bootstrap navigation ( Nav bar )
-        - http://bootstrap-tutorial.bootstraptor.com/post/53191688399/bootstrap-navigation-nav-bar
-*/
-
 window.myglobal = {};
 (function(context) {
     context.getHotelName = function() {

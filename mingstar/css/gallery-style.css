@@ -1,4 +1,5 @@
-    /* Rooms */
+    /* rooms page section */
+
 #rooms-title {
     border-bottom:      1px solid #e4e4e4;
     padding-bottom:     20px;
@@ -15,6 +16,7 @@
 #rooms-detail{
     font-style:         italic;
     list-style:         url(../images/checkmark.png);
+    padding-left:       20px;
 
     #font-size:          15px;
     #margin-left:        auto;
@@ -50,26 +52,31 @@
     color:              rgba(255, 255, 255, 0.75);
     font-family:        "Cardo", serif;
     font-size:          25px;
-    height:             100px;
+    padding-bottom:     15px;
+    padding-top:        12px;
     text-align:         center;
     width:              100%;
 
+    #height:             100px;
     #margin-left:        auto;
     #margin-right:       auto;
     #width:              95%;
 }
 .room-price-container:hover {
-    background-color:   rgba(32, 32, 32, 0.5);
+    background-color:   rgba(32, 32, 32, 0.2);
     color:              rgba(32, 32, 32, 1);
 }
 .room-price-container h2 {
-    display:            inline;
+    margin:             0;
+    /*display:            inline;*/
 }
 .room-price-container h6 {
     font-size:          20px;
     font-style:         italic;
-    font-weight:        lighter;
-    margin-top:         0px;
+    margin:             0;
+
+    #font-weight:        lighter;
+    #margin-top:         0px;
 }
 /*.room-type {
     width:              100%;
@@ -123,7 +130,34 @@
     background-color:   rgba(0,0,0,0.1);
 }
 
-    /* zeik-Version */
+    /* rooms page section - zeik-Version */
+
+.striped-row {
+    background:         rgba(94, 94, 94, 0.9);
+    color:              #fff;
+    padding-bottom:     10px;
+    margin-top:         52px;
+    padding-top:        10px;
+
+    #background:         #5e5e5e;
+}
+.striped-row .room-title {
+    margin-top:         0;
+}
+.striped-row .room-header {
+    margin-left:        5px;
+}
+.striped-row .back-to-top2 {
+    margin-right:       5px;
+}
+.striped-row .room-price-container:hover,
+.striped-row .room-price-container2:hover {
+    background-color:   rgba(255, 255, 255, 0.75);
+}
+.rooms-container {
+    height:             500px;
+    width:              960px;
+}
 #rooms-detail-title2 {
     border-bottom:      1px solid #e4e4e4;
     font-family:        "Cardo", serif;
@@ -142,7 +176,7 @@
     width:              100%;
 }
 .room-price-container2:hover {
-    background-color:   rgba(32, 32, 32, 0.5);
+    background-color:   rgba(32, 32, 32, 0.2);
     color:              rgba(32, 32, 32, 1);
 }
 .room-price-container2 h2 {

@@ -19,7 +19,7 @@
   <script type="text/javascript"></script>
 
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="css/gallery-style.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="css/gallery-style.css" /> -->
   <link href="css/style.css" rel="stylesheet" />
 
   <!-- Jssor Slider -->
@@ -153,38 +153,38 @@
             <!-- Standard Image Slider Start -->
             <div class="row room-container">
               <div class="col-sm-1 col-md-1 hidden-lg"></div>
-                <!-- Jssor Slider Begin -->
-                <div class="col-sm-10 col-md-10 col-lg-12" style="padding:0;">
-                  <!-- Gallery Container Begin -->
-                  <div id="standard_slider_container" class="gallery-container">
-                    <!-- Loading Begin -->
-                    <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                      <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; 
-                                  background-color: #000000; top: 0px; left: 0px; width: 100%; height:100%;">
-                      </div>
-                      <div style="position: absolute; display: block; top: 0px; left: 0px; width: 100%;
-                                  height:100%; background: url(jssor/img/loading.gif) no-repeat center center;">
-                      </div>
-                    </div><!-- Loading End -->
-                    <!-- Slider Image Begin -->
-                    <div u="slides" class="gallery-container"
-                         style="cursor: move; position: absolute; left: 0px; top: 0px; overflow: hidden;">
-                      <div><img u="image" src="room-images/standard/205_1.jpg" /></div>
-                      <div><img u="image" src="room-images/standard/205_2.jpg" /></div>
-                      <div><img u="image" src="room-images/standard/205_3.jpg" /></div>
-                      <div><img u="image" src="room-images/standard/205_4.jpg" /></div>
-                      <div><img u="image" src="room-images/standard/205_5.jpg" /></div>
-                    </div><!-- Slider Image End -->           
-                    <!-- Navigator Begin -->
-                    <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
-                      <div u="prototype" 
-                           style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; 
-                                  line-height:19px; color:White; font-size:12px;"></div>
-                    </div><!-- Navigator End -->            
-                    <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0px;"></span>
-                    <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0px"></span>
-                  </div><!-- Gallery Container End -->
-                </div><!-- Jssor Slider End -->
+              <!-- Jssor Slider Begin -->
+              <div class="col-sm-10 col-md-10 col-lg-12" style="padding:0;">
+                <!-- Gallery Container Begin -->
+                <div id="standard_slider_container" class="rooms-container">
+                  <!-- Loading Begin -->
+                  <div u="loading" style="position: absolute; top: 0; left: 0;">
+                    <div style="filter: alpha(opacity=70); opacity: 0.7; background-color: #000;
+                                width: 100%; height: 100%; top: 0; left: 0; position: absolute; display: block;">
+                    </div>
+                    <div style="width: 100%; height:100%; top: 0; left: 0; position: absolute; display: block;
+                                background: url(jssor/img/loading.gif) no-repeat center center;">
+                    </div>
+                  </div><!-- Loading End -->
+                  <!-- Slider Image Begin -->
+                  <div u="slides" class="rooms-container"
+                       style="top: 0; left: 0; position: absolute; overflow: hidden; cursor: move;">
+                    <div><img u="image" src="room-images/standard/205_1.jpg" /></div>
+                    <div><img u="image" src="room-images/standard/205_2.jpg" /></div>
+                    <div><img u="image" src="room-images/standard/205_3.jpg" /></div>
+                    <div><img u="image" src="room-images/standard/205_4.jpg" /></div>
+                    <div><img u="image" src="room-images/standard/205_5.jpg" /></div>
+                  </div><!-- Slider Image End -->           
+                  <!-- Navigator Begin -->
+                  <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
+                    <div u="prototype" 
+                         style="WIDTH: 19px; HEIGHT: 19px; POSITION: absolute; color:white; text-align:center;
+                                line-height:19px; font-size:12px;"></div>
+                  </div><!-- Navigator End -->            
+                  <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0;"></span>
+                  <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0"></span>
+                </div><!-- Gallery Container End -->
+              </div><!-- Jssor Slider End -->
               <div class="col-sm-1 col-md-1 hidden-lg"></div>
             </div><!-- Standard Image Slider End -->
 
@@ -198,9 +198,9 @@
               <div class="col-xs-12 col-sm-5 col-md-5 col-lg-12">
                 <h3 id="rooms-detail-title2">Facilities</h3>
                 <ul id="rooms-detail">
-                  <li>Generous Desk</li>
-                  <li>Telephone</li>
-                  <li>Hair dryer</li>
+                  <li>Generous Desk, Telephone, Hair dryer</li>
+                  <!-- <li>Telephone</li>
+                  <li>Hair dryer</li> -->
                   <li>Hi-speed Internet Access</li>
                   <li>Smartcard Electronic Lock</li>
                   <li>LCD TV with selected Satellite Channels</li>
@@ -216,7 +216,7 @@
                 <a href="contact.html" class="hidden-xs hidden-sm hidden-md">
                   <button class="room-price-container2">
                     <h2>RM 148</h2>
-                    <h4>Per Night</h4>
+                    <h4>/ Per Night</h4>
                   </button>
                 </a>
                 <!-- Button in extra-small/small/medium views -->
@@ -232,14 +232,13 @@
 
           </div>
           <div class="col-lg-1"></div>
-
         </div>
 
       </div><!-- Standard Room End -->
       
       <!-- Superior Room Start -->
       <div id="superior_room"></div>
-      <div style="background:#5e5e5e; color:#fff;">
+      <div class="striped-row">
 
         <!-- Superior Title Start -->
         <div class="row room-title">
@@ -253,72 +252,91 @@
           <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
         </div> <!-- Superior Title End -->
 
-        <!-- Superior Slider Start -->
-        <div class="row room-container">
-          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-          <div class="col-sm-10 col-md-10 col-lg-10" style="padding:0;">
-            <div id="superior_slider_container" class="gallery-container">
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-7">
 
-              <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; 
-                            background-color: #000000; top: 0px; left: 0px; width: 100%; height:100%;">
+            <!-- Superior Slider Start -->
+            <div class="row room-container">
+              <div class="col-sm-1 col-md-1 hidden-lg"></div>
+              <div class="col-sm-10 col-md-10 col-lg-12" style="padding:0;">
+                <div id="superior_slider_container" class="rooms-container">
+
+                  <div u="loading" style="position: absolute; top: 0; left: 0;">
+                    <div style="filter: alpha(opacity=70); opacity: 0.7; background-color: #000;
+                                width: 100%; height: 100%; top: 0; left: 0; position: absolute; display: block;">
+                    </div>
+                    <div style="width: 100%; height:100%; top: 0; left: 0; position: absolute; display: block;
+                                background: url(jssor/img/loading.gif) no-repeat center center;">
+                    </div>
+                  </div>
+
+                  <div u="slides" class="rooms-container" 
+                       style="top: 0; left: 0; position: absolute; overflow: hidden; cursor: move;">
+                    <div><img u="image" src="room-images/superior/203_1.jpg" /></div>
+                    <div><img u="image" src="room-images/superior/203_2.jpg" /></div>
+                    <div><img u="image" src="room-images/superior/203_5.jpg" /></div>
+                    <div><img u="image" src="room-images/superior/303_1.jpg" /></div>
+                    <div><img u="image" src="room-images/superior/303_2.jpg" /></div>
+                    <div><img u="image" src="room-images/superior/303_5.jpg" /></div>
+                  </div>
+
+                  <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
+                    <div u="prototype" 
+                         style="WIDTH: 19px; HEIGHT: 19px; POSITION: absolute; color:white; text-align:center;
+                                line-height:19px; font-size:12px;"></div>
+                  </div>
+
+                  <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0;"></span>
+                  <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0"></span>
                 </div>
-                <div style="position: absolute; display: block; top: 0px; left: 0px; width: 100%;
-                            height:100%; background: url(jssor/img/loading.gif) no-repeat center center;">
-                </div>
-              </div>
+              </div><!-- Jssor Slider End -->
+              <div class="col-sm-1 col-md-1 hidden-lg"></div>
+            </div><!-- Superior Slider End -->
 
-              <div u="slides" class="gallery-container" 
-                   style="cursor: move; position: absolute; left: 0px; top: 0px; overflow: hidden;">
-                <div><img u="image" src="room-images/superior/203_1.jpg" /></div>
-                <div><img u="image" src="room-images/superior/203_2.jpg" /></div>
-                <div><img u="image" src="room-images/superior/203_5.jpg" /></div>
-                <div><img u="image" src="room-images/superior/303_1.jpg" /></div>
-                <div><img u="image" src="room-images/superior/303_2.jpg" /></div>
-                <div><img u="image" src="room-images/superior/303_5.jpg" /></div>
-              </div>
-
-              <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
-                <div u="prototype" 
-                     style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; 
-                            line-height:19px; color:White; font-size:12px;"></div>
-              </div>
-
-              <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0px;"></span>
-              <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0px"></span>
-            </div>
-          </div><!-- Jssor Slider End -->
-          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-        </div><!-- Superior Slider End -->
-
-        <!-- Superior Facilities Start -->
-        <div class="row room-container">
-          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-          <div class="col-sm-5 col-md-5 col-lg-5">
-            <h3 id="rooms-detail-title">Facilities</h3>
-            <ul id="rooms-detail">
-              <li>Generous Desk</li>
-              <li>Telephone</li>
-              <li>Hair dryer</li>
-              <li>Hi-speed Internet Access</li>
-              <li>Smartcard Electronic Lock</li>
-              <li>LCD TV with selected Satellite Channels</li>
-              <li>2 Single Bed or King Size/Joining Bed</li>
-              <li>Contemporary Style Bathroom</li>
-              <li>Coffee &amp; Tea making</li>
-            </ul>
           </div>
-          <div class="col-sm-5 col-md-5 col-lg-5">
-            <h3 id="rooms-detail-title">Book Now</h3>
-            <a href="contact.html">
-              <button class="room-price-container">
-                <h2>RM 168</h2>
-                <h6>Per Night<h6>
-              </button>
-            </a>
+          <div class="col-lg-3">
+
+            <!-- Superior Facilities Start -->
+            <div class="row room-container">
+              <div class="hidden-xs col-sm-1 col-md-1 hidden-lg"></div>
+              <div class="col-xs-12 col-sm-5 col-md-5 col-lg-12">
+                <h3 id="rooms-detail-title2">Facilities</h3>
+                <ul id="rooms-detail">
+                  <li>Generous Desk, Telephone, Hair dryer</li>
+                  <!-- <li>Telephone</li>
+                  <li>Hair dryer</li> -->
+                  <li>Hi-speed Internet Access</li>
+                  <li>Smartcard Electronic Lock</li>
+                  <li>LCD TV with selected Satellite Channels</li>
+                  <li>2 Single Bed or King Size/Joining Bed</li>
+                  <li>Contemporary Style Bathroom</li>
+                  <li>Coffee &amp; Tea making</li>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-sm-5 col-md-5 col-lg-12">
+                <h3 id="rooms-detail-title2">Book Now</h3>
+                <!-- Button in large view -->
+                <a href="contact.html" class="hidden-xs hidden-sm hidden-md">
+                  <button class="room-price-container2">
+                    <h2>RM 168</h2>
+                    <h4>/ Per Night</h4>
+                  </button>
+                </a>
+                <!-- Button in extra-small/small/medium views -->
+                <a href="contact.html" class="hidden-lg">
+                  <button class="room-price-container">
+                    <h2>RM 168</h2>
+                    <h6>Per Night<h6>
+                  </button>
+                </a>
+              </div>
+              <div class="hidden-xs col-sm-1 col-md-1 hidden-lg"></div>
+            </div><!-- Superior Facilities End -->
+
           </div>
-          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-        </div><!-- Superior Facilities End -->
+          <div class="col-lg-1"></div>
+        </div>
 
       </div><!-- Superior Room End -->
 
@@ -337,76 +355,95 @@
           <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
         </div><!-- Deluxe Title End -->
 
-        <!-- Deluxe Slider Start -->
-        <div class="row room-container">
-          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-          <div class="col-sm-10 col-md-10 col-lg-10" style="padding:0;">
-            <div id="deluxe_slider_container" class="gallery-container">
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-7">
 
-              <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; 
-                            background-color: #000000; top: 0px; left: 0px; width: 100%; height:100%;">
+            <!-- Deluxe Slider Start -->
+            <div class="row room-container">
+              <div class="col-sm-1 col-md-1 hidden-lg"></div>
+              <div class="col-sm-10 col-md-10 col-lg-12" style="padding:0;">
+                <div id="deluxe_slider_container" class="rooms-container">
+
+                  <div u="loading" style="position: absolute; top: 0; left: 0;">
+                    <div style="filter: alpha(opacity=70); opacity: 0.7; background-color: #000;
+                                width: 100%; height: 100%; top: 0; left: 0; position: absolute; display: block;">
+                    </div>
+                    <div style="width: 100%; height:100%; top: 0; left: 0; position: absolute; display: block;
+                                background: url(jssor/img/loading.gif) no-repeat center center;">
+                    </div>
+                  </div>
+
+                  <div u="slides" class="rooms-container" 
+                       style="top: 0; left: 0; position: absolute; overflow: hidden; cursor: move;">
+                    <div><img u="image" src="room-images/deluxe/323_1.jpg" /></div>
+                    <div><img u="image" src="room-images/deluxe/323_2.jpg" /></div>
+                    <div><img u="image" src="room-images/deluxe/323_3.jpg" /></div>
+                    <div><img u="image" src="room-images/deluxe/323_4.jpg" /></div>
+                    <div><img u="image" src="room-images/deluxe/323_5.jpg" /></div>
+                    <div><img u="image" src="room-images/deluxe/323_6.jpg" /></div>
+                    <div><img u="image" src="room-images/deluxe/323_7.jpg" /></div>
+                    <div><img u="image" src="room-images/deluxe/323_8.jpg" /></div>
+                    <div><img u="image" src="room-images/deluxe/323_9.jpg" /></div>
+                  </div>
+
+                  <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
+                    <div u="prototype" 
+                         style="WIDTH: 19px; HEIGHT: 19px; POSITION: absolute; color:white; text-align:center;
+                                line-height:19px; font-size:12px;"></div>
+                  </div>
+
+                  <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0;"></span>
+                  <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0"></span>
                 </div>
-                <div style="position: absolute; display: block; top: 0px; left: 0px; width: 100%;
-                            height:100%; background: url(jssor/img/loading.gif) no-repeat center center;">
-                </div>
-              </div>
+              <div class="col-sm-1 col-md-1 hidden-lg"></div>
+              </div><!-- Jssor Slider End -->
+            </div><!-- Deluxe Slider End -->
 
-              <div u="slides" class="gallery-container" 
-                   style="cursor: move; position: absolute; left: 0px; top: 0px; overflow: hidden;">
-                <div><img u="image" src="room-images/deluxe/323_1.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_2.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_3.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_4.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_5.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_6.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_7.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_8.jpg" /></div>
-                <div><img u="image" src="room-images/deluxe/323_9.jpg" /></div>
-              </div>
-      
-              <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
-                <div u="prototype" 
-                     style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; 
-                            line-height:19px; color:White; font-size:12px;"></div>
-              </div>
-              
-              <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0px;"></span>
-              <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0px"></span>
-            </div>
-          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-          </div><!-- Jssor Slider End -->
-        </div><!-- Deluxe Slider End -->
+          </div>
+          <div class="col-lg-3">
 
-        <!-- Deluxe Facilities Start -->
-        <div class="row room-container">
-          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-          <div class="col-sm-5 col-md-5 col-lg-5">
-            <h3 id="rooms-detail-title">Facilities</h3>
-            <ul id="rooms-detail">
-              <li>Generous Desk</li>
-              <li>Telephone</li>
-              <li>Hairdryer</li>
-              <li>Hi-speed Internet Access</li>
-              <li>Smartcard Electronic Lock</li>
-              <li>LCD TV with selected Satellite Channels</li>
-              <li>2 Single Bed or King Size/Joining Bed</li>
-              <li>Contemporary Style Bathroom</li>
-              <li>Coffee &amp; Tea making</li>
-              <li>Mini Bar with complimentary snack and juice</li>
-            </ul>
+            <!-- Deluxe Facilities Start -->
+            <div class="row room-container">
+              <div class="hidden-xs col-sm-1 col-md-1 hidden-lg"></div>
+              <div class="col-xs-12 col-sm-5 col-md-5 col-lg-12">
+                <h3 id="rooms-detail-title2">Facilities</h3>
+                <ul id="rooms-detail">
+                  <li>Generous Desk, Telephone, Hair dryer</li>
+                  <!-- <li>Telephone</li>
+                  <li>Hair dryer</li> -->
+                  <li>Hi-speed Internet Access</li>
+                  <li>Smartcard Electronic Lock</li>
+                  <li>LCD TV with selected Satellite Channels</li>
+                  <li>2 Single Bed or King Size/Joining Bed</li>
+                  <li>Contemporary Style Bathroom</li>
+                  <li>Coffee &amp; Tea making</li>
+                  <li>Mini Bar with complimentary snack and juice</li>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-sm-5 col-md-5 col-lg-12">
+                <h3 id="rooms-detail-title2">Book Now</h3>
+                <!-- Button in large view -->
+                <a href="contact.html" class="hidden-xs hidden-sm hidden-md">
+                  <button class="room-price-container2">
+                    <h2>RM 188</h2>
+                    <h4>/ Per Night</h4>
+                  </button>
+                </a>
+                <!-- Button in extra-small/small/medium views -->
+                <a href="contact.html" class="hidden-lg">
+                  <button class="room-price-container">
+                    <h2>RM 188</h2>
+                    <h6>Per Night<h6>
+                  </button>
+                </a>
+              </div>
+              <div class="hidden-xs col-sm-1 col-md-1 hidden-lg"></div>
+            </div><!-- Deluxe Facilities End -->
+
           </div>
-          <div class="col-sm-5 col-md-5 col-lg-5">
-            <h3 id="rooms-detail-title">Book Now</h3>
-            <a href="contact.html">
-              <button class="room-price-container">
-                <h2>RM 188</h2>
-                <h6>Per Night<h6>
-              </button>
-            </a>
-          </div>
-          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-        </div><!-- Deluxe Facilities End -->
+          <div class="col-lg-1"></div>
+        </div>
 
       </div><!-- Deluxe Room End -->
 

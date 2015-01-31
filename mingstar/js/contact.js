@@ -1,24 +1,9 @@
-/*
-    Showing required icon for the mandatory fields
-        - http://formvalidation.io/examples/showing-required-icon/
-    Bootstrap Validator
-        - http://1000hz.github.io/bootstrap-validator/
-        - http://formvalidation.io/
-    Jsfiddle
-        - http://jsfiddle.net/davimoreira/b9yoakyx/
-    Bootstrap DatetimePicker
-        - http://eonasdan.github.io/bootstrap-datetimepicker/
-    Bootstrap DatePicker
-        - https://bootstrap-datepicker.readthedocs.org/en/release/#
-*/
-
 $(document).ready(function() {
     $('.datepicker').datepicker({
         format: 'dd MM, yyyy',
         todayBtn: 'linked',
         autoclose: true,
         todayHighlight: true
-        // startDate: 'd'
     });
     var validateForm = $('#contactusform').validate({
         rules: {
