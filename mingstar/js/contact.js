@@ -1,10 +1,12 @@
 $(document).ready(function() {
+
     $('.datepicker').datepicker({
         format: 'dd MM, yyyy',
         todayBtn: 'linked',
         autoclose: true,
         todayHighlight: true
     });
+
     var validateForm = $('#contactusform').validate({
         rules: {
             guest_name: 'required',
@@ -38,8 +40,10 @@ $(document).ready(function() {
             }
         }
     });
+
     $('#resetBtn').click(function(evt) {
         $('#resetForm').modal('hide');
         validateForm.resetForm();
     });
+
 });

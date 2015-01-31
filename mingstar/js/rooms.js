@@ -63,6 +63,7 @@ $(document).ready(function() {
             window.setTimeout(ScaleSlider, 30);
     }
     ScaleSlider();
+
     $(window).bind("load", ScaleSlider);
     $(window).bind("resize", ScaleSlider);
     $(window).bind("orientationchange", ScaleSlider);
@@ -78,4 +79,5 @@ $(document).ready(function() {
         evt.preventDefault(); 
         goToByScroll($(this).attr("id"));           
     });
+
 });
