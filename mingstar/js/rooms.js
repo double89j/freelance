@@ -5,31 +5,6 @@
 
 $(document).ready(function() {
 
-    /*var deluxeSliderOptions = {
-            sliderId: "deluxeSlider",
-            startSlide: 0,
-            effect: "12",
-            effectRandom: false,
-            pauseTime: 5000,
-            transitionTime: 500,
-            slices: 12,
-            boxes: 8,
-            hoverPause: 1,
-            autoAdvance: true,
-            captionOpacity: 0.3,
-            captionEffect: "fade",
-            thumbnailsWrapperId: "thumbs",
-            m: false,
-            license: "mylicense"
-        },
-        deluxeImageSlider = new mcImgSlider(deluxeSliderOptions);
-    deluxeImageSlider.reload();*/
-
-    // $.getScript('http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=461&amp;locationId=1222443&amp;lang=en_MY&amp;rating=true&amp;nreviews=4&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=true&amp;border=true&amp;display_version=2', function() {
-    //     if (typeof(window.taValidate) != 'undefined') {
-    //       window.taValidate();
-    //     }
-    // });   
     var options = {
         $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
         $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
@@ -76,14 +51,24 @@ $(document).ready(function() {
     //responsive code begin
     //you can remove responsive code if you don't want the slider scales while window resizes
     function ScaleSlider() {
-        var parentWidth = standard_jssor_slider.$Elmt.parentNode.clientWidth;
-        if (parentWidth) {
-          standard_jssor_slider.$ScaleWidth(Math.min(parentWidth, parentWidth));
-          superior_jssor_slider.$ScaleWidth(Math.min(parentWidth, parentWidth));
-          deluxe_jssor_slider.$ScaleWidth(Math.min(parentWidth, parentWidth));
-        } else {
+        var standardParentWidth = standard_jssor_slider.$Elmt.parentNode.clientWidth;
+        var superiorParentWidth = superior_jssor_slider.$Elmt.parentNode.clientWidth;
+        var deluxeParentWidth = deluxe_jssor_slider.$Elmt.parentNode.clientWidth;
+
+        if (standardParentWidth)
+            standard_jssor_slider.$ScaleWidth(Math.min(standardParentWidth, standardParentWidth));
+        else
             window.setTimeout(ScaleSlider, 30);
-        }
+
+        if (superiorParentWidth)
+          superior_jssor_slider.$ScaleWidth(Math.min(superiorParentWidth, superiorParentWidth));
+        else
+            window.setTimeout(ScaleSlider, 30);
+
+        if (deluxeParentWidth)
+          deluxe_jssor_slider.$ScaleWidth(Math.min(deluxeParentWidth, deluxeParentWidth));
+        else
+            window.setTimeout(ScaleSlider, 30);
 
         // var bodyWidth = document.body.clientWidth;
         // if (bodyWidth)
@@ -105,7 +90,7 @@ $(document).ready(function() {
             scrollTop: $("#"+id).offset().top
         }, 'slow');
     }
-    $(".room-type-navbar > a, .back-to-top").click(function(evt) { 
+    $(".room-type-navbar > div > a, .back-to-top, .back-to-top2").click(function(evt) { 
           // Prevent a page reload when a link is pressed
         evt.preventDefault(); 
           // Call the scroll function
