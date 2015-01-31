@@ -1033,7 +1033,7 @@ body.lightbox-open,
 }
 .navbar-fixed-top .navbar-collapse/*,
 .navbar-fixed-bottom .navbar-collapse*/ {
-    max-height:         200px;
+    #max-height:         200px;
 }
 .navbar-fixed-top .navbar-collapse/*,
 .navbar-static-top .navbar-collapse,
