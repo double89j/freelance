@@ -1504,3 +1504,6 @@ ul#slider li:not(:target) {
 }
 
         /* Arrow Navigator Skin End */
+.social-bar {
+  padding-top: 5px;
+}
