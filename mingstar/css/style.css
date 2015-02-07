@@ -327,9 +327,9 @@ header.vertical-header a:hover {
     background-color:   #2c9f5c;
 }
 header.vertical-header a.navbar-brand {
-    background:         url("../images/logo-2.png") no-repeat scroll center center / 190px auto rgba(0, 0, 0, 0);
+    background:         url("../images/logo-1.png") no-repeat scroll center center / 140px auto rgba(0, 0, 0, 0);
     #background:         url("../images/pic_top.png") no-repeat scroll center center / 164px auto rgba(0, 0, 0, 0);
-    width:              100%;
+    width:              140px;
     height:             60px
 }
 header.vertical-header a.navbar-brand:hover {
@@ -1506,4 +1506,13 @@ ul#slider li:not(:target) {
         /* Arrow Navigator Skin End */
 .social-bar {
   padding-top: 5px;
+}
+.index-social-bar {
+  max-width: 30px !important;
+}
+.index-social-bar:hover {
+  background-color: transparent !important;
+}
+.index-social-bar img{
+  padding-top: 3px;
 }
