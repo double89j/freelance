@@ -59,14 +59,7 @@
   <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
   <!-- navbar -->
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
@@ -95,10 +88,10 @@
   <!-- #main-body -->
   <div id="main-body" class="pad-section">
     <div id="content" class="container-fluid room-body">      
-
+      
       <!-- Room Type -->
       <div id="room-type"></div>
-      <div class="row pad-top">
+      <div class="row">
         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" style="padding-top:8px;">
           <div class="row room-type-navbar">
@@ -457,11 +450,6 @@
         </div>
 
       </div><!-- Deluxe Room End -->
-      
-      <!-- Facebook Like Button -->
-      <div class="fb-like" data-href="https://www.facebook.com/MingStarHotel" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
-      <!-- Google Plus -->
-      <div class="g-follow" data-annotation="none" data-height="20" data-href="https://plus.google.com/103708946417754997469/about" data-rel="publisher"></div>    
     </div><!-- #content -->
   </div><!-- #main-body -->
 
@@ -484,7 +472,14 @@
             </tr>
           </tbody></table>
         </div><!-- /.hidden-xs col-sm-3 col-md-3 col-lg-5 -->
-        <div class="copyright hidden-xs col-sm-7 col-md-7 col-lg-7 text-right"></div>
+        <div class="copyright hidden-xs col-sm-7 col-md-7 col-lg-7 text-right"> 
+        </div>
+        <div class="hidden-xs col-sm-7 col-md-7 col-lg-7 text-right"> 
+          <div style="float:right">
+            <div class="g-plusone" data-size="medium" data-annotation="bubble" data-href="https://plus.google.com/103708946417754997469/about" data-rel="publisher"></div>
+            <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FMingStarHotel&amp;width=100&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:24px; padding-top:4px;" allowTransparency="true"></iframe>
+          </div> 
+        </div>
         <!-- Greater than col-xs -->
 
         <!-- Smaller than col-xs -->
@@ -502,6 +497,12 @@
           </tbody></table>
         </div><!-- /.hidden-sm hidden-md hidden-lg -->
         <div class="copyright2 col-xs-12 hidden-sm hidden-md hidden-lg text-right"></div>
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg text-right">
+          <center>
+            <div class="g-plusone" data-size="medium" data-annotation="bubble" data-href="https://plus.google.com/103708946417754997469/about" data-rel="publisher"></div>
+            <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FMingStarHotel&amp;width=100&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:24px; padding-top:4px;" allowTransparency="true"></iframe>
+          </center>
+        </div>
         <!-- Smaller than col-xs -->
         <div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
       </div><!-- /.row -->
