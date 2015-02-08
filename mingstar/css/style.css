@@ -248,6 +248,9 @@ body {
     width:              100%;
     z-index:            1;
 }
+.navbar-header {
+    min-width:          233px;
+}
 .footerDivider {
     border-color:       #9c9c9c;
 
