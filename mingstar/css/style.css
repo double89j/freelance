@@ -290,6 +290,17 @@ footer .glyphicon:hover {
     font-size:          12px;
     margin:             0;
 }
+.social-icon {
+    float:              right
+}
+.social-icon > div:first-child {
+    width:              75px !important;
+}
+.social-icon .TA_socialButtonIcon { /* TripAdvisor */
+    display:            inline-block;
+    line-height:        1px;
+    margin-left:        15px;
+}
 
 /* Vertical Header ( Restinn Reference ) */
 

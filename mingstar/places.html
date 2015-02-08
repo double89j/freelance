@@ -14,7 +14,6 @@
 
   <!-- JavaScrip -->
   <script src="js/main.js"></script>
-  <script src="js/general.js"></script>
   <script src="js/places.js"></script>
   <script type="text/javascript"></script>
 
@@ -96,10 +95,23 @@
           <div class="col-top-flex-container" style="align-items: flex-end;">
             <iframe src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=115860096431214721188.00045067c2af1549adaeb&amp;ll=5.332071,103.147845&amp;spn=0,0&amp;iwloc=00045067c9e420974965c&amp;output=embed&amp;s=AARTsJoZwislyC0OJ20cAFwpiUvpW94oSA"
                     width="100%" height="450" scrolling="no" frameborder="0" style="border:0"></iframe>
-            <button type="button" class="btn btn-default"
-                    style="margin-top:10px;"
-                    onclick="openGoogleMap()">View on Google Map
-            </button>
+            <div style="text-align:right;">
+              <a id="wazeApp" role="button" class="btn btn-default"
+                 style="margin-top:5px; padding-left:40px; position:relative;"
+                 href="waze://?ll=5.33229,103.14851&navigate=yes">
+                 <img src="images/waze.png"
+                      style="position:absolute; top:4px; left:10px; height:24px;">Waze
+              </a>
+              <!-- <a role="button" class="btn btn-default" style="margin-top:5px;"
+                 href="https://www.google.com.my/maps/place/Ming+Star+Hotel,+217,+Jalan+Sultan+Zainal+Abidin,+20200+Kuala+Terengganu,+Terengganu/@5.332085,103.148491,17z/data=!4m2!3m1!1s0x31b7be74fc4a47b7:0xd3329c42f0575055">
+                 Apple Google Map</a>
+              <a role="button" class="btn btn-default" style="margin-top:5px;"
+                 href="geo:5.332071,103.147845">
+                 Android Google Map</a> -->
+              <a id="googleBrowser" role="button" target="_blank" class="btn btn-default" style="margin-top:5px;"
+                 href="https://www.google.com/maps/d/viewer?ll=5.332071,103.147845&source=embed&iwloc=00045067c9e420974965c&ie=UTF8&msa=0&spn=0,0&hl=en&mid=z-UdJ9CaRHZ8.kWNEoVqUrvDs">
+                 View on Google Map</a>
+            </div>
           </div>
         </div>
         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
@@ -301,10 +313,24 @@
         </div><!-- /.hidden-xs col-sm-3 col-md-3 col-lg-5 -->
         <div class="copyright hidden-xs col-sm-7 col-md-7 col-lg-7 text-right"></div>
         <div class="hidden-xs col-sm-7 col-md-7 col-lg-7 text-right"> 
-          <div style="float:right">
+          <div class="social-icon">
+            <!-- Google+ -->
             <div class="g-plusone" data-size="medium" data-annotation="bubble" data-href="https://plus.google.com/103708946417754997469/about" data-rel="publisher"></div>
+            <!-- Facebook -->
             <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FMingStarHotel&amp;width=100&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:24px; padding-top:4px;" allowTransparency="true"></iframe>
-          </div> 
+            <!-- TripAdvisor -->
+            <div id="TA_socialButtonIcon557" class="TA_socialButtonIcon">
+              <ul id="EBIhNShO" class="TA_links dnlQwd">
+                <li id="jCO1kI7B" class="D4kCduK">
+                  <a target="_blank"
+                     href="http://www.tripadvisor.com.my/Hotel_Review-g298320-d1222443-Reviews-Hotel_Ming_Star-Kuala_Terengganu_Terengganu.html">
+                    <img src="http://www.tripadvisor.com.my/img/cdsi/img2/branding/socialWidget/20x28_green-21690-2.png"/>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <script src="http://www.jscache.com/wejs?wtype=socialButtonIcon&amp;uniq=557&amp;locationId=1222443&amp;color=green&amp;size=rect&amp;lang=en_MY&amp;display_version=2"></script>
+          </div>
         </div>
         <!-- Greater than col-xs -->
 
@@ -325,8 +351,22 @@
         <div class="copyright2 col-xs-12 hidden-sm hidden-md hidden-lg text-right"></div>
         <div class="col-xs-12 hidden-sm hidden-md hidden-lg text-right">
           <center>
+            <!-- Google+ -->
             <div class="g-plusone" data-size="medium" data-annotation="bubble" data-href="https://plus.google.com/103708946417754997469/about" data-rel="publisher"></div>
+            <!-- Facebook -->
             <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FMingStarHotel&amp;width=100&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:24px; padding-top:4px;" allowTransparency="true"></iframe>
+            <!-- TripAdvisor -->
+            <div id="TA_linkingWidgetRedesign529" class="TA_linkingWidgetRedesign">
+              <ul id="1ItZzsVym0Nd" class="TA_links iUKu0FLQrzGj">
+                <li id="qvO9GYxt" class="FOPecHJnN7zE">
+                  <a target="_blank"
+                     href="http://www.tripadvisor.com.my/">
+                    <img src="http://www.tripadvisor.com.my/img/cdsi/partner/tripadvisor_logo_115x18-15079-2.gif" alt="TripAdvisor"/>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <script src="http://www.jscache.com/wejs?wtype=linkingWidgetRedesign&amp;uniq=529&amp;locationId=1222443&amp;lang=en_MY&amp;border=true&amp;display_version=2"></script>
           </center>
         </div>
         <!-- Smaller than col-xs -->
