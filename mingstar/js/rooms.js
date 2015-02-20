@@ -40,12 +40,14 @@ $(document).ready(function() {
     var standard_jssor_slider = new $JssorSlider$("standard_slider_container", options);
     var superior_jssor_slider = new $JssorSlider$("superior_slider_container", options);
     var deluxe_jssor_slider = new $JssorSlider$("deluxe_slider_container", options);
+    var sweet_jssor_slider = new $JssorSlider$("sweet_slider_container", options);
 
     //responsive code begin
     function ScaleSlider() {
         var standardParentWidth = standard_jssor_slider.$Elmt.parentNode.clientWidth;
         var superiorParentWidth = superior_jssor_slider.$Elmt.parentNode.clientWidth;
         var deluxeParentWidth = deluxe_jssor_slider.$Elmt.parentNode.clientWidth;
+        var sweetParentWidth = sweet_jssor_slider.$Elmt.parentNode.clientWidth;
 
         if (standardParentWidth)
             standard_jssor_slider.$ScaleWidth(Math.min(standardParentWidth, standardParentWidth));
@@ -59,6 +61,11 @@ $(document).ready(function() {
 
         if (deluxeParentWidth)
           deluxe_jssor_slider.$ScaleWidth(Math.min(deluxeParentWidth, deluxeParentWidth));
+        else
+            window.setTimeout(ScaleSlider, 30);
+            
+        if (sweetParentWidth)
+          sweet_jssor_slider.$ScaleWidth(Math.min(sweetParentWidth, sweetParentWidth));
         else
             window.setTimeout(ScaleSlider, 30);
     }
