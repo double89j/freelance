@@ -551,20 +551,17 @@ header.vertical-header.resize.show {
     border-bottom:      1px solid #e4e4e4;
     padding-bottom:     20px;
 }
-.rooms-detail{
+.rooms-detail {
+    font-size:          17px;
     font-style:         italic;
     list-style:         url(../images/checkmark.png);
-    padding-left:       20px;
-    font-size:          18px;
-    #margin-left:        auto;
-    #margin-right:       auto;
-    #max-width:          95%;
+    padding-left:       28px;
 }
-.room-type-navbar {
+/*.room-type-navbar {
     #margin-left:        8%;
     #margin-right:       8%;
     #text-align:         center;
-}
+}*/
 .room-type-navbar > div {
     margin-bottom:      10px;
 }
@@ -641,7 +638,7 @@ header.vertical-header.resize.show {
     color:              #fff;
 }
 .room-link-image {
-    width:              100%;
+    max-width:          100%;
 }
 .room-header {
     font-size: 	40px;
@@ -679,6 +676,9 @@ header.vertical-header.resize.show {
 
     #background:         #5e5e5e;
 }
+.striped-row .rooms-detail {
+    list-style:         url(../images/white_checkmark.png);
+}
 .striped-row .room-title {
     margin-top:         0;
 }
@@ -699,9 +699,11 @@ header.vertical-header.resize.show {
 .rooms-detail-title {
 	border-bottom:      1px solid #e4e4e4;
     font-size:			30px;
-	font-family:        "Cardo", serif;
+    font-family:        "Gill Sans","Gill Sans MT",Calibri,sans-serif;
     margin:             0 0 5px;
     padding-bottom:     5px;
+
+    #font-family:        "Cardo", serif;
 }
 .room-price-container2 {
     background-color:   rgba(32, 32, 32, 0.75);
@@ -1241,7 +1243,7 @@ ul#slider li:not(:target) {
     position: absolute;
     top: 0px;
     left: 0px;
-    border: #000 2px solid;
+    border: 2px solid #000;
     width: 100%;
     height: 100%;
 
