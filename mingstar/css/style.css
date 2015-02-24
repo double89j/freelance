@@ -172,10 +172,10 @@ body {
     text-align:         center;
     text-decoration:    none;
 
-    -moz-transition:    all 0.3s ease-in-out 0s;
-    -o-transition:      all 0.3s ease-in-out 0s;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition:         all 0.3s ease-in-out 0s;
+    #-moz-transition:    all 0.3s ease-in-out 0s;
+    #-o-transition:      all 0.3s ease-in-out 0s;
+    #-webkit-transition: all 0.3s ease-in-out 0s;
+    #transition:         all 0.3s ease-in-out 0s;
 
     #font-family:        "Cardo",serif;
     #font-family:        Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
@@ -483,11 +483,11 @@ header.vertical-header.resize.show {
     top:                0;
     color:              #fff;
 
-    -moz-transition:    all 0.4s ease 0s;
-    -ms-transition:     all 0.4s ease 0s;
-    -o-transition:      all 0.4s ease 0s;
-    -webkit-transition: all 0.4s ease 0s;
-    transition:         all 0.4s ease 0s;
+    -moz-transition:    top 0.4s ease 0s, transform 0.4s ease 0s;
+    -ms-transition:     top 0.4s ease 0s, transform 0.4s ease 0s;
+    -o-transition:      top 0.4s ease 0s, transform 0.4s ease 0s;
+    -webkit-transition: top 0.4s ease 0s, transform 0.4s ease 0s;
+    transition:         top 0.4s ease 0s, transform 0.4s ease 0s;
 
     #background-color:   #c2bd8e;
 }
