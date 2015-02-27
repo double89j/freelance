@@ -11,7 +11,6 @@ $(document).ready(function() {
         $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
         $PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
 
-        $ArrowKeyNavigation: true,                          //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
         $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
         $SlideSpacing: 0,                                   //[Optional] Space between each slide in pixels, default value is 0
         $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
@@ -35,13 +34,13 @@ $(document).ready(function() {
         }
     };
 
-    var jssor_slider2 = new $JssorSlider$("index_container", options);
+    var index_jssor_slider = new $JssorSlider$("index_slider_container", options);
 
     //responsive code begin
     function ScaleSlider() {
         var bodyWidth = document.body.clientWidth;
         if (bodyWidth)
-            jssor_slider2.$ScaleWidth(Math.min(bodyWidth, 1920));
+            index_jssor_slider.$ScaleWidth(Math.min(bodyWidth, 1920));
         else
             window.setTimeout(ScaleSlider, 30);
     }
