@@ -1,3 +1,6 @@
 *.bak
-*.orig
+*orig*
 *.db
+*compressed*
+*unused*
+*backup*
