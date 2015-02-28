@@ -9,7 +9,7 @@ $(document).ready(function() {
         $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
         $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
         $SlideEasing: $JssorEasing$.$EaseOutQuint,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
-        $SlideDuration: 1200,                               //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+        $SlideDuration: 2000,                               //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
 
         $BulletNavigatorOptions: {                          //[Optional] Options to specify and enable navigator or not
             $Class: $JssorBulletNavigator$,                 //[Required] Class to create navigator instance
@@ -39,7 +39,7 @@ $(document).ready(function() {
         $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
         $PlayOrientation: 5,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
         $SlideEasing: $JssorEasing$.$EaseOutQuint,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
-        $SlideDuration: 1500,                               //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+        $SlideDuration: 2300,                               //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
 
         $BulletNavigatorOptions: {                          //[Optional] Options to specify and enable navigator or not
             $Class: $JssorBulletNavigator$,                 //[Required] Class to create navigator instance
