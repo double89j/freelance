@@ -77,6 +77,7 @@
         $mail->AddReplyTo($email, $name);
 
         $mail->IsHTML(true); //set email format to HTML
+        $mail->CharSet="UTF-8";
 
         $mail->Subject = "Room Reservation - " . date("D d M, Y h:i:s A");
         $mail->Body = $message;
