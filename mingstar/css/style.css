@@ -570,12 +570,24 @@ header.vertical-header.resize.show {
     line-height:        40px;
     vertical-align:     middle;
 }
+.slider-describe {
+    border-bottom:      1px solid #fff;
+    box-shadow:         0 0 10px #8bafb5 inset;
+    font-size:          16px;
+    font-style:         italic;
+    padding-bottom:     5px;
+    padding-top:        5px;
+}
 .striped-row {
     background:         rgba(94, 94, 94, 0.9);
     color:              #fff;
     padding-bottom:     10px;
     margin-top:         52px;
     padding-top:        10px;
+}
+.striped-row .slider-describe {
+    /*box-shadow:         0 0 10px #e6e5b5 inset;*/
+    box-shadow:         0 0 10px #fff inset;
 }
 .striped-row .rooms-detail-title {
     border-bottom:      1px solid #e4e4e4;
