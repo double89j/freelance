@@ -57,7 +57,7 @@ body {
 }
 #hotel-name {
     color:              #424242;
-    font-family:        "Lucida Bright",Georgia,serif;
+    font-family:        "Lucida Bright",Georgia,"Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif
     font-size:          30px;
     font-weight:        400;
     outline:            medium none;
@@ -65,7 +65,7 @@ body {
     text-decoration:    none;
 }
 .pageTitle {
-    font-family:        "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+    font-family:        "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,"Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
     font-size:          32px;
     font-weight:        bold;
 }
@@ -80,7 +80,7 @@ body {
 }
 .sec-title-1,
 .sec-title-2 {
-    font-family:        "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-family:        "Century Gothic", CenturyGothic, Geneva, AppleGothic, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
     font-size:          30px;
     font-weight:        100;
     letter-spacing:     0.3px;
@@ -90,7 +90,7 @@ body {
 }
 .sec-title-1 .substyle,
 .sec-title-2 .substyle {
-    font-family:        Roboto Slab;
+    font-family:        Roboto Slab,"Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
     font-weight:        bold;
 }
 .sec-transparent {
@@ -444,13 +444,13 @@ header.vertical-header.resize.show {
     max-width:          100%;
 }
 .room-title h1 {
-    font-family:        Impact, Charcoal, sans-serif;
+    font-family:        Impact, Charcoal, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
 }
 .room-price-container {
     background-color:   rgba(32, 32, 32, 0.75);
     border:             3px solid rgba(0, 0, 0, 1);
     color:              rgba(255, 255, 255, 0.75);
-    font-family:        "Cardo", serif;
+    font-family:        "Cardo", "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
     font-size:          25px;
     padding-bottom:     15px;
     padding-top:        12px;
@@ -492,12 +492,13 @@ header.vertical-header.resize.show {
     font-size:          40px;
 }
 .gallery-title {
-    font-family:        Impact, Charcoal, sans-serif;
+    font-family:        Impact, Charcoal, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
 }
 .room-body {
     margin-left:        auto;
     margin-right:       auto;
     max-width:          100%;
+    font-family:        "Gill Sans","Gill Sans MT",Calibri,"Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
 }
 .room-grey{
     background-color:   rgba(0,0,0,0.1);
@@ -512,7 +513,7 @@ header.vertical-header.resize.show {
 .rooms-detail-title {
     border-bottom:      1px solid #9e9e9e;
     font-size:          30px;
-    font-family:        "Gill Sans","Gill Sans MT",Calibri,sans-serif;
+    font-family:        "Gill Sans","Gill Sans MT",Calibri,"Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
     margin:             0 0 5px;
     padding-bottom:     5px;
 }
@@ -520,7 +521,7 @@ header.vertical-header.resize.show {
     background-color:   rgba(32, 32, 32, 0.75);
     border:             3px solid rgba(0, 0, 0, 1);
     color:              rgba(255, 255, 255, 0.75);
-    font-family:        "Cardo", serif;
+    font-family:        "Cardo", "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
     font-size:          25px;
     padding-bottom:     10px;
     padding-top:        10px;
