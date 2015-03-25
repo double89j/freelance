@@ -1,0 +1,208 @@
+h1, h3 {
+  text-align: center;
+}
+
+.rooms-container {
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    width: 960px;
+}
+
+/* ---------- ---------- Jssor Image Slider Begin---------- ---------- */
+        /* ThumbnailNavigator Skin Begin */
+.jssort01 .w {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.jssort01 .c {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 2px solid #000;
+    width: 100%;
+    height: 100%;
+}
+.jssort01 .p:hover .c, .jssort01 .pav:hover .c, .jssort01 .pav .c {
+    background: url(ms/jssor/img/t01.png) center center;
+    border-width: 0px;
+    top: 2px;
+    left: 2px;
+    width: 68px;
+    height: 68px;
+}
+.jssort01 .p:hover .c, .jssort01 .pav:hover .c {
+    top: 0px;
+    left: 0px;
+    border: #fff 1px solid;
+    width: 100%;
+    height: 100%;
+}
+
+.jssort07 .i {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 99px;
+    height: 66px;
+    filter: alpha(opacity=80);
+    opacity: .8;
+}
+.jssort07 .p:hover .i, .jssort07 .pav .i {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+.jssort07 .o {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 97px;
+    height: 64px;
+    border: 1px solid #000;
+
+    -moz-box-sizing: initial;
+    -webkit-box-sizing: initial;
+    -o-box-sizing: initial;
+    box-sizing: initial;
+
+    -moz-transition: border-color .6s;
+    -webkit-transition: border-color .6s;
+    -o-transition: border-color .6s;
+    transition: border-color .6s;
+}
+* html .jssort07 .o {
+    /* ie quirks mode adjust */
+    width /**/: 99px;
+    height /**/: 66px;
+}
+.jssort07 .pav .o, .jssort07 .p:hover .o {
+    border-color: #fff;
+}
+.jssort07 .pav:hover .o {
+    border-color: #0099FF;
+}
+.jssort07 .p:hover .o {
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+        /* ThumbnailNavigator Skin End */
+
+
+        /* Bullet Navigator Skin Begin */
+.jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+    background: url(ms/jssor/img/b05.png) no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+.jssorb05 div {
+    background-position: -7px -7px;
+}
+.jssorb05 div:hover, .jssorb05 .av:hover {
+    background-position: -37px -7px;
+}
+.jssorb05 .av {
+    background-position: -67px -7px;
+}
+.jssorb05 .dn, .jssorb05 .dn:hover {
+    background-position: -97px -7px;
+}
+
+.jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
+    background: url(ms/jssor/img/b21.png) no-repeat;
+    overflow:hidden;
+    cursor: pointer;
+}
+.jssorb21 div { background-position: -5px -5px; }
+.jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
+.jssorb21 .av { background-position: -65px -5px; }
+.jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
+        /* Bullet Navigator Skin End */
+
+
+        /* Arrow Navigator Skin Begin */
+.jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
+    filter: alpha(opacity=70);
+    opacity: .7;
+    overflow:hidden;
+    cursor: pointer;
+    border: #000 1px solid;
+}
+.jssorb01 div { background-color: gray; }
+.jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
+.jssorb01 .av { background-color: #fff; }
+.jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
+
+.jssora05l, .jssora05r, .jssora05ldn, .jssora05rdn {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    background: url(ms/jssor/img/a17.png) no-repeat;
+    overflow:hidden;
+}
+.jssora05l { background-position: -10px -40px; }
+.jssora05r { background-position: -70px -40px; }
+.jssora05l:hover { background-position: -130px -40px; }
+.jssora05r:hover { background-position: -190px -40px; }
+.jssora05ldn { background-position: -250px -40px; }
+.jssora05rdn { background-position: -310px -40px; }
+
+.jssora11l, .jssora11r, .jssora11ldn, .jssora11rdn {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    background: url(ms/jssor/img/a11.png) no-repeat;
+    overflow: hidden;
+}
+.jssora11l {
+    background-position: -11px -41px;
+}
+.jssora11r {
+    background-position: -71px -41px;
+}
+.jssora11l:hover {
+    background-position: -131px -41px;
+}
+.jssora11r:hover {
+    background-position: -191px -41px;
+}
+.jssora11ldn {
+    background-position: -251px -41px;
+}
+.jssora11rdn {
+    background-position: -311px -41px;
+}
+
+.jssora12l, .jssora12r, .jssora12ldn, .jssora12rdn {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    background: url(ms/jssor/img/a12.png) no-repeat;
+    overflow: hidden;
+}
+.jssora12l { background-position: -16px -37px; }
+.jssora12r { background-position: -75px -37px; }
+.jssora12l:hover { background-position: -136px -37px; }
+.jssora12r:hover { background-position: -195px -37px; }
+.jssora12ldn { background-position: -256px -37px; }
+.jssora12rdn { background-position: -315px -37px; }
+
+.jssora21l, .jssora21r, .jssora21ldn, .jssora21rdn {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    background: url(ms/jssor/img/a21.png) center center no-repeat;
+    overflow: hidden;
+}
+.jssora21l { background-position: -3px -33px; }
+.jssora21r { background-position: -63px -33px; }
+.jssora21l:hover { background-position: -123px -33px; }
+.jssora21r:hover { background-position: -183px -33px; }
+.jssora21ldn { background-position: -243px -33px; }
+.jssora21rdn { background-position: -303px -33px; }
+        /* Arrow Navigator Skin End */
+/* ---------- ---------- Jssor Image Slider End---------- ---------- */        
