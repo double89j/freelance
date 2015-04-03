@@ -13,10 +13,10 @@
   <link rel="stylesheet" href="ms/bootstrap-3.3.2/css/bootstrap.min.css">
 
   <!-- Jssor Slider -->
-  <script src="ms/jssor/js/jssor.js"></script>
-  <script src="ms/jssor/js/jssor.slider.js"></script>
-  
+  <script src="js/jssor.js"></script>
+  <script src="js/jssor.slider.js"></script>
   <script src="index.js"></script>
+  
   <link href="index.css" rel="stylesheet" />
 </head>
 <body>
@@ -26,7 +26,7 @@
       <div class="row">
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2"></div>
         
-        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 top-bar">
           <h1>Mingstar Hotel Group</h1>
         </div>
         
@@ -37,14 +37,20 @@
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2"></div>
         
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <h3>Ming Star</h3>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 sub-bar">
+            <a href="http://mingstarhotel.com/ms/index.html">
+              <h3>Ming Star</h3>
+            </a>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <h3>Ming Paragon</h3>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 sub-bar">
+            <a href="http://mingstarhotel.com/mingparagon/mp_index.html">
+              <h3>Ming Paragon</h3>
+            </a>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <h3>KT Traveller Inc</h3>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 sub-bar">
+            <a href="http://mingstarhotel.com/ktti/index.php">
+              <h3>KT Traveller Inc</h3>
+            </a>
           </div>
         </div>
         
@@ -54,46 +60,80 @@
       <!-- Standard Image Slider Start -->
       <div class="row">
         <div class="hidden-sm col-md-1 col-lg-2"></div>
-        <!-- Jssor Slider Begin -->
         <div class="col-sm-12 col-md-10 col-lg-8">
-          <!-- Gallery Container Begin -->
-          <div id="standard_slider_container" class="rooms-container">
-            <!-- Loading Begin -->
-            <div u="loading" style="position: absolute; top: 0; left: 0;">
-              <div style="filter: alpha(opacity=70); opacity: 0.7; background-color: #000;
-                          width: 100%; height: 100%; top: 0; left: 0; position: absolute; display: block;">
+          <!-- Jssor Slider Begin -->
+          <div class="image-slider-container" id="sliderb_container">
+      
+              <!-- Loading Screen -->
+              <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                  <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                      background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+                  </div>
+                  <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
+                      top: 0px; left: 0px;width: 100%;height:100%;">
+                  </div>
               </div>
-              <div style="width: 100%; height:100%; top: 0; left: 0; position: absolute; display: block;
-                          background: url(jssor/img/loading.gif) no-repeat center center;">
+      
+              <!-- Slides Container -->
+              <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
+                  overflow: hidden;">
+                  <div>
+                      <img u=image src="img/landscape/01.jpg" />
+                      <div u="thumb">Price Tag 1</div>
+                  </div>
+                  <div>
+                      <img u=image src="img/landscape/02.jpg" />
+                      <div u="thumb">Price Tag 2</div>
+                  </div>
+                  <div>
+                      <img u=image src="img/landscape/03.jpg" />
+                      <div u="thumb">Price Tag 3</div>
+                  </div>
+                  <div>
+                      <img u=image src="img/landscape/04.jpg" />
+                      <div u="thumb">Price Tag 4</div>
+                  </div>
               </div>
-            </div><!-- Loading End -->
-            <!-- Slider Image Begin -->
-            <div u="slides" class="rooms-container"
-                 style="top: 0; left: 0; position: absolute; overflow: hidden; cursor: move;">
-              <div><img u="image" src="ms/room-images/standard/304_3.jpg" alt="Starndard (304_3)" /></div>
-              <div><img u="image" src="ms/room-images/standard/304_5.jpg" alt="Starndard (304_5)" /></div>
-              <div><img u="image" src="ms/room-images/standard/304_7.jpg" alt="Starndard (304_7)" /></div>
-              <div><img u="image" src="ms/room-images/standard/305_1.jpg" alt="Starndard (305_1)" /></div>
-              <div><img u="image" src="ms/room-images/standard/305_3.jpg" alt="Starndard (305_3)" /></div>
-              <div><img u="image" src="ms/room-images/standard/345_3.jpg" alt="Starndard (345_3)" /></div>
-              <div><img u="image" src="ms/room-images/standard/345_5.jpg" alt="Starndard (345_5)" /></div>
-            </div><!-- Slider Image End -->           
-            <!-- Navigator Begin -->
-            <div u="navigator" class="jssorb21 hidden-xs" style="position: absolute; bottom: 8px; left: 6px;">
-              <div u="prototype" 
-                   style="WIDTH: 19px; HEIGHT: 19px; POSITION: absolute; color:white; text-align:center;
-                          line-height:19px; font-size:12px;"></div>
-            </div><!-- Navigator End -->            
-            <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0;"></span>
-            <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0"></span>
-          </div><!-- Gallery Container End -->
-        </div><!-- Jssor Slider End -->
+              
+              <!--#region Thumbnail Navigator Skin Begin -->
+              <!-- thumbnail navigator container -->
+              <div u="thumbnavigator" class="sliderb-T" style="position: absolute; bottom: 0px; left: 0px; height:45px; width:600px;">
+                  <div style="filter: alpha(opacity=40); opacity:0.4; position: absolute; display: block;
+                      background-color: #000000; top: 0px; left: 0px; width: 100%; height: 100%;">
+                  </div>
+                  <!-- Thumbnail Item Skin Begin -->
+                  <div u="slides">
+                      <div u="prototype" style="POSITION: absolute; WIDTH: 600px; HEIGHT: 45px; TOP: 0; LEFT: 0;">
+                          <div u="thumbnailtemplate" style="font-family: verdana; font-weight: normal; POSITION: absolute; WIDTH: 100%; HEIGHT: 100%; TOP: 0; LEFT: 0; color:#fff; line-height: 45px; font-size:20px; padding-left:10px;"></div>
+                      </div>
+                  </div>
+                  <!-- Thumbnail Item Skin End -->
+              </div>
+              <!--#endregion ThumbnailNavigator Skin End -->
+              
+              <!-- bullet navigator container -->
+              <div u="navigator" class="jssorb01" style="bottom: 16px; right: 10px;">
+                  <!-- bullet navigator item prototype -->
+                  <div u="prototype"></div>
+              </div>
+
+              <!-- Arrow Left -->
+              <span u="arrowleft" class="jssora05l" style="top: 123px; left: 8px;">
+              </span>
+              <!-- Arrow Right -->
+              <span u="arrowright" class="jssora05r" style="top: 123px; right: 8px;">
+              </span>
+              <a style="display: none" href="http://www.jssor.com">jQuery Carousel</a>
+              <!-- Trigger -->
+          </div>
+          <!-- Jssor Slider End -->
+        </div>
         <div class="hidden-sm col-md-1 col-lg-2"></div>
       </div><!-- Standard Image Slider End -->
       <div class="row">
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2"></div>
         
-        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 bottom-bar">
           <h1>Visit Website</h1>
         </div>
         
