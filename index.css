@@ -1,43 +1,86 @@
 body {
-  background-color: #000;
-}
-
-h3 {
-  text-align: center;
+  /*background-image: url("ms/room-images/deluxe/333_10.jpg");
+  background-image: url("background.jpg");
+  background-size:   cover;
+  background-repeat: no-repeat;
+  background-position: center center;*/
+  
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-x: hidden;
 }
 
 .body-container {
-  max-width: 1200px;
+  /*max-width: 1200px;*/
   margin: 0px auto;
   margin-left: auto; 
   margin-right: auto;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .top-bar {
-  margin: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid;
 }
 
 .top-bar label {
-  color: rgba(255, 255, 255, 0.8);
+  /*color: rgba(170, 102, 68, 0.8);*/
+  color: rgba(255, 255, 255, 1);
   font-size: 60px;
-  font-family: "Kunstler Script",Georgia, sans-serif;
+  font-family: "Kunstler Script", Georgia, sans-serif;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.8)
+  /*text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;*/
+}
+
+.sub-bar-wrapper {
+  background-color: rgba(50, 50, 50, 1);
+  margin-bottom: 0px;
+  padding-top:20px;
 }
 
 .sub-bar {
-  background-color: orange;
-  border-color: black;
-  border: 1px solid;
-  border-radius: 6px 6px 6px 6px;
+  padding-top: 5px;
+  /*border-radius: 6px 6px 6px 6px;*/
+  height: 80px;
+  margin-bottom: 20px;
+  min-width: 280px;
+}
+
+.sub-bar h3{
+  text-align: center;
+  font-family: Colonna MT,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+  font-size: 40px;
+}
+
+.sub-bar-colour-1 {
+  background-color: rgba(230, 230, 230, 1);
+  color: rgba(0, 70, 150, 0.8);
+}
+
+.sub-bar-colour-2 {
+  background-color: rgba(230, 230, 230, 1);
+  color: rgba(100, 200, 0, 1);
+}
+
+.sub-bar-colour-3 {
+  background-color: rgba(230, 230, 230, 1);
+  color: rgba(255, 150, 0, 0.8);
 }
 
 .sub-bar a{
-  color: rgba(0, 0, 0, 0.9);
+  color: inherit;
   text-decoration: none;
 }
 
 .sub-bar a:hover{
-  background: transparent !important;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.8)
 }
 
 .bottom-bar {
@@ -51,6 +94,11 @@ h3 {
   text-align: center;
 }
 
+.image-slider-wrapper {
+  margin-top: 0px;
+  /*max-width: 1000px;*/
+}
+
 .image-slider-container {
   margin-left: auto;
   margin-right: auto;
@@ -59,7 +107,7 @@ h3 {
   position: relative;
   overflow: hidden;
   padding: 10px;
-  border-radius: 6px 6px 6px 6px;
+  /*border-radius: 6px 6px 6px 6px;*/
 }
 
 /* ---------- ---------- Jssor Image Slider Begin---------- ---------- */
